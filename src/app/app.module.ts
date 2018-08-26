@@ -9,12 +9,16 @@ import { ListPage } from '../pages/list/list';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { FoodsPage } from '../pages/foods/foods';
+import { DrinksPage } from '../pages/drinks/drinks';
+import { DrinksListPage } from '../pages/drinks-list/drinks-list';
 
 @NgModule({
   declarations: [
     ChezLuiApp,
     HomePage,
     FoodsPage,
+    DrinksPage,
+    DrinksListPage,
     ListPage
   ],
   imports: [
@@ -26,6 +30,8 @@ import { FoodsPage } from '../pages/foods/foods';
     ChezLuiApp,
     HomePage,
     FoodsPage,
+    DrinksPage,
+    DrinksListPage,
     ListPage
   ],
   providers: [

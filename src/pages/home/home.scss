@@ -28,6 +28,7 @@ page-home {
 
     ion-card {
       background-color: color($colors, tabac);
+      padding-top: 20px;
 
       .card-content {
         background-color: color($colors, tabac);
@@ -36,6 +37,8 @@ page-home {
       .card-title {
         color: color($colors, golden);
         text-align: center;
+        font-size: 25px;
+        // font-weight: bold;
       }
     }
   }

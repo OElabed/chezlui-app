@@ -1,0 +1,55 @@
+{
+  "foods": [
+    {
+      "tilte": "",
+      "description": "",
+      "price": "",
+      "active": true
+    }
+  ],
+  "drinks": [
+    {
+      "type": "canettes",
+      "list": [
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        },
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        },
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        }
+      ]
+    }
+  ],
+  "chichas" : [
+    {
+      "tilte": "",
+      "description": "",
+      "price": "",
+      "active": true
+    },
+    {
+      "tilte": "",
+      "description": "",
+      "price": "",
+      "active": true
+    },
+    {
+      "tilte": "",
+      "description": "",
+      "price": "",
+      "active": true
+    }
+  ]
+}
