@@ -10,7 +10,29 @@
   "drinks": [
     {
       "type": "canettes",
-      "list": [
+      "items": [
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        },
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        },
+        {
+          "tilte": "",
+          "description": "",
+          "price": "",
+          "active": true
+        }
+      ]
+    },{
+      "type": "canettes",
+      "items": [
         {
           "tilte": "",
           "description": "",
