@@ -1,0 +1,64 @@
+page-foods {
+  ion-navbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+    .toolbar-title {
+      color: color($colors, light);
+      text-align: center;
+    }
+    .bar-button-default {
+      color: color($colors, golden);
+    }
+  }
+
+  ion-toolbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+  }
+
+  .chezlui-food-item-image {
+    border-radius: 4px;
+  }
+
+  .card-background-page {
+    background-color: color($colors, tabac);
+
+    .card-details {
+      padding-left: 10px;
+
+      .description {
+        height: 85px;
+      }
+
+      .price {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 20px;
+        color: color($colors, golden);
+      }
+
+      .tools {
+        float: right;
+      }
+    }
+
+    .card-disable {
+      background: color($colors, gris);
+    }
+
+    // ion-card {
+    //   background-color: color($colors, tabac);
+
+    //   .card-content {
+    //     background-color: color($colors, tabac);
+    //   }
+
+    //   .card-title {
+    //     color: color($colors, golden);
+    //     text-align: center;
+    //   }
+    // }
+  }
+}

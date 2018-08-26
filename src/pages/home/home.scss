@@ -1,49 +1,42 @@
 page-home {
-  $toolbar-ios-title-text-align: center;
   ion-navbar {
     .toolbar-background {
-      background-color: color($colors, dark);
+      background-color: color($colors, tabac);
     }
     .toolbar-title {
       color: color($colors, light);
       text-align: center;
     }
     .bar-button-default {
-      color: color($colors, light);
+      color: color($colors, golden);
     }
   }
 
   .card-background-page {
-    background-color: color($colors, dark);
+    background-color: color($colors, tabac);
 
-    ion-card {
-      background-color: color($colors, dark);
+    .logo-container {
+      margin-bottom: 100px;
+      margin-top: 70px;
 
-      .card-content {
-        background-color: color($colors, dark);
-      }
-
-      .card-title {
-        color: color($colors, light);
-        text-align: center;
+      img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
       }
     }
 
-    // .card-title {
-    //   position: absolute;
-    //   top: 36%;
-    //   font-size: 2.0em;
-    //   width: 100%;
-    //   font-weight: bold;
-    //   color: #fff;
-    // }
+    ion-card {
+      background-color: color($colors, tabac);
 
-    // .card-subtitle {
-    //   font-size: 1.0em;
-    //   position: absolute;
-    //   top: 52%;
-    //   width: 100%;
-    //   color: #fff;
-    // }
+      .card-content {
+        background-color: color($colors, tabac);
+      }
+
+      .card-title {
+        color: color($colors, golden);
+        text-align: center;
+      }
+    }
   }
 }
