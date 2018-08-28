@@ -12,23 +12,34 @@ page-drinks-list {
     }
   }
 
+  .chezlui-food-item-image {
+    border-radius: 4px;
+  }
+
   .card-background-page {
     background-color: color($colors, tabac);
 
-    ion-card {
-      background-color: color($colors, tabac);
-      padding-top: 20px;
+    .card-details {
+      padding-left: 10px;
 
-      .card-content {
-        background-color: color($colors, tabac);
+      .description {
+        height: 85px;
       }
 
-      .card-title {
-        color: color($colors, golden);
-        text-align: center;
+      .price {
+        margin-top: 15px;
+        font-weight: bold;
         font-size: 20px;
-        // font-weight: bold;
+        color: color($colors, golden);
       }
+
+      .tools {
+        float: right;
+      }
+    }
+
+    .card-disable {
+      background: color($colors, gris);
     }
   }
 }

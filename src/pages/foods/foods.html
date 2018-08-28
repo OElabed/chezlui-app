@@ -17,10 +17,12 @@
 
 
 <ion-content class="card-background-page" padding>
+
   <div [ngSwitch]="foodType">
     <div *ngSwitchCase="'salee'">
-      <ion-card>
-        <ion-card-content>
+
+      <ion-card *ngFor="let item of saleeList">
+        <ion-card-content [ngClass]="{'card-disable' : !item.active}">
           <ion-grid>
             <ion-row>
               <ion-col col-3>
@@ -28,13 +30,10 @@
               </ion-col>
               <ion-col>
                 <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
+                  <h1>{{ item.tilte | uppercase }}</h1>
+                  <p class="description">{{ item.description }}</p>
                   <div>
-                    <h2 class="price">10.00€
+                    <h2 class="price">{{ item.price }}€
                       <span class="tools">
                         <button ion-button icon-only color="danger">
                           <ion-icon name="trash"></ion-icon>
@@ -43,7 +42,8 @@
                           <ion-icon name="create"></ion-icon>
                         </button>
                         <button ion-button icon-only color="primary">
-                          <ion-icon name="eye-off"></ion-icon>
+                          <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+                          <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
                         </button>
                       </span>
                     </h2>
@@ -55,110 +55,12 @@
         </ion-card-content>
       </ion-card>
 
-      <ion-card>
-        <ion-card-content class="card-disable">
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <div>
-                    <h2 class="price">10.00€
-                      <span class="tools">
-                        <button ion-button icon-only color="danger">
-                          <ion-icon name="trash"></ion-icon>
-                        </button>
-                        <button ion-button icon-only color="dark">
-                          <ion-icon name="create"></ion-icon>
-                        </button>
-                        <button ion-button icon-only color="primary">
-                          <ion-icon name="eye"></ion-icon>
-                        </button>
-                      </span>
-                    </h2>
-                  </div>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
     </div>
 
     <div *ngSwitchCase="'sucree'">
-      <ion-card>
-        <ion-card-content>
+
+      <ion-card *ngFor="let item of sucreeList">
+        <ion-card-content [ngClass]="{'card-disable' : !item.active}">
           <ion-grid>
             <ion-row>
               <ion-col col-3>
@@ -166,207 +68,31 @@
               </ion-col>
               <ion-col>
                 <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
+                  <h1>{{ item.tilte | uppercase }}</h1>
+                  <p class="description">{{ item.description }}</p>
+                  <div>
+                    <h2 class="price">{{ item.price }}€
+                      <span class="tools">
+                        <button ion-button icon-only color="danger">
+                          <ion-icon name="trash"></ion-icon>
+                        </button>
+                        <button ion-button icon-only color="dark">
+                          <ion-icon name="create"></ion-icon>
+                        </button>
+                        <button ion-button icon-only color="primary">
+                          <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+                          <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                        </button>
+                      </span>
+                    </h2>
+                  </div>
                 </div>
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card-content>
       </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-        <ion-card-content>
-          <ion-grid>
-            <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-              </ion-col>
-              <ion-col>
-                <div class="card-details">
-                  <h1>MARGHERITA</h1>
-                  <p class="description">rgo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus,
-                    si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita
-                    vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator
-                    inimicus, si ita vultis, </p>
-                  <h2 class="price">10.00€</h2>
-                </div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
+
     </div>
   </div>
 

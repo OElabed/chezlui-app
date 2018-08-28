@@ -25,7 +25,9 @@ export class DrinksPage {
     });
   }
 
-  goToDrinkTypeList() {
-    this.navCtrl.push(DrinksListPage);
+  goToDrinkTypeList(drinkGroup: any) {
+    // go to the session detail page
+    // and pass in the session data
+    this.navCtrl.push(DrinksListPage, { group: drinkGroup });
   }
 }
