@@ -11,6 +11,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { FoodsPage } from '../pages/foods/foods';
 import { DrinksPage } from '../pages/drinks/drinks';
 import { DrinksListPage } from '../pages/drinks-list/drinks-list';
+import { RippleEffectDirective } from '../directives/ripple-effect.directive';
+import { ChezLuiData } from '../providers/chezlui-data';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -19,10 +22,12 @@ import { DrinksListPage } from '../pages/drinks-list/drinks-list';
     FoodsPage,
     DrinksPage,
     DrinksListPage,
-    ListPage
+    ListPage,
+    RippleEffectDirective
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(ChezLuiApp),
   ],
   bootstrap: [IonicApp],
@@ -37,6 +42,7 @@ import { DrinksListPage } from '../pages/drinks-list/drinks-list';
   providers: [
     StatusBar,
     SplashScreen,
+    ChezLuiData,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
