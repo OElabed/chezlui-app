@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { ChezLuiApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -14,6 +13,9 @@ import { DrinksListPage } from '../pages/drinks-list/drinks-list';
 import { RippleEffectDirective } from '../directives/ripple-effect.directive';
 import { ChezLuiData } from '../providers/chezlui-data';
 import { HttpModule } from '@angular/http';
+import { HookahPage } from '../pages/hookah/hookah';
+import { IonicStorageModule } from '@ionic/storage';
+import { UserData } from '../providers/user-data';
 
 @NgModule({
   declarations: [
@@ -22,13 +24,14 @@ import { HttpModule } from '@angular/http';
     FoodsPage,
     DrinksPage,
     DrinksListPage,
-    ListPage,
+    HookahPage,
     RippleEffectDirective
   ],
   imports: [
     BrowserModule,
     HttpModule,
     IonicModule.forRoot(ChezLuiApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -37,12 +40,13 @@ import { HttpModule } from '@angular/http';
     FoodsPage,
     DrinksPage,
     DrinksListPage,
-    ListPage
+    HookahPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     ChezLuiData,
+    UserData,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

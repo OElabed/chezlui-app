@@ -1,24 +1,44 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
 
-import { Http } from '@angular/http';
+import { Http } from "@angular/http";
+import { Storage } from "@ionic/storage";
 
-import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/observable/of';
-
+import { Observable } from "rxjs/Observable";
+import "rxjs/add/operator/map";
+import "rxjs/add/observable/of";
+import "rxjs/add/observable/fromPromise";
+import "rxjs/add/operator/mergeMap";
 
 @Injectable()
 export class ChezLuiData {
   data: any;
+  CHEZLUI_DATA = "data";
 
-  constructor(public http: Http) { }
+  constructor(public http: Http, public storage: Storage) {}
 
   load(): any {
+    // this.storage.get(this.CHEZLUI_DATA).then(value => {
+    //   return value;
+    // });
+
     if (this.data) {
       return Observable.of(this.data);
     } else {
-      return this.http.get('assets/data/data.json')
-        .map(this.processData, this);
+
+      return this.http
+        .get("assets/data/data.json")
+        .map(this.processData, this)
+        .mergeMap((result: any) => {
+          return Observable.fromPromise(
+            this.storage.get(this.CHEZLUI_DATA).then(value => {
+              if (value) {
+                return value;
+              }
+              this.storage.set(this.CHEZLUI_DATA, result);
+              return result;
+            })
+          );
+        });
     }
   }
 
@@ -27,57 +47,8 @@ export class ChezLuiData {
     // build up the data by linking speakers to sessions
     this.data = data.json();
 
-    // this.data.tracks = [];
-
-    // this.data.foods = [];
-
-    // // loop through each day in the schedule
-    // this.data.schedule.forEach((day: any) => {
-    //   // loop through each timeline group in the day
-    //   day.groups.forEach((group: any) => {
-    //     // loop through each session in the timeline group
-    //     group.sessions.forEach((session: any) => {
-    //       session.speakers = [];
-    //       if (session.speakerNames) {
-    //         session.speakerNames.forEach((speakerName: any) => {
-    //           let speaker = this.data.speakers.find((s: any) => s.name === speakerName);
-    //           if (speaker) {
-    //             session.speakers.push(speaker);
-    //             speaker.sessions = speaker.sessions || [];
-    //             speaker.sessions.push(session);
-    //           }
-    //         });
-    //       }
-
-    //       if (session.tracks) {
-    //         session.tracks.forEach((track: any) => {
-    //           if (this.data.tracks.indexOf(track) < 0) {
-    //             this.data.tracks.push(track);
-    //           }
-    //         });
-    //       }
-    //     });
-    //   });
-    // });
-
     return this.data;
   }
-
-  // getSpeakers() {
-  //   return this.load().map((data: any) => {
-  //     return data.speakers.sort((a: any, b: any) => {
-  //       let aName = a.name.split(' ').pop();
-  //       let bName = b.name.split(' ').pop();
-  //       return aName.localeCompare(bName);
-  //     });
-  //   });
-  // }
-
-  // getTracks() {
-  //   return this.load().map((data: any) => {
-  //     return data.tracks.sort();
-  //   });
-  // }
 
   getFoods() {
     return this.load().map((data: any) => {
@@ -91,12 +62,9 @@ export class ChezLuiData {
     });
   }
 
-  // getMap() {
-  //   return this.load().map((data: any) => {
-  //     return data.map;
-  //   });
-  // }
-
-
-
+  getHookah() {
+    return this.load().map((data: any) => {
+      return data.hookah;
+    });
+  }
 }
