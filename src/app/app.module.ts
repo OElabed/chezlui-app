@@ -16,6 +16,7 @@ import { HttpModule } from '@angular/http';
 import { HookahPage } from '../pages/hookah/hookah';
 import { IonicStorageModule } from '@ionic/storage';
 import { UserData } from '../providers/user-data';
+import { InfosPage } from '../pages/infos/infos';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserData } from '../providers/user-data';
     DrinksPage,
     DrinksListPage,
     HookahPage,
+    InfosPage,
     RippleEffectDirective
   ],
   imports: [
@@ -40,7 +42,8 @@ import { UserData } from '../providers/user-data';
     FoodsPage,
     DrinksPage,
     DrinksListPage,
-    HookahPage
+    HookahPage,
+    InfosPage
   ],
   providers: [
     StatusBar,
