@@ -10,3 +10,9 @@ export interface ItemCL {
   price: number;
   active: boolean;
 }
+
+
+export interface SettingsCL {
+  delta: number;
+  active: boolean;
+}

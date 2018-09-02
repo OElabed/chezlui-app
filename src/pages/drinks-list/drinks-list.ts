@@ -17,8 +17,6 @@ export class DrinksListPage {
   ) {}
 
   ionViewWillEnter() {
-    console.log(this.navParams);
     this.group = this.navParams.data.group;
-    console.log(this.navParams.data.group);
   }
 }

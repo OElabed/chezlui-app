@@ -188,9 +188,9 @@
     }
   ],
   "settings": {
-    "increased": {
+    "vip": {
       "active": false,
-      "delta": 4.00
+      "delta": 8.00
     }
   }
 }

@@ -47,4 +47,11 @@
 
   </div>
 
+  <ion-fab bottom right *ngIf="userDataProvider.hasLoggedIn()">
+    <button ion-fab color="golden" (click)="goToSettings()">
+      <ion-icon name="add" class="add-icon"></ion-icon>
+    </button>
+  </ion-fab>
+
+
 </ion-content>

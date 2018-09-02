@@ -37,4 +37,10 @@ export class SettingsData {
       return data;
     });
   }
+
+  getVIPSettings() {
+    return this.load().map((data: any) => {
+      return data.vip;
+    });
+  }
 }

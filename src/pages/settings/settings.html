@@ -1,18 +1,61 @@
-<!--
-  Generated template for the SettingsPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>settings</ion-title>
+    <ion-title>PARAMÉTRES</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
-<ion-content padding>
 
+<ion-content class="card-background-page" padding>
+  <form #settingsForm="ngForm" novalidate>
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                <ion-icon name="home"></ion-icon> CHOIX D'ESPACE
+              </ion-card-title>
+              <ion-list>
+                <ion-item class="item-form">
+                  <ion-label class="light-label">NORMAL</ion-label>
+                  <ion-toggle [(ngModel)]="espaceNormal" name="espaceNormal" color="golden"></ion-toggle>
+                </ion-item>
+                <ion-item class="item-form">
+                  <ion-label class="light-label">VIP</ion-label>
+                  <ion-toggle [(ngModel)]="espaceVip" name="espaceVip" color="golden"></ion-toggle>
+                </ion-item>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-card>
+            <ion-card-content>
+              <ion-card-title>
+                <ion-icon name="star"></ion-icon> VIP PARAMÉTRES
+              </ion-card-title>
+              <ion-list>
+                <ion-item class="item-form">
+                  <ion-label class="light-label">MAJORATION EN €</ion-label>
+                  <ion-input type="number" placeholder="4" [(ngModel)]="settings.delta" name="delta" class="light-label-number" required></ion-input>
+                </ion-item>
+                <!-- TODO -->
+                <p ion-text [hidden]="settings.delta.valid || submitted == false" color="danger" padding-left>
+                  Il faut mettre un montant
+                </p>
+              </ion-list>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+      <ion-row responsive-sm class="update-button">
+        <ion-col offset-4 col-4>
+          <button ion-button large (click)="onUpdate(settingsForm)" type="submit" block>METTRE À JOUR</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
 </ion-content>

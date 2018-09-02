@@ -19,6 +19,8 @@ import { UserData } from '../providers/user-data';
 import { InfosPage } from '../pages/infos/infos';
 import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
+import { ScreenOrientation } from '@ionic-native/screen-orientation';
+import { SettingsData } from '../providers/settings-data';
 
 @NgModule({
   declarations: [
@@ -54,8 +56,10 @@ import { SettingsPage } from '../pages/settings/settings';
   providers: [
     StatusBar,
     SplashScreen,
+    ScreenOrientation,
     ChezLuiData,
     UserData,
+    SettingsData,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

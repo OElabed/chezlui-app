@@ -8,14 +8,13 @@ import { UserOptions } from "../interfaces/user-options";
 @Injectable()
 export class UserData {
   data: any;
-  currentUser: UserOptions;
+  currentUser: UserOptions = { username: "admin", password: "12345" };
 
   constructor(
     public http: Http,
     public events: Events,
     public storage: Storage
   ) {}
-
 
   load(): any {
     if (this.data) {
@@ -38,7 +37,7 @@ export class UserData {
   }
 
   hasLoggedIn(): boolean {
-    if(this.currentUser) {
+    if (this.currentUser) {
       return true;
     }
     return false;
@@ -49,8 +48,6 @@ export class UserData {
       this.currentUser = user;
     }
   }
-
-
 
   getUsers() {
     return this.load().map((data: any) => {
