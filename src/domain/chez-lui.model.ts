@@ -7,6 +7,6 @@ export interface GroupCL {
 export interface ItemCL {
   tilte: string;
   description: string;
-  price: string;
+  price: number;
   active: boolean;
 }

@@ -4,13 +4,14 @@ import { FoodsPage } from "../foods/foods";
 import { DrinksPage } from "../drinks/drinks";
 import { HookahPage } from "../hookah/hookah";
 import { InfosPage } from "../infos/infos";
+import { UserData } from "../../providers/user-data";
 
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
 })
 export class HomePage {
-  constructor(public navCtrl: NavController) {}
+  constructor(public navCtrl: NavController, public userDataProvider: UserData) {}
 
   goToFoods() {
     this.navCtrl.push(FoodsPage);

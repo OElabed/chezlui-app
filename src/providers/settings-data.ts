@@ -3,12 +3,10 @@ import { Events } from "ionic-angular";
 import { Http } from "@angular/http";
 import { Storage } from "@ionic/storage";
 import { Observable } from "rxjs/Observable";
-import { UserOptions } from "../interfaces/user-options";
 
 @Injectable()
-export class UserData {
+export class SettingsData {
   data: any;
-  currentUser: UserOptions;
 
   constructor(
     public http: Http,
@@ -28,28 +26,10 @@ export class UserData {
   processData(data: any) {
     // just some good 'ol JS fun with objects and arrays
     // build up the data by linking speakers to sessions
-    this.data = data.json().users;
+    this.data = data.json().settings;
 
     return this.data;
   }
-
-  logout(): void {
-    this.currentUser = null;
-  }
-
-  hasLoggedIn(): boolean {
-    if(this.currentUser) {
-      return true;
-    }
-    return false;
-  }
-
-  login(user: UserOptions): void {
-    if (user) {
-      this.currentUser = user;
-    }
-  }
-
 
 
   getUsers() {

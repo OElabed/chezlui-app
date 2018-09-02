@@ -49,7 +49,7 @@
             </ion-card>
           </ion-col>
           <ion-col>
-            <ion-card  (click)="goToInformation()" tappable m-ripple-effect>
+            <ion-card (click)="goToInformation()" tappable m-ripple-effect>
               <img src="assets/imgs/information.svg" height="200px" width="150px" />
               <ion-card-content>
                 <ion-card-title>
@@ -62,5 +62,9 @@
       </ion-grid>
     </ion-row>
   </ion-grid>
+
+  <ion-fab bottom right *ngIf="userDataProvider.hasLoggedIn()">
+    <button ion-fab color="golden"><ion-icon name="settings" class="settings-icon"></ion-icon></button>
+  </ion-fab>
 
 </ion-content>

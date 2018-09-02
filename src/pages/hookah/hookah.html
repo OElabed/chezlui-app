@@ -8,38 +8,40 @@
 
 <ion-content class="card-background-page" padding>
 
-  <ion-card *ngFor="let item of hookahList">
-    <ion-card-content [ngClass]="{'card-disable' : !item.active}">
-      <ion-grid>
-        <ion-row>
-          <ion-col col-3>
-            <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
-          </ion-col>
-          <ion-col>
-            <div class="card-details">
-              <h1>{{ item.tilte | uppercase }}</h1>
-              <p class="description">{{ item.description }}</p>
-              <div>
-                <h2 class="price">{{ item.price }}€
-                  <span class="tools">
-                    <button ion-button icon-only color="danger">
-                      <ion-icon name="trash"></ion-icon>
-                    </button>
-                    <button ion-button icon-only color="dark">
-                      <ion-icon name="create"></ion-icon>
-                    </button>
-                    <button ion-button icon-only color="primary">
-                      <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
-                      <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
-                    </button>
-                  </span>
-                </h2>
+  <ng-container *ngFor="let item of hookahList">
+    <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
+      <ion-card-content [ngClass]="{'card-disable' : !item.active}">
+        <ion-grid>
+          <ion-row>
+            <ion-col col-3>
+              <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
+            </ion-col>
+            <ion-col>
+              <div class="card-details">
+                <h1>{{ item.tilte | uppercase }}</h1>
+                <p class="description">{{ item.description }}</p>
+                <div>
+                  <h2 class="price">{{ item.price | number }} €
+                    <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
+                      <button ion-button icon-only color="danger">
+                        <ion-icon name="trash"></ion-icon>
+                      </button>
+                      <button ion-button icon-only color="dark">
+                        <ion-icon name="create"></ion-icon>
+                      </button>
+                      <button ion-button icon-only color="primary">
+                        <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+                        <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                      </button>
+                    </span>
+                  </h2>
+                </div>
               </div>
-            </div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 
 </ion-content>

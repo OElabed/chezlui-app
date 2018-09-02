@@ -17,6 +17,8 @@ import { HookahPage } from '../pages/hookah/hookah';
 import { IonicStorageModule } from '@ionic/storage';
 import { UserData } from '../providers/user-data';
 import { InfosPage } from '../pages/infos/infos';
+import { LoginPage } from '../pages/login/login';
+import { SettingsPage } from '../pages/settings/settings';
 
 @NgModule({
   declarations: [
@@ -27,6 +29,8 @@ import { InfosPage } from '../pages/infos/infos';
     DrinksListPage,
     HookahPage,
     InfosPage,
+    LoginPage,
+    SettingsPage,
     RippleEffectDirective
   ],
   imports: [
@@ -43,7 +47,9 @@ import { InfosPage } from '../pages/infos/infos';
     DrinksPage,
     DrinksListPage,
     HookahPage,
-    InfosPage
+    InfosPage,
+    LoginPage,
+    SettingsPage
   ],
   providers: [
     StatusBar,
