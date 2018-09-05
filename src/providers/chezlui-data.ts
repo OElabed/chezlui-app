@@ -12,8 +12,15 @@ import { SettingsData } from "./settings-data";
 
 @Injectable()
 export class ChezLuiData {
-  data: any;
-  CHEZLUI_DATA = "data";
+
+  foods_data: any;
+  CHEZLUI_DATA_FOODS = "foods_data";
+
+  drinks_data: any;
+  CHEZLUI_DATA_DRINKS = "drinks_data";
+
+  hookah_data: any;
+  CHEZLUI_DATA_HOOKAH = "hookah_data";
 
   constructor(
     public http: Http,
@@ -21,24 +28,24 @@ export class ChezLuiData {
     public settingsData: SettingsData
   ) {}
 
-  load(): any {
-    // this.storage.get(this.CHEZLUI_DATA).then(value => {
-    //   return value;
-    // });
+  getFoods() {
 
-    if (this.data) {
-      return Observable.of(this.data);
+    if (this.foods_data) {
+      return Observable.of(this.foods_data);
     } else {
       return this.http
         .get("assets/data/data.json")
-        .map(this.processData, this)
+        .map((data: any) => {
+          this.foods_data = data.json().foods;
+          return this.foods_data;
+        }, this)
         .mergeMap((result: any) => {
           return Observable.fromPromise(
-            this.storage.get(this.CHEZLUI_DATA).then(value => {
+            this.storage.get(this.CHEZLUI_DATA_FOODS).then(value => {
               if (value) {
                 return value;
               }
-              this.storage.set(this.CHEZLUI_DATA, result);
+              this.storage.set(this.CHEZLUI_DATA_FOODS, result);
               return result;
             })
           );
@@ -46,29 +53,53 @@ export class ChezLuiData {
     }
   }
 
-  processData(data: any) {
-    // just some good 'ol JS fun with objects and arrays
-    // build up the data by linking speakers to sessions
-    this.data = data.json();
-
-    return this.data;
-  }
-
-  getFoods() {
-    return this.load().map((data: any) => {
-      return data.foods;
-    });
-  }
-
   getDrinks() {
-    return this.load().map((data: any) => {
-      return data.drinks;
-    });
+
+    if (this.drinks_data) {
+      return Observable.of(this.drinks_data);
+    } else {
+      return this.http
+        .get("assets/data/data.json")
+        .map((data: any) => {
+          this.drinks_data = data.json().drinks;
+          return this.drinks_data;
+        }, this)
+        .mergeMap((result: any) => {
+          return Observable.fromPromise(
+            this.storage.get(this.CHEZLUI_DATA_DRINKS).then(value => {
+              if (value) {
+                return value;
+              }
+              this.storage.set(this.CHEZLUI_DATA_DRINKS, result);
+              return result;
+            })
+          );
+        });
+    }
   }
 
   getHookah() {
-    return this.load().map((data: any) => {
-      return data.hookah;
-    });
+
+    if (this.hookah_data) {
+      return Observable.of(this.hookah_data);
+    } else {
+      return this.http
+        .get("assets/data/data.json")
+        .map((data: any) => {
+          this.hookah_data = data.json().hookah;
+          return this.hookah_data;
+        }, this)
+        .mergeMap((result: any) => {
+          return Observable.fromPromise(
+            this.storage.get(this.CHEZLUI_DATA_HOOKAH).then(value => {
+              if (value) {
+                return value;
+              }
+              this.storage.set(this.CHEZLUI_DATA_HOOKAH, result);
+              return result;
+            })
+          );
+        });
+    }
   }
 }

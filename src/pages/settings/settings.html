@@ -19,11 +19,11 @@
               <ion-list>
                 <ion-item class="item-form">
                   <ion-label class="light-label">NORMAL</ion-label>
-                  <ion-toggle [(ngModel)]="espaceNormal" name="espaceNormal" color="golden"></ion-toggle>
+                  <ion-toggle [(ngModel)]="espaceNormal" (ionChange)="updateEspaceNormal()" name="espaceNormal" color="golden"></ion-toggle>
                 </ion-item>
                 <ion-item class="item-form">
                   <ion-label class="light-label">VIP</ion-label>
-                  <ion-toggle [(ngModel)]="espaceVip" name="espaceVip" color="golden"></ion-toggle>
+                  <ion-toggle [(ngModel)]="espaceVip" (ionChange)="updateEspaceVip()" name="espaceVip" color="golden"></ion-toggle>
                 </ion-item>
               </ion-list>
             </ion-card-content>
@@ -40,11 +40,13 @@
               <ion-list>
                 <ion-item class="item-form">
                   <ion-label class="light-label">MAJORATION EN €</ion-label>
-                  <ion-input type="number" placeholder="4" [(ngModel)]="settings.delta" name="delta" class="light-label-number" required></ion-input>
+                  <ion-input type="number" placeholder="0" [(ngModel)]="settings.delta" name="delta" class="light-label-number" required></ion-input>
                 </ion-item>
-                <!-- TODO -->
-                <p ion-text [hidden]="settings.delta.valid || submitted == false" color="danger" padding-left>
+                <p ion-text *ngIf="!settings.delta && submitted == true" color="danger" padding-left>
                   Il faut mettre un montant
+                </p>
+                <p ion-text *ngIf="!maximumValue(settings.delta)  && submitted == true" color="danger" padding-left>
+                  Il faut mettre un montant inférieur à 100€
                 </p>
               </ion-list>
             </ion-card-content>

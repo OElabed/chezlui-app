@@ -18,7 +18,7 @@ import { SettingsCL } from "../../domain/chez-lui.model";
 })
 export class SettingsPage {
   submitted = false;
-  settings: SettingsCL = {delta: 4, active: false};
+  settings: SettingsCL = { delta: 4, active: false };
 
   espaceNormal: boolean = true;
   espaceVip: boolean = false;
@@ -29,16 +29,36 @@ export class SettingsPage {
     public chezLuiData: ChezLuiData,
     public settingsData: SettingsData
   ) {
-
     this.settingsData.getVIPSettings().subscribe((vip: SettingsCL) => {
       this.settings = vip;
+
+      this.espaceVip = this.settings.active;
+      this.espaceNormal = !this.espaceVip;
     });
+  }
+
+  updateEspaceVip() {
+    this.settings.active = this.espaceVip;
+    this.espaceNormal = !this.espaceVip;
+  }
+
+  updateEspaceNormal() {
+    this.settings.active = !this.espaceNormal;
+    this.espaceVip = !this.espaceNormal;
+  }
+
+  maximumValue(item): boolean {
+    if(!isNaN(item) && item <= 100) {
+     return true;
+    }
+    return false;
   }
 
   onUpdate(form: NgForm) {
     this.submitted = true;
 
-    if (form.valid) {
+    if (form.valid && this.maximumValue(this.settings.delta)) {
+
     }
   }
 }

@@ -8,29 +8,19 @@ import { UserOptions } from "../interfaces/user-options";
 @Injectable()
 export class UserData {
   data: any;
-  currentUser: UserOptions = { username: "admin", password: "12345" };
+  currentUser: UserOptions;
+  // TODO delete this line
+  //currentUser: UserOptions = { username: "admin", password: "12345" };
+
+
+  users_data: any;
+  CHEZLUI_DATA_USERS = "users_data";
 
   constructor(
     public http: Http,
     public events: Events,
     public storage: Storage
   ) {}
-
-  load(): any {
-    if (this.data) {
-      return Observable.of(this.data);
-    } else {
-      return this.http.get("assets/data/data.json").map(this.processData, this);
-    }
-  }
-
-  processData(data: any) {
-    // just some good 'ol JS fun with objects and arrays
-    // build up the data by linking speakers to sessions
-    this.data = data.json().users;
-
-    return this.data;
-  }
 
   logout(): void {
     this.currentUser = null;
@@ -50,8 +40,26 @@ export class UserData {
   }
 
   getUsers() {
-    return this.load().map((data: any) => {
-      return data;
-    });
+    if (this.users_data) {
+      return Observable.of(this.users_data);
+    } else {
+      return this.http
+        .get("assets/data/data.json")
+        .map((data: any) => {
+          this.users_data = data.json().users;
+          return this.users_data;
+        }, this)
+        .mergeMap((result: any) => {
+          return Observable.fromPromise(
+            this.storage.get(this.CHEZLUI_DATA_USERS).then(value => {
+              if (value) {
+                return value;
+              }
+              this.storage.set(this.CHEZLUI_DATA_USERS, result);
+              return result;
+            })
+          );
+        });
+    }
   }
 }
