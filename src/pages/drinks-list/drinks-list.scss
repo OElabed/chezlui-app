@@ -10,6 +10,12 @@ page-drinks-list {
     }
     .bar-button-default {
       color: color($colors, golden);
+      width: 100px;
+    }
+    button {
+      .icon {
+        margin-left: -40px;
+      }
     }
   }
 

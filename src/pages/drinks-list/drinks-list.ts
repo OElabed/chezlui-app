@@ -27,7 +27,6 @@ export class DrinksListPage {
     return this.dataProvider.getDrinksList().map((list: any[]) => {
       list.forEach((element: GroupCL) => {
         if (this.group.uuid === element.uuid) {
-          console.log(element);
           this.group = element;
         }
       });
