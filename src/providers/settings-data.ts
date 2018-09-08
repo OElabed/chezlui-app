@@ -46,4 +46,16 @@ export class SettingsData {
       return data.vip;
     });
   }
+
+  saveSettings(settings: any) {
+    this.storage.set(this.CHEZLUI_DATA_SETTINGS, settings);
+  }
+
+  saveVIPSettings(vip: any) {
+    return this.getSettings().map((data: any) => {
+      data.vip = vip;
+      this.saveSettings(data);
+      return true;
+    });
+  }
 }

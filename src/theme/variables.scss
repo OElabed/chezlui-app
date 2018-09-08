@@ -58,7 +58,9 @@ $colors: (
 // --------------------------------------------------
 // Material Design only Sass variables can go here
 
-
+$toast-md-background: color($colors, golden);
+$toast-md-title-color: 	color($colors, tabac);
+$toast-md-title-font-size: 2.0rem;
 
 
 // App Windows Variables

@@ -18,12 +18,13 @@ export class FoodsPage {
     public navCtrl: NavController,
     public userDataProvider: UserData
   ) {
-    this.dataProvider.getFoods().subscribe((list: any[]) => {
+    this.dataProvider.getFoodsList().subscribe((list: any[]) => {
       const listSucree = list.filter(item => item.type === "sucree")[0].items;
       const listSalee = list.filter(item => item.type === "salee")[0].items;
 
       listSucree.forEach(item => {
         this.sucreeList.push({
+          uuid: item.uuid,
           tilte: item.tilte,
           description: item.description,
           price: item.price,
@@ -33,6 +34,7 @@ export class FoodsPage {
 
       listSalee.forEach(item => {
         this.saleeList.push({
+          uuid: item.uuid,
           tilte: item.tilte,
           description: item.description,
           price: item.price,

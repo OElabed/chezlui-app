@@ -21,6 +21,7 @@ import { LoginPage } from '../pages/login/login';
 import { SettingsPage } from '../pages/settings/settings';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SettingsData } from '../providers/settings-data';
+import { RippleDirective } from 'ng2-ripple-directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { SettingsData } from '../providers/settings-data';
     InfosPage,
     LoginPage,
     SettingsPage,
-    RippleEffectDirective
+    RippleEffectDirective,
+    RippleDirective
   ],
   imports: [
     BrowserModule,

@@ -12,7 +12,7 @@ export class DrinksPage {
   drinksGroup: Array<GroupCL> = [];
 
   constructor(public dataProvider: ChezLuiData, public navCtrl: NavController) {
-    this.dataProvider.getDrinks().subscribe((list: any[]) => {
+    this.dataProvider.getDrinksList().subscribe((list: any[]) => {
       console.log(list);
       list.forEach(item => {
         this.drinksGroup.push({

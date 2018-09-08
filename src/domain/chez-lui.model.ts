@@ -5,6 +5,7 @@ export interface GroupCL {
 }
 
 export interface ItemCL {
+  uuid: string;
   tilte: string;
   description: string;
   price: number;

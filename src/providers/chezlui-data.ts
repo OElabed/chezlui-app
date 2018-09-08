@@ -9,6 +9,7 @@ import "rxjs/add/observable/of";
 import "rxjs/add/observable/fromPromise";
 import "rxjs/add/operator/mergeMap";
 import { SettingsData } from "./settings-data";
+import { ItemCL } from "../domain/chez-lui.model";
 
 @Injectable()
 export class ChezLuiData {
@@ -28,7 +29,7 @@ export class ChezLuiData {
     public settingsData: SettingsData
   ) {}
 
-  getFoods() {
+  getFoodsList() {
 
     if (this.foods_data) {
       return Observable.of(this.foods_data);
@@ -53,7 +54,7 @@ export class ChezLuiData {
     }
   }
 
-  getDrinks() {
+  getDrinksList() {
 
     if (this.drinks_data) {
       return Observable.of(this.drinks_data);
@@ -78,7 +79,17 @@ export class ChezLuiData {
     }
   }
 
-  getHookah() {
+  saveList(storageId: string, data: any) {
+    this.storage.set(storageId, data);
+  }
+
+  /** ============================================
+   *                  HOOKAH
+   * =============================================
+   */
+
+
+  getHookahList() {
 
     if (this.hookah_data) {
       return Observable.of(this.hookah_data);
@@ -101,5 +112,54 @@ export class ChezLuiData {
           );
         });
     }
+  }
+
+  getHookah(uuid: string) {
+    return this.getHookahList().map((data: any[]) => {
+      let result: ItemCL;
+      data.forEach((item: ItemCL, index) => {
+        if (item.uuid === uuid) {
+          result = item;
+        }
+      });
+      return result;
+    });
+  }
+
+  addHookah(hookah: ItemCL) {
+    return this.getHookahList().map((data: any[]) => {
+
+      data.push(hookah);
+      this.saveList(this.CHEZLUI_DATA_HOOKAH, data);
+      return true;
+    });
+  }
+
+  updateHookah(hookah: ItemCL) {
+    return this.getHookahList().map((data: any[]) => {
+      let indexUpdate = 0;
+      data.forEach((item: ItemCL, index) => {
+        if (item.uuid === hookah.uuid) {
+          indexUpdate = index;
+        }
+      });
+      data[indexUpdate] = hookah;
+      this.saveList(this.CHEZLUI_DATA_HOOKAH, data);
+      return true;
+    });
+  }
+
+  deleteHookah(hookah: any) {
+    return this.getHookahList().map((data: any[]) => {
+      let newList: ItemCL[] = [];
+      data.forEach((item: ItemCL, index) => {
+        if (item.uuid !== hookah.uuid) {
+          newList.push(item);
+        }
+      });
+
+      this.saveList(this.CHEZLUI_DATA_HOOKAH, newList);
+      return true;
+    });
   }
 }

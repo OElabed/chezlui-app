@@ -16,9 +16,10 @@ export class HookahPage {
     public navCtrl: NavController,
     public userDataProvider: UserData
   ) {
-    this.dataProvider.getHookah().subscribe((list: any[]) => {
+    this.dataProvider.getHookahList().subscribe((list: any[]) => {
       list.forEach(item => {
         this.hookahList.push({
+          uuid: item.uuid,
           tilte: item.tilte,
           description: item.description,
           price: item.price,
