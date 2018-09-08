@@ -20,7 +20,7 @@
 
   <div [ngSwitch]="foodType">
     <div *ngSwitchCase="'salee'">
-      <ng-container *ngFor="let item of saleeList">
+      <ng-container *ngFor="let item of saleeGroup.items">
         <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
           <ion-card-content [ngClass]="{'card-disable' : !item.active}">
             <ion-grid>
@@ -35,13 +35,13 @@
                     <div>
                       <h2 class="price">{{ item.price | number}} €
                         <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                          <button ion-button icon-only color="danger">
+                          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'salee')">
                             <ion-icon name="trash"></ion-icon>
                           </button>
-                          <button ion-button icon-only color="dark">
+                          <button ion-button small icon-only color="dark">
                             <ion-icon name="create"></ion-icon>
                           </button>
-                          <button ion-button icon-only color="primary">
+                          <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'salee')">
                             <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
                             <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
                           </button>
@@ -60,7 +60,7 @@
     </div>
 
     <div *ngSwitchCase="'sucree'">
-      <ng-container *ngFor="let item of sucreeList">
+      <ng-container *ngFor="let item of sucreeGroup.items">
         <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
           <ion-card-content [ngClass]="{'card-disable' : !item.active}">
             <ion-grid>
@@ -75,13 +75,13 @@
                     <div>
                       <h2 class="price">{{ item.price | number }} €
                         <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                          <button ion-button icon-only color="danger">
+                          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'sucree')">
                             <ion-icon name="trash"></ion-icon>
                           </button>
-                          <button ion-button icon-only color="dark">
+                          <button ion-button small icon-only color="dark">
                             <ion-icon name="create"></ion-icon>
                           </button>
-                          <button ion-button icon-only color="primary">
+                          <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'sucree')">
                             <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
                             <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
                           </button>
@@ -96,10 +96,6 @@
         </ion-card>
 
       </ng-container>
-
-
     </div>
   </div>
-
-
 </ion-content>

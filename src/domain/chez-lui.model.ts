@@ -1,5 +1,7 @@
 export interface GroupCL {
+  uuid: string;
   title: string;
+  type: string;
   img: string;
   items: ItemCL[];
 }

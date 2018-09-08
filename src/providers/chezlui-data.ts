@@ -1,26 +1,21 @@
 import { Injectable } from "@angular/core";
-
 import { Http } from "@angular/http";
 import { Storage } from "@ionic/storage";
-
 import { Observable } from "rxjs/Observable";
+import { SettingsData } from "./settings-data";
+import { ItemCL, GroupCL } from "../domain/chez-lui.model";
 import "rxjs/add/operator/map";
 import "rxjs/add/observable/of";
 import "rxjs/add/observable/fromPromise";
 import "rxjs/add/operator/mergeMap";
-import { SettingsData } from "./settings-data";
-import { ItemCL } from "../domain/chez-lui.model";
+import { UUID } from "angular2-uuid";
 
 @Injectable()
 export class ChezLuiData {
-
-  foods_data: any;
   CHEZLUI_DATA_FOODS = "foods_data";
 
-  drinks_data: any;
   CHEZLUI_DATA_DRINKS = "drinks_data";
 
-  hookah_data: any;
   CHEZLUI_DATA_HOOKAH = "hookah_data";
 
   constructor(
@@ -28,56 +23,6 @@ export class ChezLuiData {
     public storage: Storage,
     public settingsData: SettingsData
   ) {}
-
-  getFoodsList() {
-
-    if (this.foods_data) {
-      return Observable.of(this.foods_data);
-    } else {
-      return this.http
-        .get("assets/data/data.json")
-        .map((data: any) => {
-          this.foods_data = data.json().foods;
-          return this.foods_data;
-        }, this)
-        .mergeMap((result: any) => {
-          return Observable.fromPromise(
-            this.storage.get(this.CHEZLUI_DATA_FOODS).then(value => {
-              if (value) {
-                return value;
-              }
-              this.storage.set(this.CHEZLUI_DATA_FOODS, result);
-              return result;
-            })
-          );
-        });
-    }
-  }
-
-  getDrinksList() {
-
-    if (this.drinks_data) {
-      return Observable.of(this.drinks_data);
-    } else {
-      return this.http
-        .get("assets/data/data.json")
-        .map((data: any) => {
-          this.drinks_data = data.json().drinks;
-          return this.drinks_data;
-        }, this)
-        .mergeMap((result: any) => {
-          return Observable.fromPromise(
-            this.storage.get(this.CHEZLUI_DATA_DRINKS).then(value => {
-              if (value) {
-                return value;
-              }
-              this.storage.set(this.CHEZLUI_DATA_DRINKS, result);
-              return result;
-            })
-          );
-        });
-    }
-  }
 
   saveList(storageId: string, data: any) {
     this.storage.set(storageId, data);
@@ -88,36 +33,29 @@ export class ChezLuiData {
    * =============================================
    */
 
-
   getHookahList() {
-
-    if (this.hookah_data) {
-      return Observable.of(this.hookah_data);
-    } else {
-      return this.http
-        .get("assets/data/data.json")
-        .map((data: any) => {
-          this.hookah_data = data.json().hookah;
-          return this.hookah_data;
-        }, this)
-        .mergeMap((result: any) => {
-          return Observable.fromPromise(
-            this.storage.get(this.CHEZLUI_DATA_HOOKAH).then(value => {
-              if (value) {
-                return value;
-              }
-              this.storage.set(this.CHEZLUI_DATA_HOOKAH, result);
-              return result;
-            })
-          );
-        });
-    }
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().hookah;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_HOOKAH).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_HOOKAH, result);
+            return result;
+          })
+        );
+      });
   }
 
   getHookah(uuid: string) {
     return this.getHookahList().map((data: any[]) => {
       let result: ItemCL;
-      data.forEach((item: ItemCL, index) => {
+      data.forEach((item: ItemCL) => {
         if (item.uuid === uuid) {
           result = item;
         }
@@ -128,7 +66,7 @@ export class ChezLuiData {
 
   addHookah(hookah: ItemCL) {
     return this.getHookahList().map((data: any[]) => {
-
+      hookah.uuid = UUID.UUID();
       data.push(hookah);
       this.saveList(this.CHEZLUI_DATA_HOOKAH, data);
       return true;
@@ -159,6 +97,208 @@ export class ChezLuiData {
       });
 
       this.saveList(this.CHEZLUI_DATA_HOOKAH, newList);
+      return true;
+    });
+  }
+
+  /** ============================================
+   *                  DRINKS
+   * =============================================
+   */
+
+  getDrinksList() {
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().drinks;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_DRINKS).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_DRINKS, result);
+            return result;
+          })
+        );
+      });
+  }
+
+  getDrink(uuid: string, uuid_group: string) {
+    return this.getDrinksList().map((data: any[]) => {
+      let result: ItemCL;
+      data.forEach((group_item: GroupCL) => {
+        if (group_item.uuid === uuid_group) {
+          group_item.items.forEach((item: ItemCL, index) => {
+            if (item.uuid === uuid) {
+              result = item;
+            }
+          });
+        }
+      });
+      return result;
+    });
+  }
+
+  addDrink(drink: ItemCL, uuid_group: string) {
+    return this.getDrinksList().map((data: any[]) => {
+      const newData: GroupCL[] = [];
+      data.forEach((group_item: GroupCL) => {
+        const new_group_item = group_item;
+        if (group_item.uuid === uuid_group) {
+          drink.uuid = UUID.UUID();
+          new_group_item.items.push(drink);
+        }
+        newData.push(new_group_item);
+      });
+
+      this.saveList(this.CHEZLUI_DATA_DRINKS, newData);
+      return true;
+    });
+  }
+
+  updateDrink(drink: ItemCL, uuid_group: string) {
+    return this.getDrinksList().map((data: any[]) => {
+      let indexGroupToUpdate;
+      let indexIemToUpdate;
+      data.forEach((group_item: GroupCL, indexGroup) => {
+        if (group_item.uuid === uuid_group) {
+          group_item.items.forEach((item: ItemCL, index) => {
+            if (item.uuid === drink.uuid) {
+              indexGroupToUpdate = indexGroup;
+              indexIemToUpdate = index;
+            }
+          });
+        }
+      });
+
+      if (!isNaN(indexGroupToUpdate) && !isNaN(indexIemToUpdate)) {
+        data[indexGroupToUpdate].items[indexIemToUpdate] = drink;
+      }
+      this.saveList(this.CHEZLUI_DATA_DRINKS, data);
+      return true;
+    });
+  }
+
+  deleteDrink(drink: ItemCL, uuid_group: string) {
+    return this.getDrinksList().map((data: any[]) => {
+      const newData: GroupCL[] = [];
+      data.forEach((group_item: GroupCL) => {
+        let new_group_item: GroupCL = group_item;
+        if (group_item.uuid === uuid_group) {
+          let newItems: ItemCL[] = [];
+          group_item.items.forEach((item: ItemCL) => {
+            if (item.uuid !== drink.uuid) {
+              newItems.push(item);
+            }
+          });
+          new_group_item.items = newItems;
+        }
+        newData.push(new_group_item);
+      });
+      this.saveList(this.CHEZLUI_DATA_DRINKS, newData);
+      return true;
+    });
+  }
+
+  /** ============================================
+   *                  FOODS
+   * =============================================
+   */
+
+  getFoodsList() {
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().foods;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_FOODS).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_FOODS, result);
+            return result;
+          })
+        );
+      });
+  }
+
+  getFood(uuid: string, type: string) {
+    return this.getFoodsList().map((data: any[]) => {
+      let result: ItemCL;
+      data.forEach((group_item: GroupCL) => {
+        if (group_item.type === type) {
+          group_item.items.forEach((item: ItemCL, index) => {
+            if (item.uuid === uuid) {
+              result = item;
+            }
+          });
+        }
+      });
+      return result;
+    });
+  }
+
+  addFood(food: ItemCL, type: string) {
+    return this.getFoodsList().map((data: any[]) => {
+      const newData: GroupCL[] = [];
+      data.forEach((group_item: GroupCL) => {
+        const new_group_item = group_item;
+        if (group_item.type === type) {
+          food.uuid = UUID.UUID();
+          new_group_item.items.push(food);
+        }
+        newData.push(new_group_item);
+      });
+
+      this.saveList(this.CHEZLUI_DATA_FOODS, newData);
+      return true;
+    });
+  }
+
+  updateFood(food: ItemCL, type: string) {
+    return this.getFoodsList().map((data: any[]) => {
+      let indexGroupToUpdate;
+      let indexIemToUpdate;
+      data.forEach((group_item: GroupCL, indexGroup) => {
+        if (group_item.type === type) {
+          group_item.items.forEach((item: ItemCL, index) => {
+            if (item.uuid === food.uuid) {
+              indexGroupToUpdate = indexGroup;
+              indexIemToUpdate = index;
+            }
+          });
+        }
+      });
+
+      if (!isNaN(indexGroupToUpdate) && !isNaN(indexIemToUpdate)) {
+        data[indexGroupToUpdate].items[indexIemToUpdate] = food;
+      }
+      this.saveList(this.CHEZLUI_DATA_FOODS, data);
+      return true;
+    });
+  }
+
+  deleteFood(food: ItemCL, type: string) {
+    return this.getFoodsList().map((data: any[]) => {
+      const newData: GroupCL[] = [];
+      data.forEach((group_item: GroupCL) => {
+        let new_group_item: GroupCL = group_item;
+        if (group_item.type === type) {
+          let newItems: ItemCL[] = [];
+          group_item.items.forEach((item: ItemCL) => {
+            if (item.uuid !== food.uuid) {
+              newItems.push(item);
+            }
+          });
+          new_group_item.items = newItems;
+        }
+        newData.push(new_group_item);
+      });
+      this.saveList(this.CHEZLUI_DATA_FOODS, newData);
       return true;
     });
   }

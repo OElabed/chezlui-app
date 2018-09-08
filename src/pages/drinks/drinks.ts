@@ -11,21 +11,27 @@ import { GroupCL } from "../../domain/chez-lui.model";
 export class DrinksPage {
   drinksGroup: Array<GroupCL> = [];
 
-  constructor(public dataProvider: ChezLuiData, public navCtrl: NavController) {
+  constructor(
+    public dataProvider: ChezLuiData,
+    public navCtrl: NavController
+  ) {}
+
+  ionViewWillEnter() {
     this.dataProvider.getDrinksList().subscribe((list: any[]) => {
-      console.log(list);
+      this.drinksGroup = [];
       list.forEach(item => {
         this.drinksGroup.push({
-          title: item.type,
+          uuid: item.uuid,
+          type: item.type,
+          title: item.title,
           img: item.icon,
           items: item.items
         });
       });
-      console.log(this.drinksGroup);
     });
   }
 
-  goToDrinkTypeList(drinkGroup: any) {
+  goToDrinkTypeList(drinkGroup: GroupCL) {
     // go to the session detail page
     // and pass in the session data
     this.navCtrl.push(DrinksListPage, { group: drinkGroup });

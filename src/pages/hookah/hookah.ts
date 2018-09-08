@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { NavController } from "ionic-angular";
+import { NavController, AlertController } from "ionic-angular";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { UserData } from "../../providers/user-data";
@@ -14,9 +14,17 @@ export class HookahPage {
   constructor(
     public dataProvider: ChezLuiData,
     public navCtrl: NavController,
-    public userDataProvider: UserData
+    public userDataProvider: UserData,
+    public alertCtrl: AlertController
   ) {
-    this.dataProvider.getHookahList().subscribe((list: any[]) => {
+    this.displayHookahList().subscribe(data => {
+      return data;
+    });
+  }
+
+  displayHookahList() {
+    return this.dataProvider.getHookahList().map((list: any[]) => {
+      this.hookahList = [];
       list.forEach(item => {
         this.hookahList.push({
           uuid: item.uuid,
@@ -25,6 +33,41 @@ export class HookahPage {
           price: item.price,
           active: item.active
         });
+      });
+      return true;
+    });
+  }
+
+  showDeleteConfirm(item: ItemCL) {
+    const confirm = this.alertCtrl.create({
+      title: "Confirmation de la suppression",
+      message: "Êtes-vous sûr de vouloir supprimer cet élément ?",
+      buttons: [
+        {
+          text: "Annuler",
+          handler: () => {
+          }
+        },
+        {
+          text: "Oui",
+          handler: () => {
+            this.dataProvider.deleteHookah(item).subscribe((result: boolean) => {
+              this.displayHookahList().subscribe(data => {
+                return data;
+              });
+            });
+          }
+        }
+      ]
+    });
+    confirm.present();
+  }
+
+  itemActivation(item: ItemCL) {
+    item.active = !item.active;
+    this.dataProvider.updateHookah(item).subscribe((result:boolean) => {
+      this.displayHookahList().subscribe(data => {
+        return data;
       });
     });
   }

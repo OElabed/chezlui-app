@@ -8,7 +8,6 @@ import { Observable } from "rxjs/Observable";
 export class SettingsData {
   data: any;
 
-  settings_data: any;
   CHEZLUI_DATA_SETTINGS = "settings_data";
 
   constructor(
@@ -18,27 +17,22 @@ export class SettingsData {
   ) {}
 
   getSettings() {
-    if (this.settings_data) {
-      return Observable.of(this.settings_data);
-    } else {
-      return this.http
-        .get("assets/data/data.json")
-        .map((data: any) => {
-          this.settings_data = data.json().settings;
-          return this.settings_data;
-        }, this)
-        .mergeMap((result: any) => {
-          return Observable.fromPromise(
-            this.storage.get(this.CHEZLUI_DATA_SETTINGS).then(value => {
-              if (value) {
-                return value;
-              }
-              this.storage.set(this.CHEZLUI_DATA_SETTINGS, result);
-              return result;
-            })
-          );
-        });
-    }
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().settings;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_SETTINGS).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_SETTINGS, result);
+            return result;
+          })
+        );
+      });
   }
 
   getVIPSettings() {

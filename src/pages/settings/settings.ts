@@ -4,8 +4,6 @@ import { NgForm } from "@angular/forms";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { SettingsData } from "../../providers/settings-data";
 import { SettingsCL } from "../../domain/chez-lui.model";
-// import { v4 as uuid } from 'uuid';
-import { UUID } from 'angular2-uuid';
 
 /**
  * Generated class for the SettingsPage page.
@@ -71,7 +69,6 @@ export class SettingsPage {
     if (form.valid && this.maximumValue(this.settings.delta)) {
       this.settingsData.saveVIPSettings(this.settings).subscribe((data: boolean) => {
         this.presentToast();
-        console.log(UUID.UUID());
       })
     }
   }

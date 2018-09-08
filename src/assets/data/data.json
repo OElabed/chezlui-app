@@ -68,7 +68,9 @@
   ],
   "drinks": [
     {
+      "uuid": "2f5e029b-5911-43dd-a054-00ffbd2ggbfb",
       "type": "canettes",
+      "title": "canettes",
       "icon": "can",
       "items": [
         {
@@ -95,7 +97,9 @@
       ]
     },
     {
+      "uuid": "2f5e029b-5966-43dd-a054-11ffbd2ggbfb",
       "type": "JUS",
+      "title": "JUS",
       "icon": "orange-juice",
       "items": [
         {
@@ -122,7 +126,9 @@
       ]
     },
     {
+      "uuid": "2f5e029b-5966-43dd-a054-00ffbd2ggbfb",
       "type": "CAfe",
+      "title": "CAfe",
       "icon": "coffee-cup",
       "items": [
         {
@@ -149,7 +155,9 @@
       ]
     },
     {
+      "uuid": "2f5e029b-5966-43dd-a054-0050bd2ggbfb",
       "type": "eaux & Sirop",
+      "title": "eaux & Sirop",
       "icon": "water",
       "items": [
         {
