@@ -1,0 +1,101 @@
+page-item {
+  ion-navbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+    .toolbar-title {
+      color: color($colors, light);
+      text-align: center;
+      margin-left: -30px;
+    }
+    .bar-button-default {
+      color: color($colors, golden);
+      width: 100px;
+    }
+    button {
+      .icon {
+        margin-left: -40px;
+      }
+    }
+  }
+
+  ion-toolbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+  }
+
+  .chezlui-food-item-image {
+    border-radius: 4px;
+  }
+
+  .card-background-page {
+    background-color: color($colors, tabac);
+
+    .item-form {
+      background-color: color($colors, tabac);
+      padding-left: 0px;
+      .item-inner {
+        border-bottom: 1px solid color($colors, golden) !important;
+        box-shadow: inset 0 -1px 0 0 color($colors, golden) !important;
+      }
+    }
+
+    input {
+      color: color($colors, light);
+    }
+    ion-card {
+      background-color: color($colors, tabac);
+
+      .card-title {
+        color: color($colors, golden);
+        font-size: 20px;
+        // font-weight: bold;
+      }
+    }
+  }
+
+  .list {
+    margin-bottom: 0;
+  }
+
+  .login-button {
+    margin-top: 25px;
+  }
+
+  .list-md .item-input:last-child {
+    border-bottom: none;
+  }
+
+  .list-md
+    .item-input.ng-invalid.ng-touched:not(.input-has-focus):not(.item-input-has-focus):last-child {
+    border-bottom: none;
+    box-shadow: none;
+  }
+  .list-md .item-input.item-input-has-focus:last-child,
+  .list-md .item-input-has-focus:last-child {
+    border-bottom: none;
+    box-shadow: none;
+  }
+  textarea {
+    color: color($colors, light);
+    height: 75px;
+  }
+  .add-photo {
+    border-style: dotted;
+    border-width: 2px;
+    border-color: color($colors, golden);
+    border-radius: 6px;
+
+    height: 150px;
+    width: 166px;
+
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 57%;
+      margin-top: 23px;
+    }
+  }
+}

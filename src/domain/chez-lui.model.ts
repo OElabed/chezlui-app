@@ -19,3 +19,8 @@ export interface SettingsCL {
   delta: number;
   active: boolean;
 }
+
+export interface ItemPageData {
+  modification: boolean,
+  item: ItemCL
+}

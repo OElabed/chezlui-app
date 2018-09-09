@@ -59,8 +59,8 @@ $colors: (
 // Material Design only Sass variables can go here
 
 // TOAST
-$toast-md-background: color($colors, golden);
-$toast-md-title-color: 	color($colors, tabac);
+$toast-md-background: color($colors, secondary);
+$toast-md-title-color: 	color($colors, dark);
 $toast-md-title-font-size: 2.0rem;
 
 // ALERT

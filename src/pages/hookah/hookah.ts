@@ -3,6 +3,7 @@ import { NavController, AlertController } from "ionic-angular";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { UserData } from "../../providers/user-data";
+import { ItemPage } from "../item/item";
 
 @Component({
   selector: "page-hookah",
@@ -70,5 +71,14 @@ export class HookahPage {
         return data;
       });
     });
+  }
+
+
+  goToAddItem() {
+    this.navCtrl.push(ItemPage, { modification: false, item: null });
+  }
+
+  goToModifyItem(item: any) {
+    this.navCtrl.push(ItemPage, { modification: true, item: item });
   }
 }

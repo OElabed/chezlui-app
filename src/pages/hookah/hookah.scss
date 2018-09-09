@@ -49,4 +49,14 @@ page-hookah {
       background: color($colors, gris);
     }
   }
+
+  .fab {
+    width: 100px !important;
+    height: 100px !important;
+  }
+
+  .add-icon {
+    color: color($colors, tabac);
+    font-size: 60px;
+  }
 }
