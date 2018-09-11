@@ -2,6 +2,7 @@ import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { ItemPageData } from "../../domain/chez-lui.model";
 import { NgForm } from "@angular/forms";
+import { PhotosPage } from "../photos/photos";
 
 /**
  * Generated class for the ItemPage page.
@@ -48,5 +49,9 @@ export class ItemPage {
     if (form.valid) {
       console.log("valid");
     }
+  }
+
+  goToPhotos() {
+    this.navCtrl.push(PhotosPage);
   }
 }

@@ -9,6 +9,7 @@ import "rxjs/add/observable/of";
 import "rxjs/add/observable/fromPromise";
 import "rxjs/add/operator/mergeMap";
 import { UUID } from "angular2-uuid";
+import { File } from "@ionic-native/file";
 
 @Injectable()
 export class ChezLuiData {
@@ -21,12 +22,58 @@ export class ChezLuiData {
   constructor(
     public http: Http,
     public storage: Storage,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public file: File
   ) {}
 
   saveList(storageId: string, data: any) {
     this.storage.set(storageId, data);
   }
+
+  /** ============================================
+   *                  STORAGE
+   * =============================================
+   */
+
+  initAllData() {
+    const assetDirectory = this.file.applicationDirectory + "www/assets/";
+    return Observable.fromPromise(
+      this.file
+        .checkDir(this.file.dataDirectory, "data/")
+        .then(_ => {
+          return false;
+        })
+        .catch(error => {
+          this.file
+            .copyDir(assetDirectory, "data/", this.file.dataDirectory, "data/")
+            .then(data => {
+              return true;
+            })
+            .catch(error => {
+              return false;
+            });
+        })
+    );
+  }
+
+  // Copy the image to a local folder
+  public copyFileToLocalDir(namePath, currentName, newFileName) {
+    this.file
+      .copyFile(namePath, currentName, this.file.dataDirectory, newFileName)
+      .then(
+        success => {
+          //this.placeItem.images = this.file.dataDirectory+newFileName;
+        },
+        error => {
+          console.log("error");
+        }
+      );
+  }
+
+  /** ============================================
+   *                  PHOTOS
+   * =============================================
+   */
 
   /** ============================================
    *                  HOOKAH

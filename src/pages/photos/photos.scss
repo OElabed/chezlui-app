@@ -1,4 +1,4 @@
-page-item {
+page-photos {
   ion-navbar {
     .toolbar-background {
       background-color: color($colors, tabac);
@@ -27,6 +27,7 @@ page-item {
 
   .chezlui-food-item-image {
     border-radius: 4px;
+    height: 130px;
   }
 
   .card-background-page {
@@ -46,6 +47,10 @@ page-item {
     }
     ion-card {
       background-color: color($colors, tabac);
+
+      &.selected{
+        background: color($colors, secondary);
+      }
 
       .card-title {
         color: color($colors, golden);
@@ -81,20 +86,12 @@ page-item {
     color: color($colors, light);
     height: 75px;
   }
-  .add-photo {
-    border-style: dotted;
-    border-width: 2px;
-    border-color: color($colors, golden);
-    border-radius: 6px;
-    height: 250px;
-    width: 397px;
+  .normal-photo {
 
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
-      width: 40%;
-      margin-top: 35px;
     }
   }
 }

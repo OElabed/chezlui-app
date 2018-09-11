@@ -6,6 +6,7 @@ import { ScreenOrientation } from "@ionic-native/screen-orientation";
 import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { UserData } from "../providers/user-data";
+import { ChezLuiData } from "../providers/chezlui-data";
 
 @Component({
   templateUrl: "app.html"
@@ -26,6 +27,7 @@ export class ChezLuiApp {
     public statusBar: StatusBar,
     public splashScreen: SplashScreen,
     public userDataProvider: UserData,
+    public dataProvider: ChezLuiData,
     public screenOrientation: ScreenOrientation
   ) {
     this.initializeApp();
@@ -42,12 +44,19 @@ export class ChezLuiApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
-      this.splashScreen.hide();
       if (this.platform.is("mobile") && !this.platform.is("mobileweb")) {
+        // LOCK ORIENTATION
         this.screenOrientation.lock(
           this.screenOrientation.ORIENTATIONS.PORTRAIT
         );
+        // COPY DATA INTO localfolder
+        this.dataProvider.initAllData().subscribe((data: any) => {
+          this.statusBar.styleDefault();
+          this.splashScreen.hide();
+        });
+      } else {
+        this.statusBar.styleDefault();
+        this.splashScreen.hide();
       }
     });
   }

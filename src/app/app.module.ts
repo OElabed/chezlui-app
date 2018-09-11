@@ -22,6 +22,11 @@ import { SettingsPage } from '../pages/settings/settings';
 import { ScreenOrientation } from '@ionic-native/screen-orientation';
 import { SettingsData } from '../providers/settings-data';
 import { ItemPage } from '../pages/item/item';
+import { PhotosPage } from '../pages/photos/photos';
+
+import { File } from '@ionic-native/file';
+import { Transfer } from '@ionic-native/transfer';
+import { FilePath } from '@ionic-native/file-path';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,7 @@ import { ItemPage } from '../pages/item/item';
     LoginPage,
     SettingsPage,
     ItemPage,
+    PhotosPage,
     RippleEffectDirective
   ],
   imports: [
@@ -54,6 +60,7 @@ import { ItemPage } from '../pages/item/item';
     InfosPage,
     LoginPage,
     ItemPage,
+    PhotosPage,
     SettingsPage
   ],
   providers: [
@@ -63,6 +70,11 @@ import { ItemPage } from '../pages/item/item';
     ChezLuiData,
     UserData,
     SettingsData,
+
+    File,
+    Transfer,
+    FilePath,
+
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

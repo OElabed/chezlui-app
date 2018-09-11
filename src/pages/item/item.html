@@ -20,12 +20,12 @@
             <ion-card>
               <ion-card-content>
                 <ion-card-title>
-                  PHOTOS
+                  IMAGE
                 </ion-card-title>
                 <ion-grid>
                   <ion-row>
-                    <ion-col col-4>
-                      <ion-card tappable m-ripple-effect>
+                    <ion-col offset-2 col-8>
+                      <ion-card tappable m-ripple-effect (click)="goToPhotos()">
                         <ion-card-content>
                           <div class="add-photo">
                             <img class="chezlui-food-item-image" src="assets/imgs/camera.svg" />
@@ -33,24 +33,6 @@
                         </ion-card-content>
                       </ion-card>
                     </ion-col>
-                    <ion-col col-4>
-                        <ion-card tappable m-ripple-effect>
-                          <ion-card-content>
-                            <div class="add-photo">
-                              <img class="chezlui-food-item-image" src="assets/imgs/camera.svg" />
-                            </div>
-                          </ion-card-content>
-                        </ion-card>
-                      </ion-col>
-                      <ion-col col-4>
-                          <ion-card tappable m-ripple-effect>
-                            <ion-card-content>
-                              <div class="add-photo">
-                                <img class="chezlui-food-item-image" src="assets/imgs/camera.svg" />
-                              </div>
-                            </ion-card-content>
-                          </ion-card>
-                        </ion-col>
                   </ion-row>
                 </ion-grid>
               </ion-card-content>
