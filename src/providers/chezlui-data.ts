@@ -47,7 +47,15 @@ export class ChezLuiData {
           this.file
             .copyDir(assetDirectory, "data/", this.file.dataDirectory, "data/")
             .then(data => {
-              return true;
+              this.file
+                .listDir(this.file.dataDirectory, "data/imgs/drinks/cafe/")
+                .then(entry => {
+                  // this.coucou = JSON.stringify(entry);
+                  return true;
+                })
+                .catch(error => {
+                  return false;
+                });
             })
             .catch(error => {
               return false;
