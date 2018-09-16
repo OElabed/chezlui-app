@@ -28,6 +28,7 @@ import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { FormulePage } from '../pages/formule/formule';
+import { FormuleItemPage } from '../pages/formule-item/formule-item';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { FormulePage } from '../pages/formule/formule';
     DrinksListPage,
     HookahPage,
     FormulePage,
+    FormuleItemPage,
     InfosPage,
     LoginPage,
     SettingsPage,
@@ -60,6 +62,7 @@ import { FormulePage } from '../pages/formule/formule';
     DrinksListPage,
     HookahPage,
     FormulePage,
+    FormuleItemPage,
     InfosPage,
     LoginPage,
     ItemPage,

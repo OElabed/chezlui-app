@@ -12,6 +12,7 @@ export interface ItemCL {
   description: string;
   price: number;
   active: boolean;
+  img: string;
 }
 
 

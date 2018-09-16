@@ -14,44 +14,31 @@
 
 <ion-content class="card-background-page" padding>
 
-  <ion-card tappable m-ripple-effect>
-    <ion-fab top right>
-      <button ion-fab mini color="golden">
-        <span class="price-formule">15€</span>
-      </button>
-    </ion-fab>
-    <img src="assets/data/imgs/formules/chicha.png" />
-    <div class="card-title">
-      <span>
-        CHILL
-      </span>
-    </div>
-  </ion-card>
-
-  <ion-card tappable m-ripple-effect>
-    <ion-fab top right>
-      <button ion-fab mini color="golden">
-        <span class="price-formule">7€</span>
-      </button>
-    </ion-fab>
-    <img src="assets/data/imgs/formules/pause.png" />
-    <div class="card-title">
-      <span>LA PAUSE GOURMANDE</span>
-    </div>
-  </ion-card>
-
-  <ion-card tappable m-ripple-effect>
-    <ion-fab top right>
-      <button ion-fab mini color="golden">
-        <span class="price-formule">10€</span>
-      </button>
-    </ion-fab>
-    <img src="assets/data/imgs/formules/formule.png" />
-    <div class="card-title">
-      <span>
-        EAT'S
-      </span>
-    </div>
-  </ion-card>
-
+  <ng-container *ngFor="let item of formulesList">
+    <ion-card tappable m-ripple-effect (click)="goToFormuleDetails(item)" *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
+      <div class="shadow-disable" *ngIf="!item.active"></div>
+      <div class="tools-container">
+        <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
+          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm($event,item)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+          <button ion-button small icon-only color="primary" (click)="itemActivation($event,item)">
+            <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+            <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+          </button>
+        </span>
+      </div>
+      <ion-fab top right>
+        <button ion-fab mini color="golden">
+          <span class="price-formule">{{ item.price | number }}€</span>
+        </button>
+      </ion-fab>
+      <img src="assets/{{ item.img }}" />
+      <div class="card-title">
+        <span>
+          {{ item.tilte | uppercase }}
+        </span>
+      </div>
+    </ion-card>
+  </ng-container>
 </ion-content>

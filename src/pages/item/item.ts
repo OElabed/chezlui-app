@@ -25,7 +25,8 @@ export class ItemPage {
       tilte: "",
       description: "",
       price: 0,
-      active: true
+      active: true,
+      img:""
     }
   };
 

@@ -19,6 +19,8 @@ export class ChezLuiData {
 
   CHEZLUI_DATA_HOOKAH = "hookah_data";
 
+  CHEZLUI_DATA_FORMULES = "formules_data";
+
   constructor(
     public http: Http,
     public storage: Storage,
@@ -56,7 +58,7 @@ export class ChezLuiData {
               //   .catch(error => {
               //     return false;
               //   });
-                return true;
+              return true;
             })
             .catch(error => {
               return false;
@@ -84,6 +86,57 @@ export class ChezLuiData {
    * =============================================
    */
 
+  /** ============================================
+   *                  FORMULES
+   * =============================================
+   */
+
+  getFormulesList() {
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().formules;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_FORMULES).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_FORMULES, result);
+            return result;
+          })
+        );
+      });
+  }
+
+  updateFormule(formule: ItemCL) {
+    return this.getFormulesList().map((data: any[]) => {
+      let indexUpdate = 0;
+      data.forEach((item: ItemCL, index) => {
+        if (item.uuid === formule.uuid) {
+          indexUpdate = index;
+        }
+      });
+      data[indexUpdate] = formule;
+      this.saveList(this.CHEZLUI_DATA_FORMULES, data);
+      return true;
+    });
+  }
+
+  deleteFormule(formule: any) {
+    return this.getFormulesList().map((data: any[]) => {
+      let newList: ItemCL[] = [];
+      data.forEach((item: ItemCL, index) => {
+        if (item.uuid !== formule.uuid) {
+          newList.push(item);
+        }
+      });
+
+      this.saveList(this.CHEZLUI_DATA_FORMULES, newList);
+      return true;
+    });
+  }
   /** ============================================
    *                  HOOKAH
    * =============================================

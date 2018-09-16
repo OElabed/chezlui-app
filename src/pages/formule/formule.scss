@@ -52,13 +52,19 @@ page-formule {
         top: 25%;
       }
     }
-
-    .card-subtitle {
-      font-size: 1em;
+    .tools-container {
       position: absolute;
-      top: 52%;
+      top: 70%;
+      right: 2%;
+      z-index: 1001;
+    }
+    .shadow-disable {
+      position: absolute;
+      height: 100%;
       width: 100%;
-      color: #fff;
+      background: color($colors, dark);
+      opacity: 0.8;
+      z-index: 1000;
     }
   }
 

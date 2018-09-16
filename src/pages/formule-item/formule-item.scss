@@ -1,0 +1,128 @@
+page-formule-item {
+  ion-navbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+    .toolbar-title {
+      color: color($colors, light);
+      text-align: center;
+      margin-left: -30px;
+    }
+    .bar-button-default {
+      color: color($colors, golden);
+      width: 100px;
+    }
+    button {
+      .icon {
+        margin-left: -40px;
+      }
+    }
+  }
+
+  .chezlui-food-item-image {
+    border-radius: 4px;
+  }
+
+  .card-background-page {
+    background-color: color($colors, tabac);
+
+    // ion-card {
+    //   // position: relative;
+    //   // text-align: right;
+    //   // max-height: 385px;
+    //   // // border-style: solid;
+    //   // border-color: #b29144;
+    //   // border-width: 1px;
+    // }
+
+    .card-title {
+      font-weight: bold;
+    }
+
+    // .card-title {
+
+    .price-right {
+      float: right;
+      color: color($colors, golden);
+      font-weight: bold;
+    }
+    // }s
+
+    // .card-subtitle {
+    //   font-size: 1em;
+    //   position: absolute;
+    //   top: 52%;
+    //   width: 100%;
+    //   color: #fff;
+    // }
+
+    .formule-description {
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .icon-add {
+    background: url("../../assets/imgs/add.svg") no-repeat;
+    background-size: 20px 20px;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+  }
+
+  .icon-chicha {
+    background: url("../../assets/imgs/hookah-black.svg") no-repeat;
+    background-size: 25px 25px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+  }
+
+  .icon-hot-drink {
+    background: url("../../assets/imgs/cup-of-hot-black.svg") no-repeat;
+    background-size: 25px 25px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+  }
+
+  .icon-soft-drink {
+    background: url("../../assets/imgs/soft-drink.svg") no-repeat;
+    background-size: 25px 25px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+  }
+
+  .icon-free {
+    background: url("../../assets/imgs/free-sticker-black.svg") no-repeat;
+    background-size: 37px 37px;
+    display: inline-block;
+    vertical-align: middle;
+    height: 37px;
+    width: 37px;
+  }
+
+  .remarque-information {
+    margin-top: 80px;
+    font-size: 22px;
+  }
+  .text-information {
+    vertical-align: middle;
+  }
+
+  .text-ou {
+    font-size: 15px;
+  }
+
+  .fab {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .price-formule {
+    color: color($colors, tabac);
+    font-size: 30px;
+    font-weight: bold;
+  }
+}
