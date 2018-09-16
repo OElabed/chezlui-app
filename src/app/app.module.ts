@@ -27,6 +27,7 @@ import { PhotosPage } from '../pages/photos/photos';
 import { File } from '@ionic-native/file';
 import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
+import { FormulePage } from '../pages/formule/formule';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { FilePath } from '@ionic-native/file-path';
     DrinksPage,
     DrinksListPage,
     HookahPage,
+    FormulePage,
     InfosPage,
     LoginPage,
     SettingsPage,
@@ -57,6 +59,7 @@ import { FilePath } from '@ionic-native/file-path';
     DrinksPage,
     DrinksListPage,
     HookahPage,
+    FormulePage,
     InfosPage,
     LoginPage,
     ItemPage,

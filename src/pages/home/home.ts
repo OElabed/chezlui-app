@@ -6,6 +6,7 @@ import { HookahPage } from "../hookah/hookah";
 import { InfosPage } from "../infos/infos";
 import { UserData } from "../../providers/user-data";
 import { SettingsPage } from "../settings/settings";
+import { FormulePage } from "../formule/formule";
 
 @Component({
   selector: "page-home",
@@ -28,6 +29,10 @@ export class HomePage {
 
   goToDrinks() {
     this.navCtrl.push(DrinksPage);
+  }
+
+  goToFormules() {
+    this.navCtrl.push(FormulePage);
   }
 
   goToSettings() {

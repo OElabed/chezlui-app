@@ -1,0 +1,75 @@
+page-formule {
+  ion-navbar {
+    .toolbar-background {
+      background-color: color($colors, tabac);
+    }
+    .toolbar-title {
+      color: color($colors, light);
+      text-align: center;
+      margin-left: -30px;
+    }
+    .bar-button-default {
+      color: color($colors, golden);
+      width: 100px;
+    }
+    button {
+      .icon {
+        margin-left: -40px;
+      }
+    }
+  }
+
+  .chezlui-food-item-image {
+    border-radius: 4px;
+  }
+
+  .card-background-page {
+    background-color: color($colors, tabac);
+
+    ion-card {
+      position: relative;
+      text-align: right;
+      max-height: 385px;
+      // border-style: solid;
+      // border-color: #b29144;
+      // border-width: 1px;
+    }
+
+    .card-title {
+      position: absolute;
+      top: 85%;
+      text-align: center;
+      font-size: 2em;
+      width: 100%;
+      font-weight: bold;
+      height: 40px;
+      color:  color($colors, tabac);
+      font-size: 18px;
+      background-color: color($colors, golden);
+
+      span {
+        position: relative;
+        top: 25%;
+      }
+    }
+
+    .card-subtitle {
+      font-size: 1em;
+      position: absolute;
+      top: 52%;
+      width: 100%;
+      color: #fff;
+    }
+  }
+
+  .fab {
+    width: 70px !important;
+    height: 70px !important;
+  }
+
+  .price-formule {
+    color: color($colors, tabac);
+    font-size: 30px;
+    font-weight: bold;
+  }
+}

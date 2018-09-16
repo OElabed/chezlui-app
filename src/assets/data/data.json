@@ -8,27 +8,31 @@
           "tilte": "MARGHERITA",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/salee/fajitas.png"
         },
         {
           "tilte": "SANDWICH",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/salee/fajitas.png"
         },
         {
           "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd55a1c2",
           "tilte": "PIZZA",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/salee/fajitas.png"
         },
         {
           "uuid": "48f81546-ed73-4284-a0dd-5edc3de4498e",
           "tilte": "TEST",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": false
+          "active": false,
+          "img": "data/imgs/foods/salee/fajitas.png"
         }
       ]
     },
@@ -40,28 +44,32 @@
           "tilte": "CREPE",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/sucree/gateau.jpg"
         },
         {
           "uuid": "19baffec-a67b-4ff0-b1e6-9f3f9665fb53",
           "tilte": "Gateau",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/sucree/gateau.jpg"
         },
         {
           "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
           "tilte": "Macaron",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/sucree/gateau.jpg"
         },
         {
           "uuid": "024c656e-8514-4a01-9461-c10da0c09c65",
           "tilte": "bonbon",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/foods/sucree/gateau.jpg"
         }
       ]
     }
@@ -78,21 +86,24 @@
           "tilte": "COCA COLA",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
         },
         {
           "uuid": "98fee3c5-edd2-4172-8e6e-fa6f739f7225",
           "tilte": "ICE THE",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": false
+          "active": false,
+          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
         },
         {
           "uuid": "bfa681ce-a20a-4b7a-9506-cab6ed015b8f",
           "tilte": "7UP",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
         }
       ]
     },
@@ -107,21 +118,24 @@
           "tilte": "Orange",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/juice/orange-juice.jpg"
         },
         {
           "uuid": "26deedb3-7243-42b0-8e30-1b8bf39cd266",
           "tilte": "BAnaNE",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": false
+          "active": false,
+          "img": "data/imgs/drinks/juice/orange-juice.jpg"
         },
         {
           "uuid": "e7aaa7f6-fdfa-4b8b-88ae-4736cb8b5664",
           "tilte": "Fraise",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/juice/orange-juice.jpg"
         }
       ]
     },
@@ -136,21 +150,24 @@
           "tilte": "Expresso",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/cafe/expresso.png"
         },
         {
           "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
           "tilte": "cappuccino",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": false
+          "active": false,
+          "img": "data/imgs/drinks/cafe/expresso.png"
         },
         {
           "uuid": "2f07469d-68dd-406f-8dc9-878c6126f03d",
           "tilte": "americano",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/cafe/expresso.png"
         }
       ]
     },
@@ -165,21 +182,24 @@
           "tilte": "eaux minéral",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/"
         },
         {
           "uuid": "816a21c7-44bc-4255-9ee2-ee0e061fc4b3",
           "tilte": "eaux GAZÉIFIÉE",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": false
+          "active": false,
+          "img": "data/imgs/drinks/"
         },
         {
           "uuid": "48a78788-8010-4829-bb42-2efe7e8a70c8",
           "tilte": "eaux minéral & sirops",
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.00,
-          "active": true
+          "active": true,
+          "img": "data/imgs/drinks/"
         }
       ]
     }
@@ -190,21 +210,24 @@
       "tilte": "menthe",
       "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
       "price": 10.00,
-      "active": true
+      "active": true,
+      "img": "data/imgs/"
     },
     {
       "uuid": "0f176c06-32b4-4db5-9135-cf824611a8d8",
       "tilte": "Pommes",
       "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
       "price": 10.00,
-      "active": false
+      "active": false,
+      "img": "data/imgs/"
     },
     {
       "uuid": "d6b0026a-c8a7-4ea1-aa55-2abebfdfa0e3",
       "tilte": "pastèque",
       "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
       "price": 10.00,
-      "active": false
+      "active": false,
+      "img": "data/imgs/"
     }
   ],
   "users": [

@@ -47,15 +47,16 @@ export class ChezLuiData {
           this.file
             .copyDir(assetDirectory, "data/", this.file.dataDirectory, "data/")
             .then(data => {
-              this.file
-                .listDir(this.file.dataDirectory, "data/imgs/drinks/cafe/")
-                .then(entry => {
-                  // this.coucou = JSON.stringify(entry);
-                  return true;
-                })
-                .catch(error => {
-                  return false;
-                });
+              // this.file
+              //   .listDir(this.file.dataDirectory, "data/imgs/drinks/cafe/")
+              //   .then(entry => {
+              //     // this.coucou = JSON.stringify(entry);
+              //     return true;
+              //   })
+              //   .catch(error => {
+              //     return false;
+              //   });
+                return true;
             })
             .catch(error => {
               return false;
@@ -79,7 +80,7 @@ export class ChezLuiData {
   }
 
   /** ============================================
-   *                  PHOTOS
+   *                  IMAGES
    * =============================================
    */
 
