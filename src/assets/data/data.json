@@ -233,27 +233,27 @@
   "formules": [
     {
       "uuid": "745957c8-e229-4958-979d-980e8e98b7d0",
-      "tilte": "CHILL",
-      "description": "\r\n        <div style=\"margin-top: 55px;\">\r\n          <span class=\"icon-chicha\"></span>\r\n          <span>CHICHA AU CHOIX</span>\r\n        </div>\r\n        <div style=\"margin-top: 15px;\">\r\n          <span class=\"icon-add\"></span>\r\n        </div>\r\n        <div style=\"margin-top: 15px;\">\r\n          <span class=\"icon-soft-drink\"></span> BOISSON SOFT AU CHOIX\r\n          <br>\r\n          <span class=\"text-ou\">OU</span>\r\n          <br>\r\n          <span class=\"icon-hot-drink\"></span> BOISSON CHAUDE AU CHOIX\r\n        </div>\r\n        <div style=\"margin-top: 15px;\">\r\n          <span class=\"icon-add\"></span>\r\n        </div>\r\n        <div style=\"margin-top: 15px;margin-bottom: 40px;\">\r\n          <span class=\"icon-free\"></span>\r\n          <span class=\"text-information\"> UNE SESSION VOUS SERA OFFERTE</span>\r\n        </div>",
-      "price": 15.0,
+      "tilte": "CHILL & COCKTAIL",
+      "description": "",
+      "price": 17.0,
       "active": true,
-      "img": "data/imgs/formules/chicha.png"
+      "img": "data/imgs/formules/chicha-formule.png"
     },
     {
       "uuid": "745957c8-e229-4958-979d-980e8f98b7d0",
-      "tilte": "La Pause Gourmande",
-      "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
+      "tilte": "le goûter gourmand",
+      "description": "",
       "price": 7.0,
       "active": true,
-      "img": "data/imgs/formules/pause.png"
+      "img": "data/imgs/formules/gourmande-formule.png"
     },
     {
       "uuid": "745957c8-e229-4958-979d-980e8498b7d0",
       "tilte": "eat's",
-      "description": "CHICHA + BOISSON SOFT OU CHAUDE",
+      "description": "",
       "price": 10.0,
       "active": true,
-      "img": "data/imgs/formules/formule.png"
+      "img": "data/imgs/formules/restauration-formule.png"
     }
   ],
   "users": [

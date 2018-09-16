@@ -29,6 +29,7 @@ import { Transfer } from '@ionic-native/transfer';
 import { FilePath } from '@ionic-native/file-path';
 import { FormulePage } from '../pages/formule/formule';
 import { FormuleItemPage } from '../pages/formule-item/formule-item';
+import { Insomnia } from "@ionic-native/insomnia";
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { FormuleItemPage } from '../pages/formule-item/formule-item';
     ChezLuiData,
     UserData,
     SettingsData,
+    Insomnia,
 
     File,
     Transfer,

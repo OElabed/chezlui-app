@@ -17,10 +17,10 @@
 
   <ion-card *ngIf="formule">
     <img src="assets/{{ formule.img }}" />
-    <ion-card-content>
+    <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8e98b7d0'">
       <ion-card-title class="card-title">
-        LA FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ formule.price | number }}€</span>
+        FORMULE CHILL
+        <span class="price-right">{{ formule.price - 2 | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -53,6 +53,109 @@
             <ion-col>
               <span class="icon-free"></span>
               <span class="text-information"> UNE SESSION VOUS SERA OFFERTE</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <hr>
+      <ion-card-title class="card-title">
+        FORMULE {{ formule.tilte | uppercase }}
+        <span class="price-right">{{ formule.price | number }}€</span>
+      </ion-card-title>
+      <div class="formule-description">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <span class="icon-chicha"></span>
+              <span>CHICHA AU CHOIX</span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-add"></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-cocktail"></span> COKTAIL AU CHOIX
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-add"></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-free"></span>
+              <span class="text-information"> UNE SESSION VOUS SERA OFFERTE</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card-content>
+
+
+    <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8f98b7d0'">
+      <ion-card-title class="card-title">
+        FORMULE {{ formule.tilte | uppercase }}
+        <span class="price-right">{{ formule.price | number }}€</span>
+      </ion-card-title>
+      <div class="formule-description">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <span class="icon-hot-drink"></span> CAFÉ
+              <br>
+              <span class="text-ou">OU</span>
+              <br>
+              <span class="icon-hot-drink"></span> THÉ
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-add"></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-piece-cake"></span> DESSERT
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </ion-card-content>
+
+    <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8498b7d0'">
+      <ion-card-title class="card-title">
+        FORMULE {{ formule.tilte | uppercase }}
+        <span class="price-right">{{ formule.price | number }}€</span>
+      </ion-card-title>
+      <div class="formule-description">
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <span class="icon-burger"></span> BURGER
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-add"></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-fried"></span> FRITES
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-add"></span>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col>
+              <span class="icon-soft-drink"></span> BOISSON SOFT
             </ion-col>
           </ion-row>
         </ion-grid>

@@ -7,6 +7,7 @@ import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { UserData } from "../providers/user-data";
 import { ChezLuiData } from "../providers/chezlui-data";
+import { Insomnia } from "@ionic-native/insomnia";
 
 @Component({
   templateUrl: "app.html"
@@ -28,7 +29,8 @@ export class ChezLuiApp {
     public splashScreen: SplashScreen,
     public userDataProvider: UserData,
     public dataProvider: ChezLuiData,
-    public screenOrientation: ScreenOrientation
+    public screenOrientation: ScreenOrientation,
+    public insomnia: Insomnia
   ) {
     this.initializeApp();
 
@@ -53,6 +55,13 @@ export class ChezLuiApp {
         this.dataProvider.initAllData().subscribe((data: any) => {
           this.statusBar.styleDefault();
           this.splashScreen.hide();
+
+          this.insomnia
+            .keepAwake()
+            .then(
+              () => console.warn("keepAwake success"),
+              () => console.warn("keepAwake error")
+            );
         });
       } else {
         this.statusBar.styleDefault();

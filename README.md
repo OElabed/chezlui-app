@@ -3,7 +3,7 @@
 sudo docker build -t chez-lui-env .
 
 # Run
-sudo docker run --rm -d -v $(pwd):/ionicapp chez-lui-env
+sudo docker run --rm -d -v $(pwd):/ionicapp chez-lui-env tail -f /dev/null
 
 # attach
 docker exec -e COLUMNS="`tput cols`" -e LINES="`tput lines`" -ti xxxxxxxxx bash
