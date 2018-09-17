@@ -78,32 +78,152 @@
     {
       "uuid": "2f5e029b-5911-43dd-a054-00ffbd2ggbfb",
       "type": "canettes",
-      "title": "canettes",
+      "title": "soft",
       "icon": "can",
       "items": [
         {
           "uuid": "71ddac07-e2d5-49d0-bc0f-6ce380f89fa8",
           "tilte": "COCA COLA",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "description": "",
+          "price": 4.0,
           "active": true,
-          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
+          "img": "data/imgs/drinks/soft/coca.png"
         },
         {
-          "uuid": "98fee3c5-edd2-4172-8e6e-fa6f739f7225",
-          "tilte": "ICE THE",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
-          "active": false,
-          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
+          "uuid": "T1ddac07-e2d5-49d0-bc0f-6ce380f89fa8",
+          "tilte": "COCA COLA CHERRY",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/coca-cherry.png"
         },
         {
-          "uuid": "bfa681ce-a20a-4b7a-9506-cab6ed015b8f",
-          "tilte": "7UP",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "h1ddac07-e2d5-49d0-bc0f-6ce380f89fa8",
+          "tilte": "COCA COLA ZERO",
+          "description": "",
+          "price": 4.0,
           "active": true,
-          "img": "data/imgs/drinks/canettes/coca-cola-zero.png"
+          "img": "data/imgs/drinks/soft/coca-zero.png"
+        },
+        {
+          "uuid": "h1ddac57-e2d5-49d0-bc0f-6ce380f89fa8",
+          "tilte": "FANTA",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/fanta.png"
+        },
+        {
+          "uuid": "h1ddac57-e2d5-49d0-bc0f-6ce380f89fa8",
+          "tilte": "ICE TEA",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/icetea.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-6ce380f89fa8",
+          "tilte": "OASIS FRAISE",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/oasis-fraise.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-4ce380f89fa8",
+          "tilte": "OASIS POMME",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/oasis-pomme.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-7ce380f89fa8",
+          "tilte": "OASIS TROPICAL",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/oasis-tropical.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-1ce380f89fa8",
+          "tilte": "OASIS TROPICAL",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/oasis-tropical.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-5ce380f89fa8",
+          "tilte": "PERRIER",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/perrier.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-9ce380f89fa8",
+          "tilte": "SCHWEPPES",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/schweppes.png"
+        },
+        {
+          "uuid": "h1ddac55-e2d5-49d0-bc0f-9ce380f89fa8",
+          "tilte": "SPRITE",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/soft/sprite.png"
+        }
+      ]
+    },
+    {
+      "uuid": "2f5e029b-5966-43dd-a054-00ffbd2ggbfb",
+      "type": "chaud",
+      "title": "CHAUD",
+      "icon": "coffee-cup",
+      "items": [
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
+          "tilte": "café Espresso",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/hot/cafe.png"
+        },
+        {
+          "uuid": "94bb6cea-9c58-4a41-b744-02c789564088",
+          "tilte": "CAfé long",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/hot/cafe.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
+          "tilte": "café machiatto",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/hot/machiatto.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
+          "tilte": "Thé menthe",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/hot/the-vert.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
+          "tilte": "Thé menthe leger + touche de miel",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/hot/the-vert.png"
         }
       ]
     },
@@ -140,34 +260,34 @@
       ]
     },
     {
-      "uuid": "2f5e029b-5966-43dd-a054-00ffbd2ggbfb",
-      "type": "CAfe",
-      "title": "CAfe",
-      "icon": "coffee-cup",
+      "uuid": "2f5e02fb-5966-43dd-a054-0050bd2ggbfb",
+      "type": "cocktail",
+      "title": "cocktail",
+      "icon": "cocktail-golden",
       "items": [
         {
-          "uuid": "94bb6cea-9c58-4a41-b744-02c789564088",
-          "tilte": "Expresso",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "2e5e029b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "BLUE HAWAI",
+          "description": "",
+          "price": 6.0,
           "active": true,
-          "img": "data/imgs/drinks/cafe/expresso.png"
+          "img": "data/imgs/drinks/cocktail/blue-hawai.png"
         },
         {
-          "uuid": "77b9ed42-6471-4620-bdca-f57d5553dd4b",
-          "tilte": "cappuccino",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
-          "active": false,
-          "img": "data/imgs/drinks/cafe/expresso.png"
+          "uuid": "2f5e429b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "MOJITO",
+          "description": "",
+          "price": 6.0,
+          "active": true,
+          "img": "data/imgs/drinks/cocktail/mojito.png"
         },
         {
-          "uuid": "2f07469d-68dd-406f-8dc9-878c6126f03d",
-          "tilte": "americano",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "2f5e429b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "SUNRISE",
+          "description": "",
+          "price": 6.0,
           "active": true,
-          "img": "data/imgs/drinks/cafe/expresso.png"
+          "img": "data/imgs/drinks/cocktail/sunrise.png"
         }
       ]
     },
@@ -178,28 +298,76 @@
       "icon": "water",
       "items": [
         {
-          "uuid": "2f5e029b-5966-43dd-a054-0050bd2ffbfb",
-          "tilte": "eaux minéral",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "4f5e029b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "BANANE",
+          "description": "",
+          "price": 4.0,
           "active": true,
-          "img": "data/imgs/drinks/water/water.jpg"
+          "img": "data/imgs/drinks/eaux-sirops/banane.png"
         },
         {
-          "uuid": "816a21c7-44bc-4255-9ee2-ee0e061fc4b3",
-          "tilte": "eaux GAZÉIFIÉE",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
-          "active": false,
-          "img": "data/imgs/drinks/water/water.jpg"
+          "uuid": "2f6e029b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "CITRON",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/citron.png"
         },
         {
-          "uuid": "48a78788-8010-4829-bb42-2efe7e8a70c8",
-          "tilte": "eaux minéral & sirops",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "2f5e009b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "FRAISE",
+          "description": "",
+          "price": 4.0,
           "active": true,
-          "img": "data/imgs/drinks/water/water.jpg"
+          "img": "data/imgs/drinks/eaux-sirops/fraise.png"
+        },
+        {
+          "uuid": "2f5e029b-59f6-43dd-a054-0050bd2ffbfb",
+          "tilte": "GRENADINE",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/grenadine.png"
+        },
+        {
+          "uuid": "2f5e029b-5766-43dd-a054-0050bd2ffbfb",
+          "tilte": "KIWI",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/kiwi.png"
+        },
+        {
+          "uuid": "2f5e029b-9966-43dd-a054-0050bd2ffbfb",
+          "tilte": "MELON",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/melon.png"
+        },
+        {
+          "uuid": "2f5e029b-5966-43dd-a054-0059bd2ffbfb",
+          "tilte": "MENTHE",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/menthe.png"
+        },
+        {
+          "uuid": "2f5e029c-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "PASSION",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/passion.png"
+        },
+        {
+          "uuid": "2f5b029b-5966-43dd-a054-0050bd2ffbfb",
+          "tilte": "pêche",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "img": "data/imgs/drinks/eaux-sirops/peche.png"
         }
       ]
     }

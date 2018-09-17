@@ -14,30 +14,29 @@
         <ion-card-content [ngClass]="{'card-disable' : !item.active}">
           <ion-grid>
             <ion-row>
-              <ion-col col-3>
-                <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
+              <ion-col col-3 class="image-container">
+                <img class="chezlui-food-item-image" src="assets/{{ item.img }}" />
               </ion-col>
               <ion-col>
                 <div class="card-details">
-                  <h1>{{ item.tilte | uppercase }}</h1>
-                  <p class="description">{{ item.description }}</p>
-                  <div>
-                    <h2 class="price">{{ item.price | number }} €
-                      <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                        <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, group.uuid)">
-                          <ion-icon name="trash"></ion-icon>
-                        </button>
-                        <button ion-button small icon-only color="dark">
-                          <ion-icon name="create"></ion-icon>
-                        </button>
-                        <button ion-button small icon-only color="primary" (click)="itemActivation(item, group.uuid)">
-                          <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
-                          <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
-                        </button>
-                      </span>
-                    </h2>
-                  </div>
+                  <h1 class="title-item">{{ item.tilte | uppercase }}</h1>
+                  <p class="description" *ngIf="item.description !== ''">{{ item.description }}</p>
+                  <h2 class="price">{{ item.price | number }}€</h2>
                 </div>
+                <div class="tools-container">
+                    <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
+                      <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, group.uuid)">
+                        <ion-icon name="trash"></ion-icon>
+                      </button>
+                      <button ion-button small icon-only color="dark">
+                        <ion-icon name="create"></ion-icon>
+                      </button>
+                      <button ion-button small icon-only color="primary" (click)="itemActivation(item, group.uuid)">
+                        <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+                        <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                      </button>
+                    </span>
+                  </div>
               </ion-col>
             </ion-row>
           </ion-grid>
