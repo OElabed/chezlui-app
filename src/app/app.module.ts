@@ -30,6 +30,7 @@ import { FilePath } from '@ionic-native/file-path';
 import { FormulePage } from '../pages/formule/formule';
 import { FormuleItemPage } from '../pages/formule-item/formule-item';
 import { Insomnia } from "@ionic-native/insomnia";
+import { ScreenSaverPage } from '../pages/screen-saver/screen-saver';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { Insomnia } from "@ionic-native/insomnia";
     SettingsPage,
     ItemPage,
     PhotosPage,
+    ScreenSaverPage,
     RippleEffectDirective
   ],
   imports: [
@@ -68,7 +70,8 @@ import { Insomnia } from "@ionic-native/insomnia";
     LoginPage,
     ItemPage,
     PhotosPage,
-    SettingsPage
+    SettingsPage,
+    ScreenSaverPage
   ],
   providers: [
     StatusBar,
