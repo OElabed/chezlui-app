@@ -25,6 +25,9 @@ export class FoodsPage {
     items: []
   };
 
+  saleeCategories: string[] = [];
+  saleeCategoriesActiveMap: Map<string, number> = new Map<string, number>();
+
   constructor(
     public dataProvider: ChezLuiData,
     public navCtrl: NavController,
@@ -56,6 +59,30 @@ export class FoodsPage {
         img: null,
         items: saleeGroupResult.items
       };
+
+      this.saleeCategoriesActiveMap = new Map<string, number>();
+      this.saleeCategories = [];
+
+      saleeGroupResult.items.map((item: ItemCL) => {
+        const result = this.saleeCategories.filter(
+          category => item.category === category
+        );
+        if (result.length === 0) {
+          this.saleeCategories.push(item.category);
+          if (item.active) {
+            this.saleeCategoriesActiveMap.set(item.category, 1);
+          } else {
+            this.saleeCategoriesActiveMap.set(item.category, 0);
+          }
+        } else {
+          if (item.active) {
+            let count = this.saleeCategoriesActiveMap.get(item.category);
+            count++;
+            this.saleeCategoriesActiveMap.set(item.category, count);
+          }
+        }
+      });
+
       return true;
     });
   }
@@ -88,13 +115,10 @@ export class FoodsPage {
 
   itemActivation(item: ItemCL, type: string) {
     item.active = !item.active;
-    this.dataProvider
-      .updateFood(item, type)
-      .subscribe((result: boolean) => {
-        this.displayFoodsList().subscribe(data => {
-          return data;
-        });
+    this.dataProvider.updateFood(item, type).subscribe((result: boolean) => {
+      this.displayFoodsList().subscribe(data => {
+        return data;
       });
+    });
   }
-
 }

@@ -5,34 +5,48 @@
       "items": [
         {
           "uuid": "779fc449-a319-4522-ad16-9ed89626096e",
-          "tilte": "MARGHERITA",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "tilte": "The trump wall",
+          "description": "4 brique (viande hachée, fromage emmental, poivrons, pomme de terre douce, fine herbes, paprika) servis avec une sauce mexicaine.",
+          "price": 7.0,
           "active": true,
-          "img": "data/imgs/foods/salee/fajitas.png"
+          "category": "petit creux",
+          "img": "data/imgs/foods/salee/brique.png"
         },
         {
-          "tilte": "SANDWICH",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "779fjc49-a319-4522-ad16-9ed89626096e",
+          "tilte": "El chapo",
+          "description": "Steak frais de 120g, dinde fumé barbecue, fromage emmental, poivrons, salade, tomate, sauce Chilli.",
+          "price": 7.0,
           "active": true,
-          "img": "data/imgs/foods/salee/fajitas.png"
+          "category": "burger",
+          "img": "data/imgs/foods/salee/berger.png"
         },
         {
-          "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd55a1c2",
-          "tilte": "PIZZA",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "48e438b1-3bcf-4cef-93b7-001edd55a1c2",
+          "tilte": "El pollo",
+          "description": "Tenders, salade, maïs, fromage emmental, sauce barbecue.",
+          "price": 7.0,
           "active": true,
-          "img": "data/imgs/foods/salee/fajitas.png"
+          "category": "fajitas",
+          "img": "data/imgs/foods/salee/tender.png"
         },
         {
-          "uuid": "48f81546-ed73-4284-a0dd-5edc3de4498e",
-          "tilte": "TEST",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
-          "active": false,
-          "img": "data/imgs/foods/salee/fajitas.png"
+          "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd12a1c2",
+          "tilte": "El bistec",
+          "description": "Steak frais, salade, poivron, sauce mexicaine, oignons rouge, maïs.",
+          "price": 7.0,
+          "active": true,
+          "category": "fajitas",
+          "img": "data/imgs/foods/salee/steak.png"
+        },
+        {
+          "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd5ga1c2",
+          "tilte": "El vegetariano",
+          "description": "Bouché camembert, bouché chèvre, salade, tomate, sauce fine herbes.",
+          "price": 7.0,
+          "active": true,
+          "category": "fajitas",
+          "img": "data/imgs/foods/salee/steak.png"
         }
       ]
     },
@@ -45,6 +59,7 @@
           "description": "Msemmen servis avec du Nutella et miel",
           "price": 5.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/foods/sucree/msemen.png"
         },
         {
@@ -53,6 +68,7 @@
           "description": "Tartelettes aux fraises et crème patissière",
           "price": 5.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/foods/sucree/tartellette.png"
         },
         {
@@ -61,6 +77,7 @@
           "description": " Tiramisu avec kinder bueno Nutella",
           "price": 5.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/foods/sucree/tiramissu.png"
         }
       ]
@@ -79,6 +96,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/coca.png"
         },
         {
@@ -87,6 +105,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/coca-cherry.png"
         },
         {
@@ -95,6 +114,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/coca-zero.png"
         },
         {
@@ -103,6 +123,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/fanta.png"
         },
         {
@@ -111,6 +132,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/icetea.png"
         },
         {
@@ -119,6 +141,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/oasis-fraise.png"
         },
         {
@@ -127,6 +150,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/oasis-pomme.png"
         },
         {
@@ -135,6 +159,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/oasis-tropical.png"
         },
         {
@@ -143,6 +168,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/perrier.png"
         },
         {
@@ -151,6 +177,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/schweppes.png"
         },
         {
@@ -159,6 +186,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/soft/sprite.png"
         }
       ]
@@ -175,6 +203,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/hot/cafe.png"
         },
         {
@@ -183,6 +212,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/hot/cafe.png"
         },
         {
@@ -191,6 +221,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/hot/machiatto.png"
         },
         {
@@ -199,6 +230,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/hot/the-vert.png"
         },
         {
@@ -207,6 +239,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/hot/the-vert.png"
         }
       ]
@@ -223,6 +256,7 @@
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/juice/orange-juice.jpg"
         },
         {
@@ -231,6 +265,7 @@
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.0,
           "active": false,
+          "category": "",
           "img": "data/imgs/drinks/juice/orange-juice.jpg"
         },
         {
@@ -239,6 +274,7 @@
           "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
           "price": 10.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/juice/orange-juice.jpg"
         }
       ]
@@ -255,6 +291,7 @@
           "description": "",
           "price": 6.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/cocktail/blue-hawai.png"
         },
         {
@@ -263,6 +300,7 @@
           "description": "",
           "price": 6.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/cocktail/mojito.png"
         },
         {
@@ -271,6 +309,7 @@
           "description": "",
           "price": 6.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/cocktail/sunrise.png"
         }
       ]
@@ -287,6 +326,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/banane.png"
         },
         {
@@ -295,6 +335,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/citron.png"
         },
         {
@@ -303,6 +344,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/fraise.png"
         },
         {
@@ -311,6 +353,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/grenadine.png"
         },
         {
@@ -319,6 +362,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/kiwi.png"
         },
         {
@@ -327,6 +371,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/melon.png"
         },
         {
@@ -335,6 +380,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/menthe.png"
         },
         {
@@ -343,6 +389,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/passion.png"
         },
         {
@@ -351,6 +398,7 @@
           "description": "",
           "price": 4.0,
           "active": true,
+          "category": "",
           "img": "data/imgs/drinks/eaux-sirops/peche.png"
         }
       ]
@@ -363,6 +411,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/menthe.png"
     },
     {
@@ -371,6 +420,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/menthe.png"
     },
     {
@@ -379,6 +429,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/menthe.png"
     },
     {
@@ -387,6 +438,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/menthe.png"
     },
     {
@@ -395,6 +447,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/pistache.png"
     },
     {
@@ -403,6 +456,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/poire-sucre.png"
     },
     {
@@ -411,6 +465,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/doublePomme.png"
     },
     {
@@ -419,6 +474,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/myrtille.png"
     },
     {
@@ -427,6 +483,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/pasteque.png"
     },
     {
@@ -435,6 +492,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/pasteque.png"
     },
     {
@@ -443,6 +501,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/icetea.png"
     },
     {
@@ -451,6 +510,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/fruitDragon.png"
     },
     {
@@ -459,6 +519,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/framboise.png"
     },
     {
@@ -467,6 +528,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/fruitBois.png"
     },
     {
@@ -475,6 +537,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/pasteque.png"
     },
     {
@@ -483,6 +546,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/bananeHaribo.png"
     },
     {
@@ -491,7 +555,8 @@
       "description": "",
       "price": 15.0,
       "active": true,
-      "img": "data/imgs/hookah/menthe.png"
+      "category": "",
+      "img": "data/imgs/hookah/gum.png"
     },
     {
       "uuid": "745957c8-e229-4958-9hjd-980e8a98b7d0",
@@ -499,6 +564,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/pamplemousseOrange.png"
     },
     {
@@ -507,7 +573,8 @@
       "description": "",
       "price": 15.0,
       "active": true,
-      "img": "data/imgs/hookah/menthe.png"
+      "category": "",
+      "img": "data/imgs/hookah/kiwi.png"
     },
     {
       "uuid": "745957c8-e229-4958-9oi9d-980e8a98b7d0",
@@ -515,7 +582,8 @@
       "description": "",
       "price": 15.0,
       "active": true,
-      "img": "data/imgs/hookah/menthe.png"
+      "category": "",
+      "img": "data/imgs/hookah/marij.png"
     },
     {
       "uuid": "745957c8-e229-4958-9sjd-980e8a98b7d0",
@@ -523,6 +591,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/popcorn.png"
     },
     {
@@ -531,6 +600,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/rafaello.png"
     },
     {
@@ -539,6 +609,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/goyave.png"
     },
     {
@@ -547,7 +618,8 @@
       "description": "",
       "price": 15.0,
       "active": true,
-      "img": "data/imgs/hookah/menthe.png"
+      "category": "",
+      "img": "data/imgs/hookah/love.png"
     },
     {
       "uuid": "745957c8-e229-HJKL-979d-980e8a98b7d0",
@@ -555,6 +627,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/menthe.png"
     },
     {
@@ -563,6 +636,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/concombre.png"
     },
     {
@@ -571,6 +645,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/oasis-tropical.png"
     },
     {
@@ -579,6 +654,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/hookah/citronMeringue.png"
     }
   ],
@@ -589,6 +665,7 @@
       "description": "",
       "price": 15.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/formules/chicha-formule.png"
     },
     {
@@ -597,6 +674,7 @@
       "description": "",
       "price": 7.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/formules/gourmande-formule.png"
     },
     {
@@ -605,6 +683,7 @@
       "description": "",
       "price": 10.0,
       "active": true,
+      "category": "",
       "img": "data/imgs/formules/restauration-formule.png"
     }
   ],

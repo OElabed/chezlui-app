@@ -33,7 +33,8 @@ export class HookahPage {
           description: item.description,
           price: item.price,
           active: item.active,
-          img: item.img
+          img: item.img,
+          category: item.category
         });
       });
       return true;

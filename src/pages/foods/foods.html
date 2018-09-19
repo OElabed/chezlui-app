@@ -20,42 +20,56 @@
 
   <div [ngSwitch]="foodType">
     <div *ngSwitchCase="'salee'">
-      <ng-container *ngFor="let item of saleeGroup.items">
-        <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
-          <ion-card-content [ngClass]="{'card-disable' : !item.active}">
-            <ion-grid>
-              <ion-row>
-                <ion-col col-3>
-                  <img class="chezlui-food-item-image" src="assets/{{ item.img }}" />
-                </ion-col>
-                <ion-col>
-                  <div class="card-details">
-                    <h1>{{ item.tilte | uppercase }}</h1>
-                    <p class="description">{{ item.description }}</p>
-                    <div>
-                      <h2 class="price">{{ item.price | number}} €
-                        <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'salee')">
-                            <ion-icon name="trash"></ion-icon>
-                          </button>
-                          <button ion-button small icon-only color="dark">
-                            <ion-icon name="create"></ion-icon>
-                          </button>
-                          <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'salee')">
-                            <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
-                            <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
-                          </button>
-                        </span>
-                      </h2>
-                    </div>
-                  </div>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-card-content>
-        </ion-card>
-      </ng-container>
 
+
+
+
+
+      <ng-container *ngFor="let category of saleeCategories">
+        <ng-container *ngIf="!(!userDataProvider.hasLoggedIn() && saleeCategoriesActiveMap.get(category) === 0)">
+          <h3 class="sub-categories">{{ category | uppercase }}</h3>
+          <hr class="separator" />
+          <ng-container *ngFor="let item of saleeGroup.items">
+
+            <ng-container *ngIf="item.category === category">
+              <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
+                <ion-card-content [ngClass]="{'card-disable' : !item.active}">
+                  <ion-grid>
+                    <ion-row>
+                      <ion-col col-3>
+                        <img class="chezlui-food-item-image" src="assets/{{ item.img }}" />
+                      </ion-col>
+                      <ion-col>
+                        <div class="card-details">
+                          <h1>{{ item.tilte | uppercase }}</h1>
+                          <p class="description">{{ item.description }}</p>
+                          <div>
+                            <h2 class="price">{{ item.price | number}} €
+                              <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
+                                <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'salee')">
+                                  <ion-icon name="trash"></ion-icon>
+                                </button>
+                                <button ion-button small icon-only color="dark">
+                                  <ion-icon name="create"></ion-icon>
+                                </button>
+                                <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'salee')">
+                                  <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
+                                  <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                                </button>
+                              </span>
+                            </h2>
+                          </div>
+                        </div>
+                      </ion-col>
+                    </ion-row>
+                  </ion-grid>
+                </ion-card-content>
+              </ion-card>
+            </ng-container>
+          </ng-container>
+
+        </ng-container>
+      </ng-container>
 
     </div>
 

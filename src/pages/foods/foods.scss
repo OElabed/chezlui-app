@@ -54,5 +54,15 @@ page-foods {
     .card-disable {
       background: color($colors, gris);
     }
+
+    .sub-categories {
+      color: color($colors, golden);
+      font-size: 17px;
+      text-align: center;
+    }
+
+    .separator {
+      background-color: rgba(178, 145, 68, 0.08);
+    }
   }
 }

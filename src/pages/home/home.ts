@@ -40,7 +40,6 @@ export class HomePage {
   }
 
   timerScreenSaver() {
-    console.log(this.screenSaverCounter);
     if (this.isPageActive) {
       if (this.screenSaverCounter > 0) {
         setTimeout(() => {

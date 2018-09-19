@@ -26,7 +26,8 @@ export class ItemPage {
       description: "",
       price: 0,
       active: true,
-      img:""
+      img: "",
+      category: ""
     }
   };
 
