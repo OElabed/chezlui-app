@@ -1,6 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>MENU</ion-title>
+    <ion-title>RESTAURANT</ion-title>
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="foodType" color="golden">
@@ -26,7 +26,7 @@
             <ion-grid>
               <ion-row>
                 <ion-col col-3>
-                  <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
+                  <img class="chezlui-food-item-image" src="assets/{{ item.img }}" />
                 </ion-col>
                 <ion-col>
                   <div class="card-details">
@@ -66,7 +66,7 @@
             <ion-grid>
               <ion-row>
                 <ion-col col-3>
-                  <img class="chezlui-food-item-image" src="https://via.placeholder.com/110x110" />
+                  <img class="chezlui-food-item-image" src="assets/{{ item.img }}" />
                 </ion-col>
                 <ion-col>
                   <div class="card-details">

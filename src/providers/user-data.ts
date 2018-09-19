@@ -8,9 +8,9 @@ import { UserOptions } from "../interfaces/user-options";
 @Injectable()
 export class UserData {
   data: any;
-  currentUser: UserOptions;
+  // currentUser: UserOptions;
   // TODO delete this line
-  // currentUser: UserOptions = { username: "admin", password: "12345" };
+  currentUser: UserOptions = { username: "admin", password: "12345" };
 
 
   users_data: any;
