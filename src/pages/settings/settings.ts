@@ -4,6 +4,7 @@ import { NgForm } from "@angular/forms";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { SettingsData } from "../../providers/settings-data";
 import { SettingsCL } from "../../domain/chez-lui.model";
+import { AbstractPage } from "../common/AbstractPage";
 
 /**
  * Generated class for the SettingsPage page.
@@ -16,7 +17,7 @@ import { SettingsCL } from "../../domain/chez-lui.model";
   selector: "page-settings",
   templateUrl: "settings.html"
 })
-export class SettingsPage {
+export class SettingsPage extends AbstractPage {
   submitted = false;
   settings: SettingsCL = { delta: 4, active: false };
 
@@ -30,6 +31,7 @@ export class SettingsPage {
     public settingsData: SettingsData,
     public toastCtrl: ToastController
   ) {
+    super(navCtrl);
     this.settingsData.getVIPSettings().subscribe((vip: SettingsCL) => {
       this.settings = vip;
 

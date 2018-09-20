@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header (click)="globalInteraction()">
   <ion-navbar>
     <ion-title>INFOS</ion-title>
   </ion-navbar>
@@ -6,7 +6,7 @@
 
 
 
-<ion-content class="card-background-page" padding>
+<ion-content class="card-background-page" padding (click)="globalInteraction()">
 
   <ion-card>
     <ion-card-content>
@@ -85,7 +85,7 @@
           </ion-col>
           <ion-col>
             <div class="card-details">
-              <p class="description">Veuillez respecter l'heure de la fermeture  de notre établissement qu'est au plus tard 3h00 du matin.</p>
+              <p class="description">Veuillez respecter l'heure de la fermeture de notre établissement qu'est au plus tard 3h00 du matin.</p>
             </div>
           </ion-col>
         </ion-row>

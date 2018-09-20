@@ -4,6 +4,7 @@ import { ChezLuiData } from "../../providers/chezlui-data";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { FormuleItemPage } from "../formule-item/formule-item";
 import { UserData } from "../../providers/user-data";
+import { AbstractPage } from "../common/AbstractPage";
 
 /**
  * Generated class for the FormulePage page.
@@ -16,7 +17,7 @@ import { UserData } from "../../providers/user-data";
   selector: "page-formule",
   templateUrl: "formule.html"
 })
-export class FormulePage {
+export class FormulePage extends AbstractPage {
   formulesList: Array<ItemCL> = [];
   constructor(
     public navCtrl: NavController,
@@ -25,7 +26,9 @@ export class FormulePage {
     public userDataProvider: UserData,
     public alertCtrl: AlertController,
     public events: Events
-  ) {}
+  ) {
+    super(navCtrl);
+  }
 
   ionViewDidLoad() {
     this.displayFormuleList().subscribe(data => {

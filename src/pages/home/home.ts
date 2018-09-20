@@ -7,49 +7,18 @@ import { InfosPage } from "../infos/infos";
 import { UserData } from "../../providers/user-data";
 import { SettingsPage } from "../settings/settings";
 import { FormulePage } from "../formule/formule";
-import { ScreenSaverPage } from "../screen-saver/screen-saver";
-
-const SCREEN_SAVER_RESET = 40;
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-home",
   templateUrl: "home.html"
 })
-export class HomePage {
-  screenSaverCounter: number;
-  isPageActive: boolean = false;
-
+export class HomePage extends AbstractPage {
   constructor(
-    public navCtrl: NavController,
-    public userDataProvider: UserData
-  ) {}
-
-  ionViewDidEnter() {
-    this.screenSaverCounter = SCREEN_SAVER_RESET;
-    this.isPageActive = true;
-    this.timerScreenSaver();
-  }
-
-  ionViewDidLeave() {
-    this.screenSaverCounter = 1;
-    this.isPageActive = false;
-  }
-
-  globalInteraction() {
-    this.screenSaverCounter = SCREEN_SAVER_RESET;
-  }
-
-  timerScreenSaver() {
-    if (this.isPageActive) {
-      if (this.screenSaverCounter > 0) {
-        setTimeout(() => {
-          this.screenSaverCounter--;
-          this.timerScreenSaver();
-        }, 1000);
-      } else {
-        this.navCtrl.push(ScreenSaverPage);
-      }
-    }
+    public userDataProvider: UserData,
+    public navCtrl: NavController
+  ) {
+    super(navCtrl);
   }
 
   goToFoods() {

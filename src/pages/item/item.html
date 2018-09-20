@@ -4,14 +4,14 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header>
+<ion-header (click)="globalInteraction()">
   <ion-navbar>
     <ion-title>{{ title }}</ion-title>
   </ion-navbar>
 </ion-header>
 
 
-<ion-content class="card-background-page" padding>
+<ion-content class="card-background-page" padding (click)="globalInteraction()">
   <div *ngIf="pageData">
     <form #itemForm="ngForm" novalidate>
       <ion-grid>

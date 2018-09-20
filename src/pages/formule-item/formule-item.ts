@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { ItemCL } from "../../domain/chez-lui.model";
+import { AbstractPage } from "../common/AbstractPage";
 
 /**
  * Generated class for the FormuleItemPage page.
@@ -13,10 +14,12 @@ import { ItemCL } from "../../domain/chez-lui.model";
   selector: "page-formule-item",
   templateUrl: "formule-item.html"
 })
-export class FormuleItemPage {
+export class FormuleItemPage extends AbstractPage {
   formule: ItemCL;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
+    super(navCtrl);
+  }
 
   ionViewWillEnter() {
     this.formule = this.navParams.data.formule;

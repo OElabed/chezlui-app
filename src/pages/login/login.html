@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header (click)="globalInteraction()">
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
@@ -9,7 +9,7 @@
 
 
 
-<ion-content class="card-background-page" padding>
+<ion-content class="card-background-page" padding (click)="globalInteraction()">
   <form #loginForm="ngForm" novalidate>
     <ion-grid>
 

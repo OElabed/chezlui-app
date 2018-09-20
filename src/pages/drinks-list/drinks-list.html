@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header (click)="globalInteraction()">
   <ion-navbar>
     <ion-title *ngIf="group">{{ group.title | uppercase }}</ion-title>
   </ion-navbar>
@@ -6,7 +6,7 @@
 
 
 
-<ion-content class="card-background-page" padding>
+<ion-content class="card-background-page" padding (click)="globalInteraction()">
 
   <div *ngIf="group">
     <ng-container *ngFor="let item of group.items">

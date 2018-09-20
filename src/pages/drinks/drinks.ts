@@ -3,18 +3,18 @@ import { NavController } from "ionic-angular";
 import { DrinksListPage } from "../drinks-list/drinks-list";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { GroupCL } from "../../domain/chez-lui.model";
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-drinks",
   templateUrl: "drinks.html"
 })
-export class DrinksPage {
+export class DrinksPage extends AbstractPage {
   drinksGroup: Array<GroupCL> = [];
 
-  constructor(
-    public dataProvider: ChezLuiData,
-    public navCtrl: NavController
-  ) {}
+  constructor(public dataProvider: ChezLuiData, public navCtrl: NavController) {
+    super(navCtrl);
+  }
 
   ionViewWillEnter() {
     this.dataProvider.getDrinksList().subscribe((list: any[]) => {

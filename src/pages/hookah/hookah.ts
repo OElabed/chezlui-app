@@ -4,12 +4,13 @@ import { ItemCL } from "../../domain/chez-lui.model";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { UserData } from "../../providers/user-data";
 import { ItemPage } from "../item/item";
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-hookah",
   templateUrl: "hookah.html"
 })
-export class HookahPage {
+export class HookahPage extends AbstractPage {
   hookahList: Array<ItemCL> = [];
 
   constructor(
@@ -18,6 +19,7 @@ export class HookahPage {
     public userDataProvider: UserData,
     public alertCtrl: AlertController
   ) {
+    super(navCtrl);
     this.displayHookahList().subscribe(data => {
       return data;
     });

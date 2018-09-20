@@ -4,17 +4,20 @@ import { NgForm } from "@angular/forms";
 import { UserOptions } from "../../interfaces/user-options";
 import { UserData } from "../../providers/user-data";
 import { ChezLuiApp } from "../../app/app.component";
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-login",
   templateUrl: "login.html"
 })
-export class LoginPage {
+export class LoginPage extends AbstractPage {
   login: UserOptions = { username: "", password: "" };
   submitted = false;
   errorLogin = false;
 
-  constructor(public dataProvider: UserData, public navCtrl: NavController) {}
+  constructor(public dataProvider: UserData, public navCtrl: NavController) {
+    super(navCtrl);
+  }
 
   onLogin(form: NgForm) {
     this.submitted = true;

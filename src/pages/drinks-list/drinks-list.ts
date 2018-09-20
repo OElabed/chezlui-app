@@ -3,12 +3,13 @@ import { NavController, NavParams, AlertController } from "ionic-angular";
 import { GroupCL, ItemCL } from "../../domain/chez-lui.model";
 import { UserData } from "../../providers/user-data";
 import { ChezLuiData } from "../../providers/chezlui-data";
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-drinks-list",
   templateUrl: "drinks-list.html"
 })
-export class DrinksListPage {
+export class DrinksListPage extends AbstractPage {
   group: GroupCL;
 
   constructor(
@@ -17,7 +18,9 @@ export class DrinksListPage {
     public userDataProvider: UserData,
     public alertCtrl: AlertController,
     public dataProvider: ChezLuiData
-  ) {}
+  ) {
+    super(navCtrl);
+  }
 
   ionViewWillEnter() {
     this.group = this.navParams.data.group;

@@ -3,12 +3,13 @@ import { NavController, AlertController } from "ionic-angular";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { GroupCL, ItemCL } from "../../domain/chez-lui.model";
 import { UserData } from "../../providers/user-data";
+import { AbstractPage } from "../common/AbstractPage";
 
 @Component({
   selector: "page-foods",
   templateUrl: "foods.html"
 })
-export class FoodsPage {
+export class FoodsPage extends AbstractPage {
   foodType: string = "salee";
   sucreeGroup: GroupCL = {
     uuid: null,
@@ -34,6 +35,7 @@ export class FoodsPage {
     public alertCtrl: AlertController,
     public userDataProvider: UserData
   ) {
+    super(navCtrl);
     this.displayFoodsList().subscribe((data: boolean) => {
       return data;
     });
