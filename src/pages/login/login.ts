@@ -10,29 +10,33 @@ import { ChezLuiApp } from "../../app/app.component";
   templateUrl: "login.html"
 })
 export class LoginPage {
-  login: UserOptions = { username: '', password: '' };
+  login: UserOptions = { username: "", password: "" };
   submitted = false;
+  errorLogin = false;
 
-  constructor(
-    public dataProvider: UserData,
-    public navCtrl: NavController
-  ) {}
+  constructor(public dataProvider: UserData, public navCtrl: NavController) {}
 
   onLogin(form: NgForm) {
     this.submitted = true;
 
     if (form.valid) {
-
       this.dataProvider.getUsers().subscribe((list: any[]) => {
-
-        const userResult = list.filter(user => user.username === this.login.username && user.password === this.login.password)[0];
-        if(userResult) {
+        const userResult = list.filter(
+          user =>
+            user.username === this.login.username &&
+            user.password === this.login.password
+        )[0];
+        if (userResult) {
           this.dataProvider.login(userResult);
           this.navCtrl.push(ChezLuiApp);
+        } else {
+          this.errorLogin = true;
         }
       });
-
     }
   }
 
+  ionViewWillEnter() {
+    this.errorLogin = false;
+  }
 }

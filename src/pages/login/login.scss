@@ -63,4 +63,11 @@ page-login {
     margin-top: 25px;
   }
 
+  .error-login {
+    color: color($colors, danger);
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 0px;
+    margin-top: 15px;
+  }
 }

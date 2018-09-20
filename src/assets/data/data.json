@@ -192,90 +192,72 @@
       ]
     },
     {
-      "uuid": "2f5e029b-5966-43dd-a054-00ffbd2ggbfb",
-      "type": "chaud",
-      "title": "CHAUD",
-      "icon": "coffee-cup",
+      "uuid": "2f5e029b-5966-43dd-a054-11ffbd2ggbfb",
+      "type": "milkshake",
+      "title": "Milk-shake",
+      "icon": "milkshake",
       "items": [
         {
-          "uuid": "77b9ed42-6471-4620-bdca-f57sdf3dd4b",
-          "tilte": "café Espresso",
+          "uuid": "abd13a8f-b962-4730-96e8-312aeaecaef1",
+          "tilte": "Milk-shake OREO",
           "description": "",
-          "price": 4.0,
+          "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/cafe.png"
+          "img": "data/imgs/drinks/milkshake/OREO.png"
         },
         {
-          "uuid": "94bb6cea-9c58-4a41-b744-02c789564088",
-          "tilte": "CAfé long",
+          "uuid": "abd13a8f-b962-4730-96e8-3k2aeaecaef1",
+          "tilte": "Milk-shake BUENO",
           "description": "",
-          "price": 4.0,
+          "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/cafe.png"
+          "img": "data/imgs/drinks/milkshake/BUENO.png"
         },
         {
-          "uuid": "77b9ed42-6471-4620-bdca-f5ko5553dd4b",
-          "tilte": "café machiatto",
+          "uuid": "abd13a8f-b962-4730-96e8-312alzecaef1",
+          "tilte": "Milk-shake KIT KAT",
           "description": "",
-          "price": 4.0,
+          "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/machiatto.png"
-        },
-        {
-          "uuid": "77b9ed42-6471-4620-bdca-f57d55ozdd4b",
-          "tilte": "Thé menthe",
-          "description": "",
-          "price": 4.0,
-          "active": true,
-          "category": "",
-          "img": "data/imgs/drinks/hot/the-vert.png"
-        },
-        {
-          "uuid": "77b9ed42-6471-4620-bdca-f57dpa53dd4b",
-          "tilte": "Thé menthe leger + touche de miel",
-          "description": "",
-          "price": 4.0,
-          "active": true,
-          "category": "",
-          "img": "data/imgs/drinks/hot/the-vert.png"
+          "img": "data/imgs/drinks/milkshake/KITKAT.png"
         }
       ]
     },
     {
       "uuid": "2f5e029b-5966-43dd-a054-11ffbd2ggbfb",
-      "type": "JUS",
-      "title": "JUS",
-      "icon": "orange-juice",
+      "type": "smothies",
+      "title": "smothies",
+      "icon": "smoothie",
       "items": [
         {
-          "uuid": "abd13a8f-b962-4730-96e8-312aeaecaef1",
-          "tilte": "Orange",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "abd1jx8f-b962-4730-96e8-312aeaecaef1",
+          "tilte": "smoothie Pomme Poire",
+          "description": "",
+          "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/juice/orange-juice.jpg"
+          "img": "data/imgs/drinks/smothies/pomme-poire.png"
         },
         {
-          "uuid": "26deedb3-7243-42b0-8e30-1b8bf39cd266",
-          "tilte": "BAnaNE",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
-          "active": false,
-          "category": "",
-          "img": "data/imgs/drinks/juice/orange-juice.jpg"
-        },
-        {
-          "uuid": "e7aaa7f6-fdfa-4b8b-88ae-4736cb8b5664",
-          "tilte": "Fraise",
-          "description": "Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,Ergo ego senator inimicus, si ita vultis,",
-          "price": 10.0,
+          "uuid": "abd13a8f-b962-4920-96e8-3k2aeaecaef1",
+          "tilte": "smoothie Fraise/Yuzu (agrumes japonais)",
+          "description": "",
+          "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/juice/orange-juice.jpg"
+          "img": "data/imgs/drinks/smothies/fraise.png"
+        },
+        {
+          "uuid": "abd13a8f-b962-ions-96e8-312alzecaef1",
+          "tilte": "smoothie Ananas Coco",
+          "description": "",
+          "price": 6.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/smothies/coco-ananas.png"
         }
       ]
     },
@@ -400,6 +382,59 @@
           "active": true,
           "category": "",
           "img": "data/imgs/drinks/eaux-sirops/peche.png"
+        }
+      ]
+    },
+    {
+      "uuid": "2f5e029b-5966-43dd-a054-00ffbd2ggbfb",
+      "type": "chaud",
+      "title": "CHAUD",
+      "icon": "coffee-cup",
+      "items": [
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57sdf3dd4b",
+          "tilte": "café Espresso",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/hot/cafe.png"
+        },
+        {
+          "uuid": "94bb6cea-9c58-4a41-b744-02c789564088",
+          "tilte": "CAfé long",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/hot/cafe.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f5ko5553dd4b",
+          "tilte": "café machiatto",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/hot/machiatto.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57d55ozdd4b",
+          "tilte": "Thé menthe",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/hot/the-vert.png"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57dpa53dd4b",
+          "tilte": "Thé menthe leger + touche de miel",
+          "description": "",
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "data/imgs/drinks/hot/the-vert.png"
         }
       ]
     }
@@ -628,7 +663,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/menthe.png"
+      "img": "data/imgs/hookah/hawaii.png"
     },
     {
       "uuid": "745957c8-e229-4v58-979d-980e8a98b7d0",

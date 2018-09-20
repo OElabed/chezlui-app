@@ -37,6 +37,11 @@
           </ion-list>
         </ion-col>
       </ion-row>
+      <ion-row>
+        <ion-col>
+          <h1 *ngIf="errorLogin" class="error-login">Nom d'utilisateur ou mot de passe invalide</h1>
+        </ion-col>
+      </ion-row>
 
       <ion-row responsive-sm class="login-button">
         <ion-col offset-4 col-4>
