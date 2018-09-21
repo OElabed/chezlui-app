@@ -47,6 +47,15 @@
           "active": true,
           "category": "fajitas",
           "img": "data/imgs/foods/salee/steak.png"
+        },
+        {
+          "uuid": "48e438b1-3bcf-4cef-93b7-0ffeddhxa1c2",
+          "tilte": "Frites maison",
+          "description": "Frites maison avec des patates douces.",
+          "price": 4.0,
+          "active": true,
+          "category": "frites",
+          "img": "data/imgs/foods/salee/frite.png"
         }
       ]
     },
