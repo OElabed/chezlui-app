@@ -5,6 +5,7 @@ import { ChezLuiData } from "../../providers/chezlui-data";
 import { UserData } from "../../providers/user-data";
 import { ItemPage } from "../item/item";
 import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 @Component({
   selector: "page-hookah",
@@ -17,9 +18,14 @@ export class HookahPage extends AbstractPage {
     public dataProvider: ChezLuiData,
     public navCtrl: NavController,
     public userDataProvider: UserData,
-    public alertCtrl: AlertController
+    public alertCtrl: AlertController,
+    public settingsData: SettingsData
   ) {
-    super(navCtrl);
+    super(navCtrl, settingsData);
+  }
+
+  ionViewWillEnter() {
+    super.ionViewDidEnter();
     this.displayHookahList().subscribe(data => {
       return data;
     });
@@ -50,17 +56,18 @@ export class HookahPage extends AbstractPage {
       buttons: [
         {
           text: "Annuler",
-          handler: () => {
-          }
+          handler: () => {}
         },
         {
           text: "Oui",
           handler: () => {
-            this.dataProvider.deleteHookah(item).subscribe((result: boolean) => {
-              this.displayHookahList().subscribe(data => {
-                return data;
+            this.dataProvider
+              .deleteHookah(item)
+              .subscribe((result: boolean) => {
+                this.displayHookahList().subscribe(data => {
+                  return data;
+                });
               });
-            });
           }
         }
       ]
@@ -70,13 +77,12 @@ export class HookahPage extends AbstractPage {
 
   itemActivation(item: ItemCL) {
     item.active = !item.active;
-    this.dataProvider.updateHookah(item).subscribe((result:boolean) => {
+    this.dataProvider.updateHookah(item).subscribe((result: boolean) => {
       this.displayHookahList().subscribe(data => {
         return data;
       });
     });
   }
-
 
   goToAddItem() {
     this.navCtrl.push(ItemPage, { modification: false, item: null });

@@ -20,7 +20,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8e98b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ formule.price | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -99,7 +99,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8f98b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ formule.price | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -129,7 +129,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8498b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ formule.price | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>

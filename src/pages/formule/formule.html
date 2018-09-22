@@ -30,7 +30,7 @@
       </div>
       <ion-fab top right>
         <button ion-fab mini color="golden">
-          <span class="price-formule">{{ item.price | number }}€</span>
+          <span class="price-formule">{{ getFinalPrice(item.price) | number }}€</span>
         </button>
       </ion-fab>
       <img src="assets/{{ item.img }}" />

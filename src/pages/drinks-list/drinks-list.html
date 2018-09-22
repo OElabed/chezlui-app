@@ -21,7 +21,7 @@
                 <div class="card-details">
                   <h1 class="title-item">{{ item.tilte | uppercase }}</h1>
                   <p class="description" *ngIf="item.description !== ''">{{ item.description }}</p>
-                  <h2 class="price">{{ item.price | number }}€</h2>
+                  <h2 class="price">{{ getFinalPrice(item.price) | number }}€</h2>
                 </div>
                 <div class="tools-container">
                     <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">

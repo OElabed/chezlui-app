@@ -3,7 +3,7 @@ import { NavController, NavParams, ToastController } from "ionic-angular";
 import { NgForm } from "@angular/forms";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { SettingsData } from "../../providers/settings-data";
-import { SettingsCL } from "../../domain/chez-lui.model";
+import { VipSettingsCL } from "../../domain/chez-lui.model";
 import { AbstractPage } from "../common/AbstractPage";
 
 /**
@@ -19,7 +19,9 @@ import { AbstractPage } from "../common/AbstractPage";
 })
 export class SettingsPage extends AbstractPage {
   submitted = false;
-  settings: SettingsCL = { delta: 4, active: false };
+  settings: VipSettingsCL = { delta: 0, active: false };
+
+  original: VipSettingsCL = { delta: 0, active: false };
 
   espaceNormal: boolean = true;
   espaceVip: boolean = false;
@@ -31,8 +33,16 @@ export class SettingsPage extends AbstractPage {
     public settingsData: SettingsData,
     public toastCtrl: ToastController
   ) {
-    super(navCtrl);
-    this.settingsData.getVIPSettings().subscribe((vip: SettingsCL) => {
+    super(navCtrl, settingsData);
+  }
+
+  ionViewDidEnter() {
+    super.ionViewDidEnter();
+    this.settingsData.getVIPSettings().subscribe((vip: VipSettingsCL) => {
+      this.original = {
+        delta: Number(vip.delta),
+        active: Boolean(vip.active)
+      };
       this.settings = vip;
 
       this.espaceVip = this.settings.active;
@@ -51,27 +61,47 @@ export class SettingsPage extends AbstractPage {
   }
 
   maximumValue(item): boolean {
-    if(!isNaN(item) && item <= 100) {
-     return true;
+    if (!isNaN(item) && item <= 100) {
+      return true;
     }
     return false;
   }
 
   presentToast() {
     const toast = this.toastCtrl.create({
-      message: 'Mise à jour avec succès',
+      message: "Mise à jour avec succès",
       duration: 1500
     });
     toast.present();
+  }
+
+  canUpdate() {
+    if (
+      Number(this.original.delta) === Number(this.settings.delta) &&
+      Boolean(this.original.active) === Boolean(this.settings.active)
+    ) {
+      return false;
+    }
+    return true;
   }
 
   onUpdate(form: NgForm) {
     this.submitted = true;
 
     if (form.valid && this.maximumValue(this.settings.delta)) {
-      this.settingsData.saveVIPSettings(this.settings).subscribe((data: boolean) => {
-        this.presentToast();
-      })
+      const settingToSave = {
+        delta: Number(this.settings.delta),
+        active: Boolean(this.settings.active)
+      };
+      this.settingsData
+        .saveVIPSettings(settingToSave)
+        .subscribe((data: boolean) => {
+          this.presentToast();
+          this.original = {
+            delta: Number(this.settings.delta),
+            active: Boolean(this.settings.active)
+          };
+        });
     }
   }
 }

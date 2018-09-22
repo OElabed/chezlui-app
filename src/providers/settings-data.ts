@@ -3,6 +3,7 @@ import { Events } from "ionic-angular";
 import { Http } from "@angular/http";
 import { Storage } from "@ionic/storage";
 import { Observable } from "rxjs/Observable";
+import { VipSettingsCL } from "../domain/chez-lui.model";
 
 @Injectable()
 export class SettingsData {
@@ -37,7 +38,11 @@ export class SettingsData {
 
   getVIPSettings() {
     return this.getSettings().map((data: any) => {
-      return data.vip;
+      const vip: VipSettingsCL = {
+        delta: data.vip.delta,
+        active: data.vip.active
+      };
+      return vip;
     });
   }
 

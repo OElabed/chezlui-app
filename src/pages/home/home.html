@@ -73,5 +73,18 @@
       <ion-icon name="settings" class="settings-icon"></ion-icon>
     </button>
   </ion-fab>
-
+  <div class="vip-display" *ngIf="vipActive">
+    <span class="icon-vip"></span>
+  </div>
 </ion-content>
+
+<ion-footer>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="copyright">
+        © Copyright 2018 by
+        <a href="mailto:ouelabed@gmail.com">oelabed</a>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-footer>

@@ -5,6 +5,7 @@ import { ItemCL } from "../../domain/chez-lui.model";
 import { FormuleItemPage } from "../formule-item/formule-item";
 import { UserData } from "../../providers/user-data";
 import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 /**
  * Generated class for the FormulePage page.
@@ -25,12 +26,14 @@ export class FormulePage extends AbstractPage {
     public dataProvider: ChezLuiData,
     public userDataProvider: UserData,
     public alertCtrl: AlertController,
-    public events: Events
+    public events: Events,
+    public settingsData: SettingsData
   ) {
-    super(navCtrl);
+    super(navCtrl, settingsData);
   }
 
-  ionViewDidLoad() {
+  ionViewWillEnter() {
+    super.ionViewDidEnter();
     this.displayFormuleList().subscribe(data => {
       return data;
     });

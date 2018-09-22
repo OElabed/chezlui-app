@@ -4,6 +4,7 @@ import { ItemPageData } from "../../domain/chez-lui.model";
 import { NgForm } from "@angular/forms";
 import { PhotosPage } from "../photos/photos";
 import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 /**
  * Generated class for the ItemPage page.
@@ -32,8 +33,12 @@ export class ItemPage extends AbstractPage {
     }
   };
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    super(navCtrl);
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public settingsData: SettingsData
+  ) {
+    super(navCtrl, settingsData);
   }
 
   ionViewDidLoad() {

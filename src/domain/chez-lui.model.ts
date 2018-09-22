@@ -17,7 +17,7 @@ export interface ItemCL {
 }
 
 
-export interface SettingsCL {
+export interface VipSettingsCL {
   delta: number;
   active: boolean;
 }

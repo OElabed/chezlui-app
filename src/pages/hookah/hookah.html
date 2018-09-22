@@ -21,7 +21,7 @@
                 <h1 class="title-item">{{ item.tilte | uppercase }}</h1>
                 <p class="description" *ngIf="item.description !== ''">{{ item.description }}</p>
                 <div>
-                  <h2 class="price">{{ item.price | number }} €</h2>
+                  <h2 class="price">{{ getFinalPrice(item.price) | number }} €</h2>
                 </div>
               </div>
               <div class="tools-container">

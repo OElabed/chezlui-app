@@ -744,7 +744,7 @@
   "settings": {
     "vip": {
       "active": false,
-      "delta": 8.0
+      "delta": 4.0
     }
   }
 }

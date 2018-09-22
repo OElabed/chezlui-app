@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
-import { AbstractPage } from '../common/AbstractPage';
+import { Component } from "@angular/core";
+import { NavController, NavParams } from "ionic-angular";
+import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 /**
  * Generated class for the PhotosPage page.
@@ -10,17 +11,19 @@ import { AbstractPage } from '../common/AbstractPage';
  */
 
 @Component({
-  selector: 'page-photos',
-  templateUrl: 'photos.html',
+  selector: "page-photos",
+  templateUrl: "photos.html"
 })
 export class PhotosPage extends AbstractPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-    super(navCtrl);
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams,
+    public settingsData: SettingsData
+  ) {
+    super(navCtrl, settingsData);
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad PhotosPage');
+    console.log("ionViewDidLoad PhotosPage");
   }
-
 }

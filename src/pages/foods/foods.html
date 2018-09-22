@@ -44,7 +44,7 @@
                           <h1>{{ item.tilte | uppercase }}</h1>
                           <p class="description">{{ item.description }}</p>
                           <div>
-                            <h2 class="price">{{ item.price | number}} €
+                            <h2 class="price">{{ getFinalPrice(item.price) | number}} €
                               <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
                                 <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'salee')">
                                   <ion-icon name="trash"></ion-icon>
@@ -87,7 +87,7 @@
                     <h1>{{ item.tilte | uppercase }}</h1>
                     <p class="description">{{ item.description }}</p>
                     <div>
-                      <h2 class="price">{{ item.price | number }} €
+                      <h2 class="price">{{ getFinalPrice(item.price) | number }} €
                         <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
                           <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'sucree')">
                             <ion-icon name="trash"></ion-icon>

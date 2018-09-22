@@ -4,6 +4,7 @@ import { ChezLuiData } from "../../providers/chezlui-data";
 import { GroupCL, ItemCL } from "../../domain/chez-lui.model";
 import { UserData } from "../../providers/user-data";
 import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 @Component({
   selector: "page-foods",
@@ -33,9 +34,14 @@ export class FoodsPage extends AbstractPage {
     public dataProvider: ChezLuiData,
     public navCtrl: NavController,
     public alertCtrl: AlertController,
-    public userDataProvider: UserData
+    public userDataProvider: UserData,
+    public settingsData: SettingsData
   ) {
-    super(navCtrl);
+    super(navCtrl, settingsData);
+  }
+
+  ionViewWillEnter() {
+    super.ionViewDidEnter();
     this.displayFoodsList().subscribe((data: boolean) => {
       return data;
     });

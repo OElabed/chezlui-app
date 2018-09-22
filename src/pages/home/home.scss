@@ -65,4 +65,27 @@ page-home {
     color: color($colors, tabac);
     font-size: 60px;
   }
+
+  .copyright {
+    color: color($colors, golden);
+    text-align: center;
+    a {
+      text-decoration: none;
+      color: color($colors, golden);
+    }
+  }
+
+  .vip-display {
+    position: absolute;
+    top: 3%;
+    right: 48%;
+  }
+
+  .icon-vip {
+    background: url("../../assets/imgs/star.svg") no-repeat;
+    background-size: 40px 40px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+  }
 }

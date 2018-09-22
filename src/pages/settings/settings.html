@@ -55,7 +55,7 @@
       </ion-row>
       <ion-row responsive-sm class="update-button">
         <ion-col offset-4 col-4>
-          <button ion-button large (click)="onUpdate(settingsForm)" type="submit" block>METTRE À JOUR</button>
+          <button ion-button large (click)="onUpdate(settingsForm)" type="submit" block [disabled]="!canUpdate()">METTRE À JOUR</button>
         </ion-col>
       </ion-row>
     </ion-grid>

@@ -4,6 +4,7 @@ import { DrinksListPage } from "../drinks-list/drinks-list";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { GroupCL } from "../../domain/chez-lui.model";
 import { AbstractPage } from "../common/AbstractPage";
+import { SettingsData } from "../../providers/settings-data";
 
 @Component({
   selector: "page-drinks",
@@ -12,8 +13,12 @@ import { AbstractPage } from "../common/AbstractPage";
 export class DrinksPage extends AbstractPage {
   drinksGroup: Array<GroupCL> = [];
 
-  constructor(public dataProvider: ChezLuiData, public navCtrl: NavController) {
-    super(navCtrl);
+  constructor(
+    public dataProvider: ChezLuiData,
+    public navCtrl: NavController,
+    public settingsData: SettingsData
+  ) {
+    super(navCtrl, settingsData);
   }
 
   ionViewWillEnter() {
