@@ -60,7 +60,7 @@
       <hr>
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }} &amp; COCKTAIL
-        <span class="price-right">{{ formule.price + 2 | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule.price) + 2 | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
