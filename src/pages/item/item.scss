@@ -81,20 +81,26 @@ page-item {
     color: color($colors, light);
     height: 75px;
   }
+
+  .add-photo-container {
+    position: relative;
+    padding-left: 192px;
+    padding-right: 192px;
+  }
   .add-photo {
     border-style: dotted;
     border-width: 2px;
     border-color: color($colors, golden);
     border-radius: 6px;
     height: 250px;
-    width: 397px;
+    width: 250px;
 
     img {
       display: block;
       margin-left: auto;
       margin-right: auto;
       width: 40%;
-      margin-top: 35px;
+      margin-top: 65px;
     }
   }
 }

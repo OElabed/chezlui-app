@@ -1,0 +1,61 @@
+<!--
+  Generated template for the AddPhotoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>AJOUTER PHOTO</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="card-background-page" padding>
+
+  <ion-item *ngIf="!isCordova">
+    <ion-label id="profile_image" color="primary" stacked>Select Image</ion-label>
+    <ion-input type="file" accept="image/*" (change)="fileChangeEvent($event)"></ion-input>
+  </ion-item>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6>
+        <ion-grid>
+          <ion-row>
+            <ion-col offset-4 col-4>
+              <button ion-button block *ngIf="isCordova" color="primary" (click)="selectImageFromCamera()">
+                <ion-icon name="camera"></ion-icon> CAMERA</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+      <ion-col col-6>
+        <ion-grid>
+          <ion-row>
+            <ion-col offset-4 col-4>
+              <button ion-button block *ngIf="isCordova" color="primary" (click)="selectImageFromGallary()">
+                <ion-icon name="folder-open"></ion-icon> GALLARY</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <image-cropper [imageBase64]="imageBase64Data" [imageChangedEvent]="imageChangedEvent" [maintainAspectRatio]="true" [aspectRatio]="1 / 1"
+    [resizeToWidth]="110" format="png" (imageCroppedBase64)="imageCroppedBase64($event)" (imageLoaded)="imageLoaded()" (loadImageFailed)="loadImageFailed()"></image-cropper>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col offset-4 col-4>
+        <button ion-button block color="secondary" *ngIf="croppedImage !== ''" (click)="saveImage()">SAUVGARDER</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>

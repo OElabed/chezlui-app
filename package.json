@@ -20,6 +20,7 @@
     "@angular/http": "5.2.11",
     "@angular/platform-browser": "5.2.11",
     "@angular/platform-browser-dynamic": "5.2.11",
+    "@ionic-native/camera": "^4.14.0",
     "@ionic-native/core": "~4.11.0",
     "@ionic-native/file": "^4.12.2",
     "@ionic-native/file-path": "^4.12.2",
@@ -32,6 +33,7 @@
     "angular2-uuid": "^1.1.1",
     "cordova-android": "7.1.1",
     "cordova-android-support-gradle-release": "^1.4.4",
+    "cordova-plugin-camera": "^4.0.3",
     "cordova-plugin-crosswalk-webview": "^2.4.0",
     "cordova-plugin-device": "^2.0.2",
     "cordova-plugin-file": "^6.0.1",
@@ -47,6 +49,7 @@
     "ion-ripple": "^1.1.0",
     "ionic-angular": "3.9.2",
     "ionicons": "3.0.0",
+    "ngx-image-cropper": "^1.0.2",
     "rxjs": "5.5.11",
     "sw-toolbox": "3.6.0",
     "zone.js": "0.8.26"
@@ -77,7 +80,8 @@
       "cordova-plugin-file": {},
       "cordova-plugin-file-transfer": {},
       "cordova-plugin-filepath": {},
-      "cordova-plugin-insomnia": {}
+      "cordova-plugin-insomnia": {},
+      "cordova-plugin-camera": {}
     },
     "platforms": [
       "android"

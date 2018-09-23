@@ -15,6 +15,8 @@ import { ChezLuiData } from '../providers/chezlui-data';
 import { HttpModule } from '@angular/http';
 import { HookahPage } from '../pages/hookah/hookah';
 import { IonicStorageModule } from '@ionic/storage';
+import { ImageCropperModule } from 'ngx-image-cropper';
+
 import { UserData } from '../providers/user-data';
 import { InfosPage } from '../pages/infos/infos';
 import { LoginPage } from '../pages/login/login';
@@ -31,6 +33,10 @@ import { FormulePage } from '../pages/formule/formule';
 import { FormuleItemPage } from '../pages/formule-item/formule-item';
 import { Insomnia } from "@ionic-native/insomnia";
 import { ScreenSaverPage } from '../pages/screen-saver/screen-saver';
+import { AddPhotoPage } from '../pages/add-photo/add-photo';
+import { UtilService } from '../services/utils-service';
+import { CameraService } from '../services/camera-ervice';
+import { Camera } from '@ionic-native/camera';
 
 @NgModule({
   declarations: [
@@ -47,12 +53,14 @@ import { ScreenSaverPage } from '../pages/screen-saver/screen-saver';
     SettingsPage,
     ItemPage,
     PhotosPage,
+    AddPhotoPage,
     ScreenSaverPage,
     RippleEffectDirective
   ],
   imports: [
     BrowserModule,
     HttpModule,
+    ImageCropperModule,
     IonicModule.forRoot(ChezLuiApp),
     IonicStorageModule.forRoot()
   ],
@@ -70,6 +78,7 @@ import { ScreenSaverPage } from '../pages/screen-saver/screen-saver';
     LoginPage,
     ItemPage,
     PhotosPage,
+    AddPhotoPage,
     SettingsPage,
     ScreenSaverPage
   ],
@@ -80,7 +89,10 @@ import { ScreenSaverPage } from '../pages/screen-saver/screen-saver';
     ChezLuiData,
     UserData,
     SettingsData,
+    UtilService,
     Insomnia,
+    CameraService,
+    Camera,
 
     File,
     Transfer,

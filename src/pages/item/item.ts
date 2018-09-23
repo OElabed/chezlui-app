@@ -3,8 +3,6 @@ import { NavController, NavParams } from "ionic-angular";
 import { ItemPageData } from "../../domain/chez-lui.model";
 import { NgForm } from "@angular/forms";
 import { PhotosPage } from "../photos/photos";
-import { AbstractPage } from "../common/AbstractPage";
-import { SettingsData } from "../../providers/settings-data";
 
 /**
  * Generated class for the ItemPage page.
@@ -16,7 +14,7 @@ import { SettingsData } from "../../providers/settings-data";
   selector: "page-item",
   templateUrl: "item.html"
 })
-export class ItemPage extends AbstractPage {
+export class ItemPage {
   submitted = false;
   title: string = "AJOUTER";
 
@@ -33,13 +31,7 @@ export class ItemPage extends AbstractPage {
     }
   };
 
-  constructor(
-    public navCtrl: NavController,
-    public navParams: NavParams,
-    public settingsData: SettingsData
-  ) {
-    super(navCtrl, settingsData);
-  }
+  constructor(public navCtrl: NavController, public navParams: NavParams) {}
 
   ionViewDidLoad() {
     const param = this.navParams.data;
