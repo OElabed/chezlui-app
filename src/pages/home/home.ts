@@ -9,6 +9,7 @@ import { SettingsPage } from "../settings/settings";
 import { FormulePage } from "../formule/formule";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 @Component({
   selector: "page-home",
@@ -18,9 +19,10 @@ export class HomePage extends AbstractPage {
   constructor(
     public userDataProvider: UserData,
     public navCtrl: NavController,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   goToFoods() {

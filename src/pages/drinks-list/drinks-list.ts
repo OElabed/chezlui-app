@@ -5,6 +5,7 @@ import { UserData } from "../../providers/user-data";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 @Component({
   selector: "page-drinks-list",
@@ -19,9 +20,10 @@ export class DrinksListPage extends AbstractPage {
     public userDataProvider: UserData,
     public alertCtrl: AlertController,
     public dataProvider: ChezLuiData,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   ionViewWillEnter() {

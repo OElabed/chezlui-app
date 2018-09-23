@@ -2,6 +2,7 @@ import { ScreenSaverPage } from "../screen-saver/screen-saver";
 import { NavController } from "ionic-angular";
 import { SettingsData } from "../../providers/settings-data";
 import { VipSettingsCL } from "../../domain/chez-lui.model";
+import { UtilService } from "../../services/utils-service";
 
 const SCREEN_SAVER_RESET = 40;
 
@@ -12,10 +13,15 @@ export class AbstractPage {
   basePrice: number = 0;
   vipActive: boolean = false;
 
+  baseDataFolder: string = "";
+
   constructor(
     public navCtrl: NavController,
-    public settingsData: SettingsData
-  ) {}
+    public settingsData: SettingsData,
+    public utilsService: UtilService
+  ) {
+    this.baseDataFolder = this.utilsService.getBaseDataFolder();
+  }
 
   ionViewDidEnter() {
     this.screenSaverCounter = SCREEN_SAVER_RESET;

@@ -3,6 +3,7 @@ import { NavController, NavParams } from "ionic-angular";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 /**
  * Generated class for the FormuleItemPage page.
@@ -21,9 +22,10 @@ export class FormuleItemPage extends AbstractPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   ionViewWillEnter() {

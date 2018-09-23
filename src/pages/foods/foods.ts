@@ -5,6 +5,7 @@ import { GroupCL, ItemCL } from "../../domain/chez-lui.model";
 import { UserData } from "../../providers/user-data";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 @Component({
   selector: "page-foods",
@@ -35,9 +36,10 @@ export class FoodsPage extends AbstractPage {
     public navCtrl: NavController,
     public alertCtrl: AlertController,
     public userDataProvider: UserData,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   ionViewWillEnter() {

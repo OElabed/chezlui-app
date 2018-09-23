@@ -33,7 +33,7 @@
           <span class="price-formule">{{ getFinalPrice(item.price) | number }}€</span>
         </button>
       </ion-fab>
-      <img src="assets/{{ item.img }}" />
+      <img src="{{ baseDataFolder + item.img }}" />
       <div class="card-title">
         <span>
           {{ item.tilte | uppercase }}

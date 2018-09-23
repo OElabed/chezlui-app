@@ -6,6 +6,7 @@ import { UserData } from "../../providers/user-data";
 import { ChezLuiApp } from "../../app/app.component";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 @Component({
   selector: "page-login",
@@ -19,9 +20,10 @@ export class LoginPage extends AbstractPage {
   constructor(
     public dataProvider: UserData,
     public navCtrl: NavController,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   onLogin(form: NgForm) {

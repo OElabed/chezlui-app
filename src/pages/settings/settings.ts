@@ -4,7 +4,6 @@ import { NgForm } from "@angular/forms";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { SettingsData } from "../../providers/settings-data";
 import { VipSettingsCL } from "../../domain/chez-lui.model";
-import { AbstractPage } from "../common/AbstractPage";
 
 /**
  * Generated class for the SettingsPage page.
@@ -17,7 +16,7 @@ import { AbstractPage } from "../common/AbstractPage";
   selector: "page-settings",
   templateUrl: "settings.html"
 })
-export class SettingsPage extends AbstractPage {
+export class SettingsPage {
   submitted = false;
   settings: VipSettingsCL = { delta: 0, active: false };
 
@@ -33,11 +32,9 @@ export class SettingsPage extends AbstractPage {
     public settingsData: SettingsData,
     public toastCtrl: ToastController
   ) {
-    super(navCtrl, settingsData);
   }
 
   ionViewDidEnter() {
-    super.ionViewDidEnter();
     this.settingsData.getVIPSettings().subscribe((vip: VipSettingsCL) => {
       this.original = {
         delta: Number(vip.delta),

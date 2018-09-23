@@ -6,6 +6,7 @@ import { UserData } from "../../providers/user-data";
 import { ItemPage } from "../item/item";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
+import { UtilService } from "../../services/utils-service";
 
 @Component({
   selector: "page-hookah",
@@ -19,9 +20,10 @@ export class HookahPage extends AbstractPage {
     public navCtrl: NavController,
     public userDataProvider: UserData,
     public alertCtrl: AlertController,
-    public settingsData: SettingsData
+    public settingsData: SettingsData,
+    public utilsService: UtilService
   ) {
-    super(navCtrl, settingsData);
+    super(navCtrl, settingsData, utilsService);
   }
 
   ionViewWillEnter() {
