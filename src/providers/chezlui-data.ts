@@ -9,10 +9,11 @@ import "rxjs/add/observable/of";
 import "rxjs/add/observable/fromPromise";
 import "rxjs/add/operator/mergeMap";
 import { UUID } from "angular2-uuid";
-import { File } from "@ionic-native/file";
+import { File, Entry } from "@ionic-native/file";
 
 @Injectable()
 export class ChezLuiData {
+
   CHEZLUI_DATA_FOODS = "foods_data";
 
   CHEZLUI_DATA_DRINKS = "drinks_data";
@@ -50,9 +51,9 @@ export class ChezLuiData {
             .copyDir(assetDirectory, "data/", this.file.dataDirectory, "data/")
             .then(data => {
               // this.file
-              //   .listDir(this.file.dataDirectory, "data/imgs/drinks/cafe/")
-              //   .then(entry => {
-              //     // this.coucou = JSON.stringify(entry);
+              //   .listDir(this.file.dataDirectory, "data/imgs/drinks/")
+              //   .then((entries: Entry[]) => {
+              //     this.coucou = JSON.stringify(entries);
               //     return true;
               //   })
               //   .catch(error => {
@@ -85,6 +86,40 @@ export class ChezLuiData {
    *                  IMAGES
    * =============================================
    */
+
+  getDrinksPhotos() {
+    return Observable.fromPromise(
+      this.file
+        .listDir(this.file.dataDirectory, "data/imgs/drinks/")
+        .then((entries: Entry[]) => {
+          return entries;
+        })
+        .catch(error => {
+          return [];
+        })
+    ).map((data: Entry[]) => {
+      let imagesPaths: string[] = [];
+      let promiseList = [];
+      data.forEach((item: Entry, index) => {
+        promiseList.push(
+          this.file
+            .listDir(this.file.dataDirectory, item.fullPath)
+            .then((images: Entry[]) => {
+              images.forEach((image: Entry, index) => {
+                imagesPaths.push(image.fullPath);
+              });
+            })
+            .catch(error => {
+              throw new Error(error);
+            })
+        );
+      });
+
+      return Observable.fromPromise(
+        Promise.all(promiseList).then(() => true)
+      );
+    });
+  }
 
   /** ============================================
    *                  FORMULES

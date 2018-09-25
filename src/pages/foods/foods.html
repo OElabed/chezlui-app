@@ -1,6 +1,11 @@
 <ion-header (click)="globalInteraction()">
   <ion-navbar>
     <ion-title>RESTAURANT</ion-title>
+    <ion-buttons end *ngIf="userDataProvider.hasLoggedIn()">
+      <button ion-button class="add-button" (click)="goToAddItem()">
+        <ion-icon name="add" class="add-icon"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="foodType" color="golden">

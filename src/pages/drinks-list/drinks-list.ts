@@ -6,6 +6,7 @@ import { ChezLuiData } from "../../providers/chezlui-data";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
+import { ItemPage } from "../item/item";
 
 @Component({
   selector: "page-drinks-list",
@@ -80,5 +81,9 @@ export class DrinksListPage extends AbstractPage {
           return data;
         });
       });
+  }
+
+  goToAddItem() {
+    this.navCtrl.push(ItemPage, { modification: false, item: null });
   }
 }

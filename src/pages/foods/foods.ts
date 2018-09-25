@@ -6,6 +6,7 @@ import { UserData } from "../../providers/user-data";
 import { AbstractPage } from "../common/AbstractPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
+import { ItemPage } from "../item/item";
 
 @Component({
   selector: "page-foods",
@@ -130,5 +131,9 @@ export class FoodsPage extends AbstractPage {
         return data;
       });
     });
+  }
+
+  goToAddItem() {
+    this.navCtrl.push(ItemPage, { modification: false, item: null });
   }
 }

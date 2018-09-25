@@ -17,6 +17,15 @@ page-foods {
         margin-left: -40px;
       }
     }
+    .add-button {
+      span {
+        margin-left: 25px;
+      }
+    }
+    .add-icon {
+      color: color($colors, golden);
+      font-size: 25px;
+    }
   }
 
   ion-toolbar {
