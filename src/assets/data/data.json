@@ -11,7 +11,7 @@
           "price": 7.0,
           "active": true,
           "category": "petit creux",
-          "img": "data/imgs/foods/salee/brique.png"
+          "img": "454401c9-5873-4370-a77a-39ccb01969c7"
         },
         {
           "uuid": "779fjc49-a319-4522-ad16-9ed89626096e",
@@ -21,7 +21,7 @@
           "price": 7.0,
           "active": true,
           "category": "burger",
-          "img": "data/imgs/foods/salee/berger.png"
+          "img": "12c653d9-8106-494d-9fdd-3521389e0989"
         },
         {
           "uuid": "48e438b1-3bcf-4cef-93b7-001edd55a1c2",
@@ -31,7 +31,7 @@
           "price": 7.0,
           "active": true,
           "category": "fajitas",
-          "img": "data/imgs/foods/salee/tender.png"
+          "img": "39d2bd1e-e6ff-491c-9c80-2de543442dc4"
         },
         {
           "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd12a1c2",
@@ -41,7 +41,7 @@
           "price": 7.0,
           "active": true,
           "category": "fajitas",
-          "img": "data/imgs/foods/salee/steak.png"
+          "img": "f265a8b7-1a28-47f4-8517-201cfea14e72"
         },
         {
           "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd5ga1c2",
@@ -51,7 +51,7 @@
           "price": 7.0,
           "active": true,
           "category": "fajitas",
-          "img": "data/imgs/foods/salee/steak.png"
+          "img": "d194ce40-b95d-4073-96cc-1e737febabeb"
         },
         {
           "uuid": "48e438b1-3bcf-4cef-93b7-0ffeddhxa1c2",
@@ -61,7 +61,7 @@
           "price": 4.0,
           "active": true,
           "category": "frites",
-          "img": "data/imgs/foods/salee/frite.png"
+          "img": "170bdde2-b1ab-4458-9fd5-d28e044342fe"
         }
       ]
     },
@@ -76,7 +76,7 @@
           "price": 5.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/foods/sucree/moelleux.png"
+          "img": "70424741-f54f-4ed4-b57f-edb902adaa42"
         },
         {
           "uuid": "6307e2c3-aaa8-4c44-a736-eb31a8cae602",
@@ -86,7 +86,7 @@
           "price": 5.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/foods/sucree/mangue.png"
+          "img": "5a2df0e6-cf02-46e4-b5b1-32f00679eab6"
         },
         {
           "uuid": "6307e2c3-aaa8-4c44-a736-eb31oldae602",
@@ -96,7 +96,7 @@
           "price": 5.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/foods/sucree/mousse-chocolat.png"
+          "img": "93f7054a-adc0-4b3a-a2e8-7822bb6a6490"
         },
         {
           "uuid": "dd752126-7960-4919-b1d2-55a6adfa42b2",
@@ -106,7 +106,7 @@
           "price": 5.0,
           "active": false,
           "category": "",
-          "img": "data/imgs/foods/sucree/msemen.png"
+          "img": "6a50fe5d-254d-4843-bb14-aa878dd7c094"
         },
         {
           "uuid": "19baffec-a67b-4ff0-b1e6-9f3f9665fb53",
@@ -116,7 +116,7 @@
           "price": 5.0,
           "active": false,
           "category": "",
-          "img": "data/imgs/foods/sucree/tartellette.png"
+          "img": "a3649649-e635-4a6f-879b-20ed541287a5"
         },
         {
           "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
@@ -126,7 +126,7 @@
           "price": 5.0,
           "active": false,
           "category": "",
-          "img": "data/imgs/foods/sucree/tiramissu.png"
+          "img": "939ace31-c145-404d-b961-f0c7b003ba39"
         }
       ]
     }
@@ -146,7 +146,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/coca.png"
+          "img": "ed434934-8921-44ae-8619-a1dd036065e4"
         },
         {
           "uuid": "T1ddac07-e2d5-49d0-bc0f-6ce380f89fa8",
@@ -156,7 +156,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/coca-cherry.png"
+          "img": "d19076eb-af26-41f3-ae46-52517b5af9fe"
         },
         {
           "uuid": "h1ddac07-e2d5-49d0-bc0f-6ce380f89fa8",
@@ -166,7 +166,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/coca-zero.png"
+          "img": "de5669aa-8fa2-4f64-af88-ab1b47f13934"
         },
         {
           "uuid": "h1ddac57-e2d5-49d0-bc0f-6ce380fs9fa8",
@@ -176,7 +176,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/fanta.png"
+          "img": "fd5fa500-7be6-48e1-a43f-5b53b5cb7656"
         },
         {
           "uuid": "h1ddac57-e2d5-49d0-bc0f-6ce380f89fa8",
@@ -186,7 +186,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/icetea.png"
+          "img": "97d2f4cc-322b-42f1-8ac6-74b0d030a9a7"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-6ce380f89fa8",
@@ -196,7 +196,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/oasis-fraise.png"
+          "img": "37f600cc-f484-4e99-9f58-68e50f6b90c5"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-4ce380f89fa8",
@@ -206,7 +206,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/oasis-pomme.png"
+          "img": "d09417ce-0b59-4fac-8cc2-5ab898f2f603"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-7ce380f89fa8",
@@ -216,7 +216,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/oasis-tropical.png"
+          "img": "443254f2-3c7b-412c-8a5b-3bb67d6208d6"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-5ce380f89fa8",
@@ -226,7 +226,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/perrier.png"
+          "img": "bfe55574-07bb-4533-9b5c-4d060c7a5fab"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-9ce380f89fa8",
@@ -236,7 +236,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/schweppes.png"
+          "img": "76a9f04b-e60c-48b3-8adb-7919079d30b4"
         },
         {
           "uuid": "h1ddac55-e2d5-49d0-bc0f-9ce380f89fa8",
@@ -246,7 +246,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/soft/sprite.png"
+          "img": "9fca45a6-6c3d-43ce-8f7e-748f0dbdc3d6"
         }
       ]
     },
@@ -264,7 +264,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/milkshake/OREO.png"
+          "img": "d40b4e26-1ab9-415c-8158-b5d90295baa1"
         },
         {
           "uuid": "abd13a8f-b962-4730-96e8-3k2aeaecaef1",
@@ -274,7 +274,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/milkshake/BUENO.png"
+          "img": "fdd1b3d4-8021-4d36-98c7-0acbcf9cb8a7"
         },
         {
           "uuid": "abd13a8f-b962-4730-96e8-312alzecaef1",
@@ -284,7 +284,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/milkshake/KITKAT.png"
+          "img": "73613839-d883-4b94-bf4a-a833038773bf"
         }
       ]
     },
@@ -302,7 +302,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/smothies/pomme-poire.png"
+          "img": "48b3bbd1-ff85-4be4-8155-05e399086497"
         },
         {
           "uuid": "abd13a8f-b962-4920-96e8-3k2aeaecaef1",
@@ -312,7 +312,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/smothies/fraise.png"
+          "img": "c9ab98af-4000-47f6-a42d-82bf2ef2ce2a"
         },
         {
           "uuid": "abd13a8f-b962-ions-96e8-312alzecaef1",
@@ -322,7 +322,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/smothies/coco-ananas.png"
+          "img": "6132eb87-c2ef-46f0-bc18-3060de59dfe3"
         }
       ]
     },
@@ -340,7 +340,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/cocktail/blue.png"
+          "img": "1deac309-8567-4bc6-becd-3c7a69b7230e"
         },
         {
           "uuid": "2f5e429b-5966-43dd-a054-0050bd00fbfb",
@@ -350,7 +350,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/cocktail/mojito.png"
+          "img": "85f30060-4017-444f-9836-8be1fa36a418"
         },
         {
           "uuid": "2f5e429b-5966-43dd-a054-0360bd2ffbfb",
@@ -360,7 +360,7 @@
           "price": 6.0,
           "active": false,
           "category": "",
-          "img": "data/imgs/drinks/cocktail/sunrise.png"
+          "img": "1760e5c7-8703-437b-9b2c-d8fbca27b461"
         },
         {
           "uuid": "2f5e429b-5966-43dd-a054-0050bffffbfb",
@@ -370,7 +370,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/cocktail/coco.png"
+          "img": "d49b8910-39e0-4733-a13a-dc7338883318"
         }
       ]
     },
@@ -388,7 +388,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/banane.png"
+          "img": "82bcca0c-e498-4615-95f1-4bdc329726b8"
         },
         {
           "uuid": "2f6e029b-5966-43dd-a054-0050bd2ffbfb",
@@ -398,7 +398,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/citron.png"
+          "img": "94ed0bdd-633c-4f6c-aa63-dbbf84438155"
         },
         {
           "uuid": "2f5e009b-5966-43dd-a054-0050bd2ffbfb",
@@ -408,7 +408,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/fraise.png"
+          "img": "51334206-1bc5-4558-a8ab-3a9c063ce643"
         },
         {
           "uuid": "2f5e029b-59f6-43dd-a054-0050bd2ffbfb",
@@ -418,7 +418,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/grenadine.png"
+          "img": "29a02b41-79a6-4006-bd36-4b123d70f1e6"
         },
         {
           "uuid": "2f5e029b-5766-43dd-a054-0050bd2ffbfb",
@@ -428,7 +428,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/kiwi.png"
+          "img": "482aa056-bec4-42c7-9291-52180fe6e877"
         },
         {
           "uuid": "2f5e029b-9966-43dd-a054-0050bd2ffbfb",
@@ -438,7 +438,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/melon.png"
+          "img": "0d1ac953-411a-4caa-a05f-eee8ddcdf4a5"
         },
         {
           "uuid": "2f5e029b-5966-43dd-a054-0059bd2ffbfb",
@@ -448,7 +448,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/menthe.png"
+          "img": "53de0280-58e9-4d4e-80b6-159ee4814b0c"
         },
         {
           "uuid": "2f5e029c-5966-43dd-a054-0050bd2ffbfb",
@@ -458,7 +458,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/passion.png"
+          "img": "cea37df2-a8ea-45ba-a51b-b48da67cee76"
         },
         {
           "uuid": "2f5b029b-5966-43dd-a054-0050bd2ffbfb",
@@ -468,7 +468,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/eaux-sirops/peche.png"
+          "img": "5ad72969-f6b4-4ffd-8f45-38a16cb206a5"
         }
       ]
     },
@@ -486,7 +486,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/cafe.png"
+          "img": "aee2c566-5aef-4ba7-bf30-427ed1cadba2"
         },
         {
           "uuid": "94bb6cea-9c58-4a41-b744-02c789564088",
@@ -496,7 +496,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/cafe.png"
+          "img": "80f9a565-fcb1-4552-8f93-b01f5e38ef82"
         },
         {
           "uuid": "77b9ed42-6471-4620-bdca-f5ko5553dd4b",
@@ -506,7 +506,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/machiatto.png"
+          "img": "2ff65230-fd72-4e70-b3e8-94085d703077"
         },
         {
           "uuid": "77b9ed42-6471-4620-bdca-f57d55ozdd4b",
@@ -516,7 +516,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/the-vert.png"
+          "img": "773afce4-363c-4d03-a259-5450327a7c3e"
         },
         {
           "uuid": "77b9ed42-6471-4620-bdca-f57dpa53dd4b",
@@ -526,7 +526,7 @@
           "price": 4.0,
           "active": true,
           "category": "",
-          "img": "data/imgs/drinks/hot/the-vert.png"
+          "img": "4af25f1d-7f9f-4ed3-8f10-6b926a2aacf9"
         }
       ]
     }
@@ -540,7 +540,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/menthe.png"
+      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b257"
     },
     {
       "uuid": "745957c8-e229-4952-979d-980e8a98b7d0",
@@ -550,7 +550,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/menthe.png"
+      "img": "d965e72b-f055-4248-a763-668075071af4"
     },
     {
       "uuid": "745957c8-e229-4953-979d-980e8a98b7d0",
@@ -560,7 +560,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/menthe.png"
+      "img": "e5da41cd-490a-46e2-888c-3430ab18e424"
     },
     {
       "uuid": "745957c8-e229-4954-979d-980e8a98b7d0",
@@ -570,7 +570,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/menthe.png"
+      "img": "4d8e3830-3b82-48f3-b70a-7abaa001850c"
     },
     {
       "uuid": "745957c8-e229-4955-979d-980e8a98b7d0",
@@ -580,7 +580,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/pistache.png"
+      "img": "cab2e3bc-7b4a-4dc1-b3f3-8c957db53f38"
     },
     {
       "uuid": "745957c8-e229-495F-979d-980e8a98b7d0",
@@ -590,7 +590,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/poire-sucre.png"
+      "img": "377cda5f-b744-4075-808f-83c44dda4672"
     },
     {
       "uuid": "745957c8-e229-495T-979d-980e8a98b7d0",
@@ -600,7 +600,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/doublePomme.png"
+      "img": "9a391863-e1e2-4205-83c6-18ed9162fb63"
     },
     {
       "uuid": "745957c8-e229-4959-979d-980e8a98b7d0",
@@ -610,7 +610,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/myrtille.png"
+      "img": "2600c9ef-f273-43e7-8fcb-0c7e0a3271c4"
     },
     {
       "uuid": "745957c8-e229-4958-979G-980e8a98b7d0",
@@ -620,7 +620,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/pasteque.png"
+      "img": "1b6b4571-d37b-4969-b9f5-71a03f2ad8ea"
     },
     {
       "uuid": "745957c8-e229-4958-97Gd-980e8a98b7d0",
@@ -630,7 +630,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/pasteque.png"
+      "img": "e4235b72-8ad6-4536-9e0c-68ec819155b4"
     },
     {
       "uuid": "745957c8-e229-4958-979d-980e8a98b7d0",
@@ -640,7 +640,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/icetea.png"
+      "img": "60676220-3808-494f-b43b-2f6fe5588459"
     },
     {
       "uuid": "745957c8-e229-49G8-979d-980e8a98b7d0",
@@ -650,7 +650,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/fruitDragon.png"
+      "img": "0fa36e91-896a-4690-afa3-4fa66663a10f"
     },
     {
       "uuid": "745957c8-e229-49H8-979d-980e8a98b7d0",
@@ -660,7 +660,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/framboise.png"
+      "img": "14549b4e-403f-4eae-93df-71c4638c9b23"
     },
     {
       "uuid": "745957c8-e229-49T8-979d-980e8a98b7d0",
@@ -670,7 +670,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/fruitBois.png"
+      "img": "5477d431-17fb-40f8-88c1-a2ecef734591"
     },
     {
       "uuid": "745957c8-e229-4938-979d-980e8a98b7d0",
@@ -680,7 +680,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/pasteque.png"
+      "img": "d996cbae-8027-41c2-b520-191897334187"
     },
     {
       "uuid": "745957c8-e229-4958-j79d-980e8a98b7d0",
@@ -690,7 +690,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/bananeHaribo.png"
+      "img": "49cbb4f7-ad4e-4d0d-98d8-eb8f32c8dd71"
     },
     {
       "uuid": "745957c8-e229-4958-n79d-980e8a98b7d0",
@@ -700,7 +700,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/gum.png"
+      "img": "80c63d82-e1d6-4069-878d-0c513e378e74"
     },
     {
       "uuid": "745957c8-e229-4958-9hjd-980e8a98b7d0",
@@ -710,7 +710,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/pamplemousseOrange.png"
+      "img": "59b7b04a-64c0-4d82-81aa-6b1db58dda31"
     },
     {
       "uuid": "745957c8-e229-4958-kl9d-980e8a98b7d0",
@@ -720,7 +720,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/kiwi.png"
+      "img": "739e5b9d-f8d0-44dd-a630-a6feaa0b2124"
     },
     {
       "uuid": "745957c8-e229-4958-9oi9d-980e8a98b7d0",
@@ -730,7 +730,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/marij.png"
+      "img": "f30c3381-a588-4355-9ebb-de06410c92c9"
     },
     {
       "uuid": "745957c8-e229-4958-9sjd-980e8a98b7d0",
@@ -740,7 +740,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/popcorn.png"
+      "img": "d9f24d5d-2603-4436-b3ad-f5d52c45fe81"
     },
     {
       "uuid": "745957c8-e229-4958-x79d-980e8a98b7d0",
@@ -750,7 +750,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/rafaello.png"
+      "img": "f9f4ca47-1cf1-4245-847e-7f2039878da5"
     },
     {
       "uuid": "745957c8-e229-4958-s79d-980e8a98b7d0",
@@ -760,7 +760,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/goyave.png"
+      "img": "3ccda107-5c86-4ba8-9498-bde91f26cfce"
     },
     {
       "uuid": "745957c8-e229-4ghj-979d-980e8a98b7d0",
@@ -770,7 +770,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/love.png"
+      "img": "2d64ba1e-4ead-4724-a40f-7920e8b5d071"
     },
     {
       "uuid": "745957c8-e229-HJKL-979d-980e8a98b7d0",
@@ -780,7 +780,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/hawaii.png"
+      "img": "7b8dcce2-b5c4-49ba-a5ab-c468a1944a16"
     },
     {
       "uuid": "745957c8-e229-4v58-979d-980e8a98b7d0",
@@ -790,7 +790,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/concombre.png"
+      "img": "0d02e013-73e9-498a-902d-437882d4f017"
     },
     {
       "uuid": "745957c8-e229-4lc8-979d-980e8a98b7d0",
@@ -800,7 +800,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/oasis-tropical.png"
+      "img": "a593546f-f576-4df0-af26-a799229b6aac"
     },
     {
       "uuid": "745957c8-e229-jo58-979d-980e8a98b7d0",
@@ -810,7 +810,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/citronMeringue.png"
+      "img": "a694adea-dbf7-4952-bef1-a062bbc8bc88"
     },
     {
       "uuid": "745957c8-e339-jo58-979d-980e8a98b7d0",
@@ -820,7 +820,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/mojito.png"
+      "img": "1da89da4-4118-40f9-9bf1-4b5f3c1dff44"
     },
     {
       "uuid": "745957c8-e449-jo58-979d-980e8a98b7d0",
@@ -830,7 +830,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/banane-cannelle.png"
+      "img": "58724818-4215-4592-9e53-4992b8cc1d87"
     },
     {
       "uuid": "745957c8-e559-jo58-979d-980e8a98b7d0",
@@ -840,7 +840,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/hookah/tagada.png"
+      "img": "ddff8abb-5fce-4527-8034-60733e6e2d2a"
     }
   ],
   "formules": [
@@ -852,7 +852,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/formules/chicha-formule.png"
+      "img": "1d718bec-8ea9-4892-8515-f0d14c7f12e9"
     },
     {
       "uuid": "745957c8-e229-4958-979d-980e8f98b7d0",
@@ -862,7 +862,7 @@
       "price": 7.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/formules/gourmande-formule.png"
+      "img": "6d48567d-bdfd-4af3-9495-4ef06a2221fa"
     },
     {
       "uuid": "745957c8-e229-4958-979d-980e8498b7d0",
@@ -872,7 +872,7 @@
       "price": 10.0,
       "active": true,
       "category": "",
-      "img": "data/imgs/formules/restauration-formule.png"
+      "img": "0770888b-f9d7-4e7a-ac0a-b93396870fb3"
     }
   ],
   "users": [
@@ -887,407 +887,407 @@
   ],
   "photos": [
     {
-      "id": "fafc107c-54b2-486f-a353-a7912ed00358",
+      "id": "454401c9-5873-4370-a77a-39ccb01969c7",
       "type": "foods",
       "path": "data/imgs/foods/salee/brique.png"
     },
     {
-      "id": "8059abd0-0669-4628-962e-d9801c2ce310",
+      "id": "12c653d9-8106-494d-9fdd-3521389e0989",
       "type": "foods",
       "path": "data/imgs/foods/salee/berger.png"
     },
     {
-      "id": "80202e5f-1c97-460a-89d3-077b5f419590",
+      "id": "39d2bd1e-e6ff-491c-9c80-2de543442dc4",
       "type": "foods",
       "path": "data/imgs/foods/salee/tender.png"
     },
     {
-      "id": "87d2a5fd-3ec9-4624-88c1-48ae1f05ada9",
+      "id": "f265a8b7-1a28-47f4-8517-201cfea14e72",
       "type": "foods",
       "path": "data/imgs/foods/salee/steak.png"
     },
     {
-      "id": "669291d6-784a-4055-b1e3-0cdebf9ca1b2",
+      "id": "d194ce40-b95d-4073-96cc-1e737febabeb",
       "type": "foods",
       "path": "data/imgs/foods/salee/steak.png"
     },
     {
-      "id": "5d9767a8-ada4-42c2-82b0-6ae01509c49e",
+      "id": "170bdde2-b1ab-4458-9fd5-d28e044342fe",
       "type": "foods",
       "path": "data/imgs/foods/salee/frite.png"
     },
     {
-      "id": "7f47f2fb-302f-4c09-a3d1-3a93cefa3807",
+      "id": "70424741-f54f-4ed4-b57f-edb902adaa42",
       "type": "foods",
       "path": "data/imgs/foods/sucree/moelleux.png"
     },
     {
-      "id": "8ea20eca-a488-4b9c-86d9-7d89c2e6dba7",
+      "id": "5a2df0e6-cf02-46e4-b5b1-32f00679eab6",
       "type": "foods",
       "path": "data/imgs/foods/sucree/mangue.png"
     },
     {
-      "id": "8630f181-305e-40f8-8eb8-84f602428f5d",
+      "id": "93f7054a-adc0-4b3a-a2e8-7822bb6a6490",
       "type": "foods",
       "path": "data/imgs/foods/sucree/mousse-chocolat.png"
     },
     {
-      "id": "1ffd3dcb-d93d-4720-ad1d-76613f4990df",
+      "id": "6a50fe5d-254d-4843-bb14-aa878dd7c094",
       "type": "foods",
       "path": "data/imgs/foods/sucree/msemen.png"
     },
     {
-      "id": "43d8e2a9-9d95-429c-a78d-ebd3112cde31",
+      "id": "a3649649-e635-4a6f-879b-20ed541287a5",
       "type": "foods",
       "path": "data/imgs/foods/sucree/tartellette.png"
     },
     {
-      "id": "9be72f43-ab30-4c37-ba09-1c47c81f948b",
+      "id": "939ace31-c145-404d-b961-f0c7b003ba39",
       "type": "foods",
       "path": "data/imgs/foods/sucree/tiramissu.png"
     },
     {
-      "id": "d778c6e2-26b5-4a0b-b6c5-9ff94984bb88",
+      "id": "ed434934-8921-44ae-8619-a1dd036065e4",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/coca.png"
     },
     {
-      "id": "131a81c7-0e3e-4062-a2b9-1a909dcfa164",
+      "id": "d19076eb-af26-41f3-ae46-52517b5af9fe",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/coca-cherry.png"
     },
     {
-      "id": "ee9cf912-f36c-4c20-b0c5-5dfd0f74201a",
+      "id": "de5669aa-8fa2-4f64-af88-ab1b47f13934",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/coca-zero.png"
     },
     {
-      "id": "fdf0069d-55c9-4508-a659-cff2f371b362",
+      "id": "fd5fa500-7be6-48e1-a43f-5b53b5cb7656",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/fanta.png"
     },
     {
-      "id": "e2762dce-005b-4034-9163-e5e8c3c40d5f",
+      "id": "97d2f4cc-322b-42f1-8ac6-74b0d030a9a7",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/icetea.png"
     },
     {
-      "id": "126bce26-fa3e-4a11-953e-9dd11c1a8c4f",
+      "id": "37f600cc-f484-4e99-9f58-68e50f6b90c5",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/oasis-fraise.png"
     },
     {
-      "id": "6b642490-f462-426b-bcca-2386e561d73f",
+      "id": "d09417ce-0b59-4fac-8cc2-5ab898f2f603",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/oasis-pomme.png"
     },
     {
-      "id": "54c2fe05-1b52-4c6b-97ee-c31030b3279b",
+      "id": "443254f2-3c7b-412c-8a5b-3bb67d6208d6",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/oasis-tropical.png"
     },
     {
-      "id": "412d5220-1c89-4203-928a-5da1daf5cffc",
+      "id": "bfe55574-07bb-4533-9b5c-4d060c7a5fab",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/perrier.png"
     },
     {
-      "id": "80d697c2-296e-4c57-9114-bab731545d4a",
+      "id": "76a9f04b-e60c-48b3-8adb-7919079d30b4",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/schweppes.png"
     },
     {
-      "id": "1be5ea44-08d8-4b2b-a3e6-ab13a28c2045",
+      "id": "9fca45a6-6c3d-43ce-8f7e-748f0dbdc3d6",
       "type": "drinks",
       "path": "data/imgs/drinks/soft/sprite.png"
     },
     {
-      "id": "727a2bed-fe87-4287-aeee-8bb68310e52e",
+      "id": "d40b4e26-1ab9-415c-8158-b5d90295baa1",
       "type": "drinks",
       "path": "data/imgs/drinks/milkshake/OREO.png"
     },
     {
-      "id": "84738534-429f-437b-91bb-d0323b9571d3",
+      "id": "fdd1b3d4-8021-4d36-98c7-0acbcf9cb8a7",
       "type": "drinks",
       "path": "data/imgs/drinks/milkshake/BUENO.png"
     },
     {
-      "id": "7da71131-3c3a-4ba4-ad03-177f4177d8b0",
+      "id": "73613839-d883-4b94-bf4a-a833038773bf",
       "type": "drinks",
       "path": "data/imgs/drinks/milkshake/KITKAT.png"
     },
     {
-      "id": "3d822f20-92d9-4902-b403-6bb60da7caf4",
+      "id": "48b3bbd1-ff85-4be4-8155-05e399086497",
       "type": "drinks",
       "path": "data/imgs/drinks/smothies/pomme-poire.png"
     },
     {
-      "id": "172acefe-d392-4e73-8f04-cff43f309efc",
+      "id": "c9ab98af-4000-47f6-a42d-82bf2ef2ce2a",
       "type": "drinks",
       "path": "data/imgs/drinks/smothies/fraise.png"
     },
     {
-      "id": "c6da6393-15e7-4905-a1d1-8ff68b606972",
+      "id": "6132eb87-c2ef-46f0-bc18-3060de59dfe3",
       "type": "drinks",
       "path": "data/imgs/drinks/smothies/coco-ananas.png"
     },
     {
-      "id": "7fcfc524-8d9f-4c72-84d2-c3ba99f9d72e",
+      "id": "1deac309-8567-4bc6-becd-3c7a69b7230e",
       "type": "drinks",
       "path": "data/imgs/drinks/cocktail/blue.png"
     },
     {
-      "id": "5799a51c-5bdf-4352-9ed3-e5af85825ac4",
+      "id": "85f30060-4017-444f-9836-8be1fa36a418",
       "type": "drinks",
       "path": "data/imgs/drinks/cocktail/mojito.png"
     },
     {
-      "id": "edd9f339-d318-4a96-967c-a538d93fee11",
+      "id": "1760e5c7-8703-437b-9b2c-d8fbca27b461",
       "type": "drinks",
       "path": "data/imgs/drinks/cocktail/sunrise.png"
     },
     {
-      "id": "b2cd9c51-9272-41d4-9311-271ec104ec0c",
+      "id": "d49b8910-39e0-4733-a13a-dc7338883318",
       "type": "drinks",
       "path": "data/imgs/drinks/cocktail/coco.png"
     },
     {
-      "id": "80275c30-33e7-4263-b961-f61afc3bc598",
+      "id": "82bcca0c-e498-4615-95f1-4bdc329726b8",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/banane.png"
     },
     {
-      "id": "37e752a9-0720-43fa-98ea-bb03b1dbb6b9",
+      "id": "94ed0bdd-633c-4f6c-aa63-dbbf84438155",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/citron.png"
     },
     {
-      "id": "ad8fa20e-9851-4f7d-a94d-9128fc5819c0",
+      "id": "51334206-1bc5-4558-a8ab-3a9c063ce643",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/fraise.png"
     },
     {
-      "id": "40379b89-d499-44c4-b8c2-6d1af36b0a58",
+      "id": "29a02b41-79a6-4006-bd36-4b123d70f1e6",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/grenadine.png"
     },
     {
-      "id": "4ee927b1-d061-4252-9587-8ef3704b66a1",
+      "id": "482aa056-bec4-42c7-9291-52180fe6e877",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/kiwi.png"
     },
     {
-      "id": "9a611613-234e-4b82-b3ea-8ad00be84d96",
+      "id": "0d1ac953-411a-4caa-a05f-eee8ddcdf4a5",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/melon.png"
     },
     {
-      "id": "449f00f6-0a76-45a2-b9f6-bf25aac719c5",
+      "id": "53de0280-58e9-4d4e-80b6-159ee4814b0c",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/menthe.png"
     },
     {
-      "id": "fd6b4af3-3a80-4281-8509-87e36870adbb",
+      "id": "cea37df2-a8ea-45ba-a51b-b48da67cee76",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/passion.png"
     },
     {
-      "id": "0b64c931-a993-4eb4-909f-c8ddc800cfc8",
+      "id": "5ad72969-f6b4-4ffd-8f45-38a16cb206a5",
       "type": "drinks",
       "path": "data/imgs/drinks/eaux-sirops/peche.png"
     },
     {
-      "id": "7ec475cd-e1be-46f0-a9c2-1b0ed726889e",
+      "id": "aee2c566-5aef-4ba7-bf30-427ed1cadba2",
       "type": "drinks",
       "path": "data/imgs/drinks/hot/cafe.png"
     },
     {
-      "id": "43dba5d7-dc90-45d1-aa1a-5d3a72a0478c",
+      "id": "80f9a565-fcb1-4552-8f93-b01f5e38ef82",
       "type": "drinks",
       "path": "data/imgs/drinks/hot/cafe.png"
     },
     {
-      "id": "a3e31dd7-3602-4bd7-98c2-e8a7113b4112",
+      "id": "2ff65230-fd72-4e70-b3e8-94085d703077",
       "type": "drinks",
       "path": "data/imgs/drinks/hot/machiatto.png"
     },
     {
-      "id": "11612bbf-ac0a-460c-b961-7102fce22f55",
+      "id": "773afce4-363c-4d03-a259-5450327a7c3e",
       "type": "drinks",
       "path": "data/imgs/drinks/hot/the-vert.png"
     },
     {
-      "id": "031277cb-ade8-49ea-804e-b1bcee3a1336",
+      "id": "4af25f1d-7f9f-4ed3-8f10-6b926a2aacf9",
       "type": "drinks",
       "path": "data/imgs/drinks/hot/the-vert.png"
     },
     {
-      "id": "77a9aefc-6500-444a-ab14-2168027c1c12",
+      "id": "a65c6111-5368-4da7-b52a-bb0c93e4b257",
       "type": "hookah",
       "path": "data/imgs/hookah/menthe.png"
     },
     {
-      "id": "cd33af22-26c2-4715-a442-859b5990812f",
+      "id": "d965e72b-f055-4248-a763-668075071af4",
       "type": "hookah",
       "path": "data/imgs/hookah/menthe.png"
     },
     {
-      "id": "800814fa-da4d-4ee2-b03d-806d14de0772",
+      "id": "e5da41cd-490a-46e2-888c-3430ab18e424",
       "type": "hookah",
       "path": "data/imgs/hookah/menthe.png"
     },
     {
-      "id": "aaf23d3d-b2b6-484a-b9e9-4190b63ec1d0",
+      "id": "4d8e3830-3b82-48f3-b70a-7abaa001850c",
       "type": "hookah",
       "path": "data/imgs/hookah/menthe.png"
     },
     {
-      "id": "bdf11ece-1768-4e18-91b9-8a87dab7fee1",
+      "id": "cab2e3bc-7b4a-4dc1-b3f3-8c957db53f38",
       "type": "hookah",
       "path": "data/imgs/hookah/pistache.png"
     },
     {
-      "id": "6153cb50-82c4-4449-b1a2-caa67683073b",
+      "id": "377cda5f-b744-4075-808f-83c44dda4672",
       "type": "hookah",
       "path": "data/imgs/hookah/poire-sucre.png"
     },
     {
-      "id": "4349f61b-744f-4d49-9ba0-8dd67e3f1721",
+      "id": "9a391863-e1e2-4205-83c6-18ed9162fb63",
       "type": "hookah",
       "path": "data/imgs/hookah/doublePomme.png"
     },
     {
-      "id": "fa6de517-f83f-4f8e-a9da-91b5a89dc379",
+      "id": "2600c9ef-f273-43e7-8fcb-0c7e0a3271c4",
       "type": "hookah",
       "path": "data/imgs/hookah/myrtille.png"
     },
     {
-      "id": "a42804ac-fa82-441b-9859-86182e1f1169",
+      "id": "1b6b4571-d37b-4969-b9f5-71a03f2ad8ea",
       "type": "hookah",
       "path": "data/imgs/hookah/pasteque.png"
     },
     {
-      "id": "6b64de60-54b3-4c0e-a31f-8b3fadadd017",
+      "id": "e4235b72-8ad6-4536-9e0c-68ec819155b4",
       "type": "hookah",
       "path": "data/imgs/hookah/pasteque.png"
     },
     {
-      "id": "db911be6-2e48-41cd-aa06-7d9bdfaf126d",
+      "id": "60676220-3808-494f-b43b-2f6fe5588459",
       "type": "hookah",
       "path": "data/imgs/hookah/icetea.png"
     },
     {
-      "id": "bc962dda-0d63-4f60-9f80-260e746b33c9",
+      "id": "0fa36e91-896a-4690-afa3-4fa66663a10f",
       "type": "hookah",
       "path": "data/imgs/hookah/fruitDragon.png"
     },
     {
-      "id": "455d9cac-8fd7-4c1c-86ec-06df1a6a8b41",
+      "id": "14549b4e-403f-4eae-93df-71c4638c9b23",
       "type": "hookah",
       "path": "data/imgs/hookah/framboise.png"
     },
     {
-      "id": "c5904338-0ace-49cf-92c5-97a32080e356",
+      "id": "5477d431-17fb-40f8-88c1-a2ecef734591",
       "type": "hookah",
       "path": "data/imgs/hookah/fruitBois.png"
     },
     {
-      "id": "086e0087-5b05-424e-a322-89841ff76e51",
+      "id": "d996cbae-8027-41c2-b520-191897334187",
       "type": "hookah",
       "path": "data/imgs/hookah/pasteque.png"
     },
     {
-      "id": "e7b5b862-7e66-4e9a-9e56-79fb10ede561",
+      "id": "49cbb4f7-ad4e-4d0d-98d8-eb8f32c8dd71",
       "type": "hookah",
       "path": "data/imgs/hookah/bananeHaribo.png"
     },
     {
-      "id": "f0372b41-6132-4eb2-9da0-b0386834e4da",
+      "id": "80c63d82-e1d6-4069-878d-0c513e378e74",
       "type": "hookah",
       "path": "data/imgs/hookah/gum.png"
     },
     {
-      "id": "6132d1ac-4a59-4bab-80c3-f120f3d9bfdc",
+      "id": "59b7b04a-64c0-4d82-81aa-6b1db58dda31",
       "type": "hookah",
       "path": "data/imgs/hookah/pamplemousseOrange.png"
     },
     {
-      "id": "d9405190-2ad1-4c9c-829b-05a964c5b2f8",
+      "id": "739e5b9d-f8d0-44dd-a630-a6feaa0b2124",
       "type": "hookah",
       "path": "data/imgs/hookah/kiwi.png"
     },
     {
-      "id": "ca634991-90d9-46a5-8908-53577047c750",
+      "id": "f30c3381-a588-4355-9ebb-de06410c92c9",
       "type": "hookah",
       "path": "data/imgs/hookah/marij.png"
     },
     {
-      "id": "f1295a60-3d35-4588-badd-e5b7337b6740",
+      "id": "d9f24d5d-2603-4436-b3ad-f5d52c45fe81",
       "type": "hookah",
       "path": "data/imgs/hookah/popcorn.png"
     },
     {
-      "id": "2c25cfeb-6053-456f-b6cd-3203158bb521",
+      "id": "f9f4ca47-1cf1-4245-847e-7f2039878da5",
       "type": "hookah",
       "path": "data/imgs/hookah/rafaello.png"
     },
     {
-      "id": "89c5e976-c42d-427b-b030-65ea8d8d4301",
+      "id": "3ccda107-5c86-4ba8-9498-bde91f26cfce",
       "type": "hookah",
       "path": "data/imgs/hookah/goyave.png"
     },
     {
-      "id": "53e99526-cfab-4b85-86cc-ac29f1fb06a6",
+      "id": "2d64ba1e-4ead-4724-a40f-7920e8b5d071",
       "type": "hookah",
       "path": "data/imgs/hookah/love.png"
     },
     {
-      "id": "818c0520-fcec-4688-bcdb-035d875b5ff0",
+      "id": "7b8dcce2-b5c4-49ba-a5ab-c468a1944a16",
       "type": "hookah",
       "path": "data/imgs/hookah/hawaii.png"
     },
     {
-      "id": "677e6037-295b-492c-9c7c-686c44edfe98",
+      "id": "0d02e013-73e9-498a-902d-437882d4f017",
       "type": "hookah",
       "path": "data/imgs/hookah/concombre.png"
     },
     {
-      "id": "3e95c782-2305-4d77-9e86-e8ef61100c24",
+      "id": "a593546f-f576-4df0-af26-a799229b6aac",
       "type": "hookah",
       "path": "data/imgs/hookah/oasis-tropical.png"
     },
     {
-      "id": "f128fa06-a5ee-4fa4-bf52-4a4f21fe8708",
+      "id": "a694adea-dbf7-4952-bef1-a062bbc8bc88",
       "type": "hookah",
       "path": "data/imgs/hookah/citronMeringue.png"
     },
     {
-      "id": "92039aee-f202-43ba-9c04-a920d28e7975",
+      "id": "1da89da4-4118-40f9-9bf1-4b5f3c1dff44",
       "type": "hookah",
       "path": "data/imgs/hookah/mojito.png"
     },
     {
-      "id": "67701e45-afd6-4ddc-869e-4d95e8487e6d",
+      "id": "58724818-4215-4592-9e53-4992b8cc1d87",
       "type": "hookah",
       "path": "data/imgs/hookah/banane-cannelle.png"
     },
     {
-      "id": "f01437bc-1996-4b4a-a703-0cc65a59744e",
+      "id": "ddff8abb-5fce-4527-8034-60733e6e2d2a",
       "type": "hookah",
       "path": "data/imgs/hookah/tagada.png"
     },
     {
-      "id": "554efc0f-cd98-411c-9077-8410856de77b",
+      "id": "1d718bec-8ea9-4892-8515-f0d14c7f12e9",
       "type": "formules",
       "path": "data/imgs/formules/chicha-formule.png"
     },
     {
-      "id": "25e9b867-917a-451c-b5c1-43a8486ffd87",
+      "id": "6d48567d-bdfd-4af3-9495-4ef06a2221fa",
       "type": "formules",
       "path": "data/imgs/formules/gourmande-formule.png"
     },
     {
-      "id": "6ce0f027-bfb6-49b1-a7e7-e13eef4851d0",
+      "id": "0770888b-f9d7-4e7a-ac0a-b93396870fb3",
       "type": "formules",
       "path": "data/imgs/formules/restauration-formule.png"
     }
