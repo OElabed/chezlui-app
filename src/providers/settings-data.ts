@@ -39,7 +39,6 @@ export class SettingsData {
   getVIPSettings() {
     return this.getSettings().map((data: any) => {
       const vip: VipSettingsCL = {
-        delta: data.vip.delta,
         active: data.vip.active
       };
       return vip;

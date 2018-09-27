@@ -18,9 +18,9 @@ import { VipSettingsCL } from "../../domain/chez-lui.model";
 })
 export class SettingsPage {
   submitted = false;
-  settings: VipSettingsCL = { delta: 0, active: false };
+  settings: VipSettingsCL = { active: false };
 
-  original: VipSettingsCL = { delta: 0, active: false };
+  original: VipSettingsCL = { active: false };
 
   espaceNormal: boolean = true;
   espaceVip: boolean = false;
@@ -37,7 +37,6 @@ export class SettingsPage {
   ionViewDidEnter() {
     this.settingsData.getVIPSettings().subscribe((vip: VipSettingsCL) => {
       this.original = {
-        delta: Number(vip.delta),
         active: Boolean(vip.active)
       };
       this.settings = vip;
@@ -74,7 +73,6 @@ export class SettingsPage {
 
   canUpdate() {
     if (
-      Number(this.original.delta) === Number(this.settings.delta) &&
       Boolean(this.original.active) === Boolean(this.settings.active)
     ) {
       return false;
@@ -85,9 +83,8 @@ export class SettingsPage {
   onUpdate(form: NgForm) {
     this.submitted = true;
 
-    if (form.valid && this.maximumValue(this.settings.delta)) {
+    if (form.valid) {
       const settingToSave = {
-        delta: Number(this.settings.delta),
         active: Boolean(this.settings.active)
       };
       this.settingsData
@@ -95,7 +92,6 @@ export class SettingsPage {
         .subscribe((data: boolean) => {
           this.presentToast();
           this.original = {
-            delta: Number(this.settings.delta),
             active: Boolean(this.settings.active)
           };
         });

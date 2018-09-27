@@ -887,8 +887,7 @@
   ],
   "settings": {
     "vip": {
-      "active": false,
-      "delta": 4.0
+      "active": false
     }
   }
 }
