@@ -10,6 +10,7 @@ export interface ItemCL {
   uuid: string;
   tilte: string;
   description: string;
+  price_vip: number;
   price: number;
   active: boolean;
   img: string;

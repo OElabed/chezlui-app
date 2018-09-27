@@ -24,6 +24,7 @@ export class ItemPage {
       uuid: "",
       tilte: "",
       description: "",
+      price_vip: 0,
       price: 0,
       active: true,
       img: "",

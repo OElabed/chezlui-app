@@ -20,7 +20,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8e98b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -59,8 +59,8 @@
       </div>
       <hr>
       <ion-card-title class="card-title">
-        FORMULE {{ formule.tilte | uppercase }} &amp; COCKTAIL
-        <span class="price-right">{{ getFinalPrice(formule.price) + 2 | number }}€</span>
+        FORMULE {{ formule.tilte | uppercase }} &amp; COCKTAIL, MILKSHAKES ou SMOTHIES
+        <span class="price-right">{{ getFinalPrice(formule) + 2 | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -78,6 +78,14 @@
           <ion-row>
             <ion-col>
               <span class="icon-cocktail"></span> COCKTAIL AU CHOIX
+              <br>
+              <span class="text-ou">OU</span>
+              <br>
+              <span class="icon-cocktail"></span> MILKSHAKE AU CHOIX
+              <br>
+              <span class="text-ou">OU</span>
+              <br>
+              <span class="icon-cocktail"></span> SMOOTHIE AU CHOIX
             </ion-col>
           </ion-row>
           <ion-row>
@@ -99,7 +107,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8f98b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>
@@ -129,7 +137,7 @@
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8498b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}
-        <span class="price-right">{{ getFinalPrice(formule.price) | number }}€</span>
+        <span class="price-right">{{ getFinalPrice(formule) | number }}€</span>
       </ion-card-title>
       <div class="formule-description">
         <ion-grid>

@@ -1,7 +1,7 @@
 import { ScreenSaverPage } from "../screen-saver/screen-saver";
 import { NavController } from "ionic-angular";
 import { SettingsData } from "../../providers/settings-data";
-import { VipSettingsCL } from "../../domain/chez-lui.model";
+import { VipSettingsCL, ItemCL } from "../../domain/chez-lui.model";
 import { UtilService } from "../../services/utils-service";
 
 const SCREEN_SAVER_RESET = 40;
@@ -10,7 +10,6 @@ export class AbstractPage {
   screenSaverCounter: number;
   isPageActive: boolean = false;
 
-  basePrice: number = 0;
   vipActive: boolean = false;
 
   baseDataFolder: string = "";
@@ -27,15 +26,12 @@ export class AbstractPage {
     this.screenSaverCounter = SCREEN_SAVER_RESET;
     this.isPageActive = true;
     this.timerScreenSaver();
-    this.loadBasePrice();
+    this.loadVIPSettings();
   }
 
-  loadBasePrice() {
+  loadVIPSettings() {
     this.settingsData.getVIPSettings().subscribe((vip: VipSettingsCL) => {
       this.vipActive = vip.active;
-      if (vip.active) {
-        this.basePrice = vip.delta;
-      }
     });
   }
 
@@ -61,7 +57,10 @@ export class AbstractPage {
     }
   }
 
-  getFinalPrice(price: number) {
-    return this.basePrice + price;
+  getFinalPrice(item: ItemCL) {
+    if (this.vipActive) {
+      return item.price_vip;
+    }
+    return item.price;
   }
 }

@@ -42,6 +42,7 @@ export class HookahPage extends AbstractPage {
           tilte: item.tilte,
           description: item.description,
           price: item.price,
+          price_vip: item.price_vip,
           active: item.active,
           img: item.img,
           category: item.category
