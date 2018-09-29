@@ -118,6 +118,13 @@ export class ChezLuiData {
     return result;
   }
 
+  getPhotosByType(type: string) {
+    return this.getAllPhotosList().map((images: PhotoData[]) => {
+      console.log(images.filter(item => item.type === type));
+      return images.filter(item => item.type === type);
+    });
+  }
+
   /** ============================================
    *                  FORMULES
    * =============================================

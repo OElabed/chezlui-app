@@ -24,69 +24,69 @@
         <ion-card>
           <ion-card-content>
             <ion-card-title>
-              DRINKS
+              BOISSONS
             </ion-card-title>
             <ion-grid>
               <ion-row>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect class="selected">
+
+                <ion-col col-4 *ngFor="let item of drinksPhotos">
+                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
+
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
+                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
                       </div>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
+
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-card-title>
+              RESTAURANT
+            </ion-card-title>
+            <ion-grid>
+              <ion-row>
+
+                <ion-col col-4 *ngFor="let item of foodsPhotos">
+                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
+
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
+                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
                       </div>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
+              </ion-row>
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-card-title>
+              CHICHA
+            </ion-card-title>
+            <ion-grid>
+              <ion-row>
+
+                <ion-col col-4 *ngFor="let item of hookahPhotos">
+                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
-                      </div>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
-                    <ion-card-content>
-                      <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
-                      </div>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
-                    <ion-card-content>
-                      <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
-                      </div>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
-                    <ion-card-content>
-                      <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
-                      </div>
-                    </ion-card-content>
-                  </ion-card>
-                </ion-col>
-                <ion-col col-4>
-                  <ion-card tappable m-ripple-effect>
-                    <ion-card-content>
-                      <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="assets/data/imgs/drinks/hot/cafe.png" />
+                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
                       </div>
                     </ion-card-content>
                   </ion-card>
