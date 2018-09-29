@@ -27,7 +27,11 @@ export class ItemPage {
       price_vip: 0,
       price: 0,
       active: true,
-      img: "",
+      img: {
+        id: "",
+        type: "",
+        path: ""
+      },
       category: ""
     }
   };

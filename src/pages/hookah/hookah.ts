@@ -44,7 +44,7 @@ export class HookahPage extends AbstractPage {
           price: item.price,
           price_vip: item.price_vip,
           active: item.active,
-          img: item.img,
+          img: this.dataProvider.getPhotoById(item.img),
           category: item.category
         });
       });

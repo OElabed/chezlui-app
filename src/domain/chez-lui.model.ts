@@ -13,16 +13,21 @@ export interface ItemCL {
   price_vip: number;
   price: number;
   active: boolean;
-  img: string;
+  img: PhotoData;
   category: string;
 }
-
 
 export interface VipSettingsCL {
   active: boolean;
 }
 
 export interface ItemPageData {
-  modification: boolean,
-  item: ItemCL
+  modification: boolean;
+  item: ItemCL;
+}
+
+export interface PhotoData {
+  id: string;
+  type: string;
+  path: string;
 }

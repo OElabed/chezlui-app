@@ -3,17 +3,16 @@ import { Http } from "@angular/http";
 import { Storage } from "@ionic/storage";
 import { Observable } from "rxjs/Observable";
 import { SettingsData } from "./settings-data";
-import { ItemCL, GroupCL } from "../domain/chez-lui.model";
+import { ItemCL, GroupCL, PhotoData } from "../domain/chez-lui.model";
 import "rxjs/add/operator/map";
 import "rxjs/add/observable/of";
 import "rxjs/add/observable/fromPromise";
 import "rxjs/add/operator/mergeMap";
 import { UUID } from "angular2-uuid";
-import { File, Entry } from "@ionic-native/file";
+import { File } from "@ionic-native/file";
 
 @Injectable()
 export class ChezLuiData {
-
   CHEZLUI_DATA_FOODS = "foods_data";
 
   CHEZLUI_DATA_DRINKS = "drinks_data";
@@ -22,12 +21,20 @@ export class ChezLuiData {
 
   CHEZLUI_DATA_FORMULES = "formules_data";
 
+  CHEZLUI_DATA_IMAGES = "images_data";
+
+  photos: PhotoData[] = [];
+
   constructor(
     public http: Http,
     public storage: Storage,
     public settingsData: SettingsData,
     public file: File
-  ) {}
+  ) {
+    this.getAllPhotosList().subscribe(data => {
+      this.photos = data;
+    });
+  }
 
   saveList(storageId: string, data: any) {
     this.storage.set(storageId, data);
@@ -50,15 +57,6 @@ export class ChezLuiData {
           this.file
             .copyDir(assetDirectory, "data/", this.file.dataDirectory, "data/")
             .then(data => {
-              // this.file
-              //   .listDir(this.file.dataDirectory, "data/imgs/drinks/")
-              //   .then((entries: Entry[]) => {
-              //     this.coucou = JSON.stringify(entries);
-              //     return true;
-              //   })
-              //   .catch(error => {
-              //     return false;
-              //   });
               return true;
             })
             .catch(error => {
@@ -87,38 +85,37 @@ export class ChezLuiData {
    * =============================================
    */
 
-  getDrinksPhotos() {
-    return Observable.fromPromise(
-      this.file
-        .listDir(this.file.dataDirectory, "data/imgs/drinks/")
-        .then((entries: Entry[]) => {
-          return entries;
-        })
-        .catch(error => {
-          return [];
-        })
-    ).map((data: Entry[]) => {
-      let imagesPaths: string[] = [];
-      let promiseList = [];
-      data.forEach((item: Entry, index) => {
-        promiseList.push(
-          this.file
-            .listDir(this.file.dataDirectory, item.fullPath)
-            .then((images: Entry[]) => {
-              images.forEach((image: Entry, index) => {
-                imagesPaths.push(image.fullPath);
-              });
-            })
-            .catch(error => {
-              throw new Error(error);
-            })
+  getAllPhotosList() {
+    return this.http
+      .get("assets/data/data.json")
+      .map((data: any) => {
+        return data.json().photos;
+      }, this)
+      .mergeMap((result: any) => {
+        return Observable.fromPromise(
+          this.storage.get(this.CHEZLUI_DATA_IMAGES).then(value => {
+            if (value) {
+              return value;
+            }
+            this.storage.set(this.CHEZLUI_DATA_IMAGES, result);
+            return result;
+          })
         );
       });
+  }
 
-      return Observable.fromPromise(
-        Promise.all(promiseList).then(() => true)
-      );
+  getPhotoById(uuid: string) {
+    let result: PhotoData;
+    this.photos.forEach((item: any) => {
+      if (item.id === uuid) {
+        result = {
+          id: item.id,
+          type: item.type,
+          path: item.path
+        };
+      }
     });
+    return result;
   }
 
   /** ============================================
@@ -146,7 +143,7 @@ export class ChezLuiData {
   }
 
   updateFormule(formule: ItemCL) {
-    return this.getFormulesList().map((data: any[]) => {
+    return this.getFormulesList().map((data: ItemCL[]) => {
       let indexUpdate = 0;
       data.forEach((item: ItemCL, index) => {
         if (item.uuid === formule.uuid) {
@@ -160,7 +157,7 @@ export class ChezLuiData {
   }
 
   deleteFormule(formule: any) {
-    return this.getFormulesList().map((data: any[]) => {
+    return this.getFormulesList().map((data: ItemCL[]) => {
       let newList: ItemCL[] = [];
       data.forEach((item: ItemCL, index) => {
         if (item.uuid !== formule.uuid) {
@@ -197,19 +194,19 @@ export class ChezLuiData {
   }
 
   getHookah(uuid: string) {
-    return this.getHookahList().map((data: any[]) => {
+    return this.getHookahList().map((data: ItemCL[]) => {
       let result: ItemCL;
       data.forEach((item: ItemCL) => {
         if (item.uuid === uuid) {
           result = item;
         }
       });
-      return result;
+      return this.mapItemCL(result);
     });
   }
 
   addHookah(hookah: ItemCL) {
-    return this.getHookahList().map((data: any[]) => {
+    return this.getHookahList().map((data: ItemCL[]) => {
       hookah.uuid = UUID.UUID();
       data.push(hookah);
       this.saveList(this.CHEZLUI_DATA_HOOKAH, data);
@@ -218,7 +215,7 @@ export class ChezLuiData {
   }
 
   updateHookah(hookah: ItemCL) {
-    return this.getHookahList().map((data: any[]) => {
+    return this.getHookahList().map((data: ItemCL[]) => {
       let indexUpdate = 0;
       data.forEach((item: ItemCL, index) => {
         if (item.uuid === hookah.uuid) {
@@ -231,8 +228,8 @@ export class ChezLuiData {
     });
   }
 
-  deleteHookah(hookah: any) {
-    return this.getHookahList().map((data: any[]) => {
+  deleteHookah(hookah: ItemCL) {
+    return this.getHookahList().map((data: ItemCL[]) => {
       let newList: ItemCL[] = [];
       data.forEach((item: ItemCL, index) => {
         if (item.uuid !== hookah.uuid) {
@@ -281,7 +278,7 @@ export class ChezLuiData {
           });
         }
       });
-      return result;
+      return this.mapItemCL(result);
     });
   }
 
@@ -382,7 +379,7 @@ export class ChezLuiData {
           });
         }
       });
-      return result;
+      return this.mapItemCL(result);
     });
   }
 
@@ -445,5 +442,41 @@ export class ChezLuiData {
       this.saveList(this.CHEZLUI_DATA_FOODS, newData);
       return true;
     });
+  }
+
+  /** ============================================
+   *                  COMMON
+   * =============================================
+   */
+
+  mapItemCLfromList(data: any[]) {
+    let result: ItemCL[] = [];
+    data.forEach((item: any) => {
+      result.push({
+        uuid: item.uuid,
+        tilte: item.tilte,
+        description: item.description,
+        price: item.price,
+        price_vip: item.price_vip,
+        active: item.active,
+        img: this.getPhotoById(item.img),
+        category: item.category
+      });
+    });
+    return result;
+  }
+
+  mapItemCL(data: any) {
+    let result: ItemCL = {
+      uuid: data.uuid,
+      tilte: data.tilte,
+      description: data.description,
+      price: data.price,
+      price_vip: data.price_vip,
+      active: data.active,
+      img: this.getPhotoById(data.img),
+      category: data.category
+    };
+    return result;
   }
 }

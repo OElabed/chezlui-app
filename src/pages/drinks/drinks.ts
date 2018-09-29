@@ -32,7 +32,7 @@ export class DrinksPage extends AbstractPage {
           type: item.type,
           title: item.title,
           img: item.icon,
-          items: item.items
+          items: this.dataProvider.mapItemCLfromList(item.items)
         });
       });
     });

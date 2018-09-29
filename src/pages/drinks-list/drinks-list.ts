@@ -40,6 +40,7 @@ export class DrinksListPage extends AbstractPage {
       list.forEach((element: GroupCL) => {
         if (this.group.uuid === element.uuid) {
           this.group = element;
+          this.group.items = this.dataProvider.mapItemCLfromList(element.items);
         }
       });
       return true;

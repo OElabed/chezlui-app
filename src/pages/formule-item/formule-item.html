@@ -16,7 +16,7 @@
 <ion-content class="card-background-page" padding (click)="globalInteraction()">
 
   <ion-card *ngIf="formule">
-    <img src="{{ baseDataFolder + formule.img }}" />
+    <img src="{{ baseDataFolder + formule.img.path }}" />
     <ion-card-content *ngIf="formule.uuid === '745957c8-e229-4958-979d-980e8e98b7d0'">
       <ion-card-title class="card-title">
         FORMULE {{ formule.tilte | uppercase }}

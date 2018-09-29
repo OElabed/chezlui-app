@@ -60,7 +60,7 @@ export class FoodsPage extends AbstractPage {
         title: null,
         type: sucreeGroupResult.type,
         img: null,
-        items: sucreeGroupResult.items
+        items: this.dataProvider.mapItemCLfromList(sucreeGroupResult.items)
       };
 
       this.saleeGroup = {
@@ -68,7 +68,7 @@ export class FoodsPage extends AbstractPage {
         title: null,
         type: saleeGroupResult.type,
         img: null,
-        items: saleeGroupResult.items
+        items: this.dataProvider.mapItemCLfromList(saleeGroupResult.items)
       };
 
       this.saleeCategoriesActiveMap = new Map<string, number>();
