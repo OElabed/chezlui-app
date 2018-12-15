@@ -157,7 +157,7 @@ export class ChezLuiData {
           indexUpdate = index;
         }
       });
-      data[indexUpdate] = formule;
+      data[indexUpdate] = this.mapDBItemCL(formule);
       this.saveList(this.CHEZLUI_DATA_FORMULES, data);
       return true;
     });
@@ -229,7 +229,7 @@ export class ChezLuiData {
           indexUpdate = index;
         }
       });
-      data[indexUpdate] = hookah;
+      data[indexUpdate] = this.mapDBItemCL(hookah);
       this.saveList(this.CHEZLUI_DATA_HOOKAH, data);
       return true;
     });
@@ -322,7 +322,9 @@ export class ChezLuiData {
       });
 
       if (!isNaN(indexGroupToUpdate) && !isNaN(indexIemToUpdate)) {
-        data[indexGroupToUpdate].items[indexIemToUpdate] = drink;
+        data[indexGroupToUpdate].items[indexIemToUpdate] = this.mapDBItemCL(
+          drink
+        );
       }
       this.saveList(this.CHEZLUI_DATA_DRINKS, data);
       return true;
@@ -423,7 +425,9 @@ export class ChezLuiData {
       });
 
       if (!isNaN(indexGroupToUpdate) && !isNaN(indexIemToUpdate)) {
-        data[indexGroupToUpdate].items[indexIemToUpdate] = food;
+        data[indexGroupToUpdate].items[indexIemToUpdate] = this.mapDBItemCL(
+          food
+        );
       }
       this.saveList(this.CHEZLUI_DATA_FOODS, data);
       return true;
@@ -482,6 +486,20 @@ export class ChezLuiData {
       price_vip: data.price_vip,
       active: data.active,
       img: this.getPhotoById(data.img),
+      category: data.category
+    };
+    return result;
+  }
+
+  mapDBItemCL(data: ItemCL) {
+    let result: any = {
+      uuid: data.uuid,
+      tilte: data.tilte,
+      description: data.description,
+      price: data.price,
+      price_vip: data.price_vip,
+      active: data.active,
+      img: data.img.id,
       category: data.category
     };
     return result;

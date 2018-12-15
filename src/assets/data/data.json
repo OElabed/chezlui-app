@@ -17,18 +17,58 @@
           "uuid": "779fjc49-a319-4522-ad16-9ed89626096e",
           "tilte": "El chapo",
           "description": "Steak frais de 120g, dinde fumé barbecue, fromage emmental, poivrons, salade, tomate, sauce Chilli.",
-          "price_vip": 8.0,
-          "price": 7.0,
+          "price_vip": 10.5,
+          "price": 9.5,
           "active": true,
           "category": "burger",
           "img": "12c653d9-8106-494d-9fdd-3521389e0989"
         },
         {
+          "uuid": "779fjc49-a319-4522-ad16-9pp89626096e",
+          "tilte": "Hot dog",
+          "description": "Ketchup, Moutarde, Cornichons, Soucisse frais, Salade Roquette, Cheddar, (Chévre miel free)",
+          "price_vip": 8.5,
+          "price": 7.5,
+          "active": true,
+          "category": "hot dog",
+          "img": "5a2df0e6-cf02-46e4-b5b1-32f00679eab6"
+        },
+        {
+          "uuid": "901fjc49-a319-4522-ad16-9pp89626096e",
+          "tilte": "Le savoyard",
+          "description": "Sauce Fromagére, Salade Roquette, Oignon Rouge, Fromage comté, Dinde fumé, Eclat d'amende, Grillé Steak frais 100g.",
+          "price_vip": 10.5,
+          "price": 9.5,
+          "active": true,
+          "category": "plats",
+          "img": "5m2df0e6-cf02-46e4-b5b1-32f00459eab6"
+        },
+        {
+          "uuid": "901fjc49-1219-4522-ad16-9pp89626096e",
+          "tilte": "L'oriental",
+          "description": "Pain Msemmen, Souce poivre, Steak frais 100g, Cheddar, Salade Roquette, Poivron, Oignon Rouge, Oeuf.",
+          "price_vip": 10.5,
+          "price": 9.5,
+          "active": true,
+          "category": "plats",
+          "img": "5c2df0e6-cf02-46e4-b5b1-32f00459eab6"
+        },
+        {
+          "uuid": "901fjc49-1219-4522-ad16-9pp89626096e",
+          "tilte": "Riz escalope milanaise",
+          "description": "",
+          "price_vip": 10.5,
+          "price": 9.5,
+          "active": true,
+          "category": "plats",
+          "img": "5j2df0e6-cf02-46e4-b5b1-32f00459eab6"
+        },
+        {
           "uuid": "48e438b1-3bcf-4cef-93b7-001edd55a1c2",
           "tilte": "El pollo",
           "description": "Tenders, salade, maïs, fromage emmental, sauce barbecue.",
-          "price_vip": 8.0,
-          "price": 7.0,
+          "price_vip": 10.5,
+          "price": 9.5,
           "active": true,
           "category": "fajitas",
           "img": "39d2bd1e-e6ff-491c-9c80-2de543442dc4"
@@ -37,8 +77,8 @@
           "uuid": "48e438b1-3bcf-4cef-93b7-0ffedd12a1c2",
           "tilte": "El bistec",
           "description": "Steak frais, salade, poivron, sauce mexicaine, oignons rouge, maïs.",
-          "price_vip": 8.0,
-          "price": 7.0,
+          "price_vip": 10.5,
+          "price": 9.5,
           "active": true,
           "category": "fajitas",
           "img": "f265a8b7-1a28-47f4-8517-201cfea14e72"
@@ -48,7 +88,7 @@
           "tilte": "El vegetariano",
           "description": "Bouché camembert, bouché chèvre, salade, tomate, sauce fine herbes.",
           "price_vip": 8.0,
-          "price": 7.0,
+          "price": 9.5,
           "active": true,
           "category": "fajitas",
           "img": "d194ce40-b95d-4073-96cc-1e737febabeb"
@@ -104,7 +144,7 @@
           "description": "Msemmen servis avec du Nutella et miel",
           "price_vip": 6.0,
           "price": 5.0,
-          "active": false,
+          "active": true,
           "category": "",
           "img": "6a50fe5d-254d-4843-bb14-aa878dd7c094"
         },
@@ -114,19 +154,49 @@
           "description": "Tartelettes aux fraises et crème patissière",
           "price_vip": 6.0,
           "price": 5.0,
-          "active": false,
+          "active": true,
           "category": "",
           "img": "a3649649-e635-4a6f-879b-20ed541287a5"
         },
         {
           "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
           "tilte": "TIramisu bueno",
-          "description": " Tiramisu avec kinder bueno Nutella",
+          "description": "Tiramisu avec kinder bueno Nutella",
           "price_vip": 6.0,
           "price": 5.0,
-          "active": false,
+          "active": true,
           "category": "",
           "img": "939ace31-c145-404d-b961-f0c7b003ba39"
+        },
+        {
+          "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
+          "tilte": "TIramisu cookie banane",
+          "description": "Tiramisu produit maison",
+          "price_vip": 6.0,
+          "price": 5.0,
+          "active": true,
+          "category": "",
+          "img": "939ace31-c145-404d-b961-f0c7b003ba39"
+        },
+        {
+          "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
+          "tilte": "Gauffre Nutella Bueno",
+          "description": " ",
+          "price_vip": 6.0,
+          "price": 5.0,
+          "active": true,
+          "category": "",
+          "img": "5a2df0e6-cf02-46e4-b5b1-32f004tgsab6"
+        },
+        {
+          "uuid": "6307e2c3-a5a8-4c44-a736-eb31a8cae602",
+          "tilte": "Gauffre Nutella Choco-bons",
+          "description": " ",
+          "price_vip": 6.0,
+          "price": 5.0,
+          "active": true,
+          "category": "",
+          "img": "5a2df0e6-cf02-46e4-b5b1-32f004tgsab6"
         }
       ]
     }
@@ -274,7 +344,7 @@
           "price": 6.0,
           "active": true,
           "category": "",
-          "img": "fdd1b3d4-8021-4d36-98c7-0acbcf9cb8a7"
+          "img": "0690888b-f9d7-4e7a-ailq-b9ls96870fb3"
         },
         {
           "uuid": "abd13a8f-b962-4730-96e8-312alzecaef1",
@@ -285,6 +355,36 @@
           "active": true,
           "category": "",
           "img": "73613839-d883-4b94-bf4a-a833038773bf"
+        },
+        {
+          "uuid": "abd13a8f-b962-4730-96e8-312alzecaef5",
+          "tilte": "Milk-shake Choco-Bons (Eclat de noisette)",
+          "description": "",
+          "price_vip": 8.0,
+          "price": 6.0,
+          "active": true,
+          "category": "",
+          "img": "0690888b-f9d7-4e7a-ailq-b9ls96870fb3"
+        },
+        {
+          "uuid": "abd13a8f-b962-4730-96e8-312alzecaef4",
+          "tilte": "Milk-shake Pistache Amande",
+          "description": "",
+          "price_vip": 8.0,
+          "price": 6.0,
+          "active": true,
+          "category": "",
+          "img": "0690888b-f9d7-4e7a-aiua-bko396870fb3"
+        },
+        {
+          "uuid": "abd13a8f-b962-4730-96e8-3k2aeaecahid",
+          "tilte": "Milk-shake BUENO COCO",
+          "description": "",
+          "price_vip": 8.0,
+          "price": 6.0,
+          "active": true,
+          "category": "",
+          "img": "0690888b-f9d7-4e7a-ailq-b9ls96870fb3"
         }
       ]
     },
@@ -323,6 +423,16 @@
           "active": true,
           "category": "",
           "img": "6132eb87-c2ef-46f0-bc18-3060de59dfe3"
+        },
+        {
+          "uuid": "abd13a8f-b962-4920-96e8-3k2aeaecgef1",
+          "tilte": "smoothie Fraise/Banane",
+          "description": "",
+          "price_vip": 8.0,
+          "price": 6.0,
+          "active": true,
+          "category": "",
+          "img": "c9ab98af-4000-47f6-a42d-82bf2ef2ce2a"
         }
       ]
     },
@@ -358,7 +468,7 @@
           "description": "",
           "price_vip": 8.0,
           "price": 6.0,
-          "active": false,
+          "active": true,
           "category": "",
           "img": "1760e5c7-8703-437b-9b2c-d8fbca27b461"
         },
@@ -527,6 +637,16 @@
           "active": true,
           "category": "",
           "img": "4af25f1d-7f9f-4ed3-8f10-6b926a2aacf9"
+        },
+        {
+          "uuid": "77b9ed42-6471-4620-bdca-f57dpa53dd4b",
+          "tilte": "Chocolat chaud (Pour cet hiver)",
+          "description": "",
+          "price_vip": 5.0,
+          "price": 4.0,
+          "active": true,
+          "category": "",
+          "img": "0690888b-f9d7-4e7a-ac0a-b93396870fb3"
         }
       ]
     }
@@ -571,6 +691,226 @@
       "active": true,
       "category": "",
       "img": "4d8e3830-3b82-48f3-b70a-7abaa001850c"
+    },
+    {
+      "uuid": "a305ad49-24d7-4848-9ca1-ddcaad3f519b",
+      "tilte": "Cassis",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "38d046b6-423b-48e3-8753-4de1f054875d"
+    },
+    {
+      "uuid": "aa0c0574-d8b6-47bb-882f-cf806d8d26a0",
+      "tilte": "Pistache cookies",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "cc192ea5-ffba-47fa-b831-560fcccf4b1f"
+    },
+    {
+      "uuid": "7af93dff-76e9-413b-8683-f5f0fe63760b",
+      "tilte": "Cannelle",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "49954391-7c6d-4d08-b901-a46ee3f07960"
+    },
+    {
+      "uuid": "93a9f05d-767c-4fa0-8c88-fed5ea5c8aa8",
+      "tilte": "Framboise orange",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "c16b7cd6-e791-4ae0-a2e9-2273d38a4412"
+    },
+    {
+      "uuid": "a67e7227-23f5-40af-82b6-ac0b9bf8ce82",
+      "tilte": "Menthe bonbon",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "1dbf05bf-8f42-4bf0-b050-cb443443bb17"
+    },
+    {
+      "uuid": "15dbe22e-3121-4fa7-b2ee-04f8944117b7",
+      "tilte": "Menthe arlequin",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "1d22889b-e623-43c4-aead-97448591b76c"
+    },
+    {
+      "uuid": "704142ec-3231-4a0d-a49c-c953cf3ddd50",
+      "tilte": "Beurre de cacahouète",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "a5322a8f-e291-4b84-8434-255efcacad43"
+    },
+    {
+      "uuid": "2474b20c-14da-484a-93fb-2882fba36c92",
+      "tilte": "Cerise sucrée",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "2d6c51d4-2d2b-453e-a9da-535705288c11"
+    },
+    {
+      "uuid": "cb2e0056-6dc4-45f1-b80d-c8206e81b634",
+      "tilte": "Gum Hollywood",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "6f2c4d45-c97f-4bb3-90a8-383cb2329b70"
+    },
+    {
+      "uuid": "fbfe186a-068e-47d8-afb0-e46cb1e02040",
+      "tilte": "Ananas sucre",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "5964977d-fcae-46df-b7e1-1e1a52879b11"
+    },
+    {
+      "uuid": "6610a89e-45af-4fb0-bb08-6d9493c07d96",
+      "tilte": "Passion glace",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "fc2b146b-2696-43db-b24f-6c654725734b"
+    },
+    {
+      "uuid": "b40d6cb1-a1ce-4ad5-b0d6-a0431387d3b7",
+      "tilte": "Fraise milkshake",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "701707b3-ad25-4a2e-adde-ca1044922c61"
+    },
+    {
+      "uuid": "5812b60b-c363-4169-82dc-7b6932327bd8",
+      "tilte": "Pastèque milkshake",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "664053b6-6414-45e1-bad1-a2d59ac343d5"
+    },
+    {
+      "uuid": "757a80de-889d-450c-85c0-087851d0f144",
+      "tilte": "Mandarine",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "6a3d5b35-0df8-4c51-9070-597110fbce1e"
+    },
+    {
+      "uuid": "5289a27c-5337-43d3-8e2f-b2bcdeba255a",
+      "tilte": "Abricot",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "3fffa0d1-46aa-49c5-a489-d0553aa66f94"
+    },
+    {
+      "uuid": "f8564e5e-b144-4aab-89c6-eaf22851c27e",
+      "tilte": "Caramel",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "cc9fc691-bb6a-450b-9596-c91ca516e347"
+    },
+    {
+      "uuid": "699136b5-5d64-454a-b5e6-c7e5e0441565",
+      "tilte": "Fraise framboise",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "c16b7cd6-e791-4ae0-a2e9-2273d38a4412"
+    },
+    {
+      "uuid": "1bc9465e-d450-49d8-8a8b-b312cdca6ceb",
+      "tilte": "Melon sucrée",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "8f1ed351-dffd-45cf-830e-2c178ed7b974"
+    },
+    {
+      "uuid": "6da4e5ad-265c-4127-aba0-ea71d6046398",
+      "tilte": "Citron jasmin",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "b8e28438-24da-4b4f-a23d-c23f1ee3d5f3"
+    },
+    {
+      "uuid": "2f2d02fe-f203-4eaa-a788-f3117a479874",
+      "tilte": "Pomme canne à sucre",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "8f1ed351-dffd-45cf-800e-2c178ed7b974"
+    },
+    {
+      "uuid": "d9a09abe-aa49-4532-8103-77e3272a65f0",
+      "tilte": "mangue sucrée",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "5a980e4c-791c-4e58-b86b-43b31cea77fa"
+    },
+    {
+      "uuid": "bce9a56d-f930-4282-9f2e-c3170949f904",
+      "tilte": "Coca bonbon",
+      "description": "",
+      "price_vip": 19.0,
+      "price": 15.0,
+      "active": true,
+      "category": "",
+      "img": "04eca195-4f6f-41f4-8173-67bcf75d2af4"
     },
     {
       "uuid": "745957c8-e229-4955-979d-980e8a98b7d0",
@@ -869,7 +1209,7 @@
       "tilte": "eat's",
       "description": "",
       "price_vip": 14.0,
-      "price": 10.0,
+      "price": 9.5,
       "active": true,
       "category": "",
       "img": "0770888b-f9d7-4e7a-ac0a-b93396870fb3"
@@ -1290,6 +1630,166 @@
       "id": "0770888b-f9d7-4e7a-ac0a-b93396870fb3",
       "type": "formules",
       "path": "data/imgs/formules/restauration-formule.png"
+    },
+    {
+      "id": "0690888b-f9d7-4e7a-ac0a-b93396870fb3",
+      "type": "drinks",
+      "path": "data/imgs/drinks/hot/chocolat.png"
+    },
+    {
+      "id": "0690888b-f9d7-4e7a-aiua-bko396870fb3",
+      "type": "drinks",
+      "path": "data/imgs/drinks/milkshake/mk-pistache.png"
+    },
+    {
+      "id": "0690888b-f9d7-4e7a-aiua-b9ls96870fb3",
+      "type": "drinks",
+      "path": "data/imgs/drinks/milkshake/mk-kitkat.png"
+    },
+    {
+      "id": "0690888b-f9d7-4e7a-ailq-b9ls96870fb3",
+      "type": "drinks",
+      "path": "data/imgs/drinks/milkshake/mk-bueno.png"
+    },
+    {
+      "id": "5a2df0e6-cf02-46e4-b5b1-32f00679eab6",
+      "type": "foods",
+      "path": "data/imgs/foods/salee/hotdog.png"
+    },
+    {
+      "id": "5a2df0e6-cf02-46e4-b5b1-32f00459eab6",
+      "type": "foods",
+      "path": "data/imgs/foods/salee/plat.png"
+    },
+    {
+      "id": "5j2df0e6-cf02-46e4-b5b1-32f00459eab6",
+      "type": "foods",
+      "path": "data/imgs/foods/salee/escalope.png"
+    },
+    {
+      "id": "5c2df0e6-cf02-46e4-b5b1-32f00459eab6",
+      "type": "foods",
+      "path": "data/imgs/foods/salee/steak-fromage.png"
+    },
+    {
+      "id": "5m2df0e6-cf02-46e4-b5b1-32f00459eab6",
+      "type": "foods",
+      "path": "data/imgs/foods/salee/escalope-fromage.png"
+    },
+    {
+      "id": "5a2df0e6-cf02-46e4-b5b1-32f004tgsab6",
+      "type": "foods",
+      "path": "data/imgs/foods/sucree/gauffre.png"
+    },
+    {
+      "id": "3fffa0d1-46aa-49c5-a489-d0553aa66f94",
+      "type": "hookah",
+      "path": "data/imgs/hookah/abricot.png"
+    },
+    {
+      "id": "5964977d-fcae-46df-b7e1-1e1a52879b11",
+      "type": "hookah",
+      "path": "data/imgs/hookah/ananas.png"
+    },
+    {
+      "id": "04eca195-4f6f-41f4-8173-67bcf75d2af4",
+      "type": "hookah",
+      "path": "data/imgs/hookah/caca-bonbon.png"
+    },
+    {
+      "id": "a5322a8f-e291-4b84-8434-255efcacad43",
+      "type": "hookah",
+      "path": "data/imgs/hookah/cacahouete.png"
+    },
+    {
+      "id": "49954391-7c6d-4d08-b901-a46ee3f07960",
+      "type": "hookah",
+      "path": "data/imgs/hookah/canelle.png"
+    },
+    {
+      "id": "cc9fc691-bb6a-450b-9596-c91ca516e347",
+      "type": "hookah",
+      "path": "data/imgs/hookah/caramel.png"
+    },
+    {
+      "id": "38d046b6-423b-48e3-8753-4de1f054875d",
+      "type": "hookah",
+      "path": "data/imgs/hookah/cassis.png"
+    },
+    {
+      "id": "2d6c51d4-2d2b-453e-a9da-535705288c11",
+      "type": "hookah",
+      "path": "data/imgs/hookah/cerise.png"
+    },
+    {
+      "id": "b8e28438-24da-4b4f-a23d-c23f1ee3d5f3",
+      "type": "hookah",
+      "path": "data/imgs/hookah/citron-jasmin.png"
+    },
+    {
+      "id": "6a3d5b35-0df8-4c51-9070-597110fbce1e",
+      "type": "hookah",
+      "path": "data/imgs/hookah/climentine.png"
+    },
+    {
+      "id": "c16b7cd6-e791-4ae0-a2e9-2273d38a4412",
+      "type": "hookah",
+      "path": "data/imgs/hookah/fraise-framboise.png"
+    },
+    {
+      "id": "701707b3-ad25-4a2e-adde-ca1044922c61",
+      "type": "hookah",
+      "path": "data/imgs/hookah/fraise-milkshake.png"
+    },
+    {
+      "id": "6f2c4d45-c97f-4bb3-90a8-383cb2329b70",
+      "type": "hookah",
+      "path": "data/imgs/hookah/hollywood.png"
+    },
+    {
+      "id": "5a980e4c-791c-4e58-b86b-43b31cea77fa",
+      "type": "hookah",
+      "path": "data/imgs/hookah/mangue.png"
+    },
+    {
+      "id": "1d22889b-e623-43c4-aead-97448591b76c",
+      "type": "hookah",
+      "path": "data/imgs/hookah/menthe-arlequin.png"
+    },
+    {
+      "id": "1dbf05bf-8f42-4bf0-b050-cb443443bb17",
+      "type": "hookah",
+      "path": "data/imgs/hookah/menthe-bonbon.png"
+    },
+    {
+      "id": "0afb8828-8611-4f46-ad04-947ad8edb274",
+      "type": "hookah",
+      "path": "data/imgs/hookah/orange-framboise.png"
+    },
+    {
+      "id": "fc2b146b-2696-43db-b24f-6c654725734b",
+      "type": "hookah",
+      "path": "data/imgs/hookah/passion-glace.png"
+    },
+    {
+      "id": "664053b6-6414-45e1-bad1-a2d59ac343d5",
+      "type": "hookah",
+      "path": "data/imgs/hookah/pasteque-milkshake.png"
+    },
+    {
+      "id": "cc192ea5-ffba-47fa-b831-560fcccf4b1f",
+      "type": "hookah",
+      "path": "data/imgs/hookah/pistache-cookies.png"
+    },
+    {
+      "id": "8f1ed351-dffd-45cf-800e-2c178ed7b974",
+      "type": "hookah",
+      "path": "data/imgs/hookah/pomme-sucre-canne.png"
+    },
+    {
+      "id": "8f1ed351-dffd-45cf-830e-2c178ed7b974",
+      "type": "hookah",
+      "path": "data/imgs/hookah/melon.png"
     }
   ],
   "settings": {

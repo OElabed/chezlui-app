@@ -4,7 +4,7 @@ import { SettingsData } from "../../providers/settings-data";
 import { VipSettingsCL, ItemCL } from "../../domain/chez-lui.model";
 import { UtilService } from "../../services/utils-service";
 
-const SCREEN_SAVER_RESET = 40;
+const SCREEN_SAVER_RESET = 100;
 
 export class AbstractPage {
   screenSaverCounter: number;
