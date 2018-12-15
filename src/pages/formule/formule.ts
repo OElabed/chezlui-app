@@ -4,7 +4,7 @@ import { ChezLuiData } from "../../providers/chezlui-data";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { FormuleItemPage } from "../formule-item/formule-item";
 import { UserData } from "../../providers/user-data";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -19,7 +19,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-formule",
   templateUrl: "formule.html"
 })
-export class FormulePage extends AbstractPage {
+export class FormulePage extends AbstractPublicPage {
   formulesList: Array<ItemCL> = [];
   constructor(
     public navCtrl: NavController,
@@ -47,7 +47,7 @@ export class FormulePage extends AbstractPage {
       list.forEach(item => {
         this.formulesList.push({
           uuid: item.uuid,
-          tilte: item.tilte,
+          title: item.title,
           description: item.description,
           price: item.price,
           price_vip: item.price_vip,

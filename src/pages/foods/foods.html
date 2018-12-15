@@ -9,57 +9,84 @@
   </ion-navbar>
   <ion-toolbar no-border-top>
     <ion-segment [(ngModel)]="foodType" color="golden">
-      <ion-segment-button value="salee">
-        Salée
-      </ion-segment-button>
-      <ion-segment-button value="sucree">
-        Sucrée
-      </ion-segment-button>
+      <ion-segment-button value="salee"> Salée </ion-segment-button>
+      <ion-segment-button value="sucree"> Sucrée </ion-segment-button>
     </ion-segment>
   </ion-toolbar>
 </ion-header>
 
-
-
 <ion-content class="card-background-page" padding (click)="globalInteraction()">
-
   <div [ngSwitch]="foodType">
     <div *ngSwitchCase="'salee'">
-
-
-
-
-
       <ng-container *ngFor="let category of saleeCategories">
-        <ng-container *ngIf="!(!userDataProvider.hasLoggedIn() && saleeCategoriesActiveMap.get(category) === 0)">
+        <ng-container
+          *ngIf="
+            !(
+              !userDataProvider.hasLoggedIn() &&
+              saleeCategoriesActiveMap.get(category) === 0
+            )
+          "
+        >
           <h3 class="sub-categories">{{ category | uppercase }}</h3>
           <hr class="separator" />
           <ng-container *ngFor="let item of saleeGroup.items">
-
             <ng-container *ngIf="item.category === category">
-              <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
-                <ion-card-content [ngClass]="{'card-disable' : !item.active}">
+              <ion-card
+                *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)"
+              >
+                <ion-card-content [ngClass]="{ 'card-disable': !item.active }">
                   <ion-grid>
                     <ion-row>
                       <ion-col col-3>
-                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.img.path }}" />
+                        <img
+                          class="chezlui-food-item-image"
+                          src="{{ baseDataFolder + item.img.path }}"
+                        />
                       </ion-col>
                       <ion-col>
                         <div class="card-details">
-                          <h1>{{ item.tilte | uppercase }}</h1>
+                          <h1>{{ item.title | uppercase }}</h1>
                           <p class="description">{{ item.description }}</p>
                           <div>
-                            <h2 class="price">{{ getFinalPrice(item) | number}} €
-                              <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                                <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'salee')">
+                            <h2 class="price">
+                              {{ getFinalPrice(item) | number }} €
+                              <span
+                                class="tools"
+                                *ngIf="userDataProvider.hasLoggedIn()"
+                              >
+                                <button
+                                  ion-button
+                                  small
+                                  icon-only
+                                  color="danger"
+                                  (click)="showDeleteConfirm(item, 'salee')"
+                                >
                                   <ion-icon name="trash"></ion-icon>
                                 </button>
-                                <button ion-button small icon-only color="dark">
+                                <button
+                                  ion-button
+                                  small
+                                  icon-only
+                                  color="dark"
+                                  (click)="goToEditItem(item, 'salee')"
+                                >
                                   <ion-icon name="create"></ion-icon>
                                 </button>
-                                <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'salee')">
-                                  <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
-                                  <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                                <button
+                                  ion-button
+                                  small
+                                  icon-only
+                                  color="primary"
+                                  (click)="itemActivation(item, 'salee')"
+                                >
+                                  <ion-icon
+                                    name="eye-off"
+                                    *ngIf="item.active"
+                                  ></ion-icon>
+                                  <ion-icon
+                                    name="eye"
+                                    *ngIf="!item.active"
+                                  ></ion-icon>
                                 </button>
                               </span>
                             </h2>
@@ -72,37 +99,66 @@
               </ion-card>
             </ng-container>
           </ng-container>
-
         </ng-container>
       </ng-container>
-
     </div>
 
     <div *ngSwitchCase="'sucree'">
       <ng-container *ngFor="let item of sucreeGroup.items">
         <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
-          <ion-card-content [ngClass]="{'card-disable' : !item.active}">
+          <ion-card-content [ngClass]="{ 'card-disable': !item.active }">
             <ion-grid>
               <ion-row>
                 <ion-col col-3>
-                  <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.img.path }}" />
+                  <img
+                    class="chezlui-food-item-image"
+                    src="{{ baseDataFolder + item.img.path }}"
+                  />
                 </ion-col>
                 <ion-col>
                   <div class="card-details">
-                    <h1>{{ item.tilte | uppercase }}</h1>
+                    <h1>{{ item.title | uppercase }}</h1>
                     <p class="description">{{ item.description }}</p>
                     <div>
-                      <h2 class="price">{{ getFinalPrice(item) | number }} €
-                        <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item, 'sucree')">
+                      <h2 class="price">
+                        {{ getFinalPrice(item) | number }} €
+                        <span
+                          class="tools"
+                          *ngIf="userDataProvider.hasLoggedIn()"
+                        >
+                          <button
+                            ion-button
+                            small
+                            icon-only
+                            color="danger"
+                            (click)="showDeleteConfirm(item, 'sucree')"
+                          >
                             <ion-icon name="trash"></ion-icon>
                           </button>
-                          <button ion-button small icon-only color="dark">
+                          <button
+                            ion-button
+                            small
+                            icon-only
+                            color="dark"
+                            (click)="goToEditItem(item, 'sucree')"
+                          >
                             <ion-icon name="create"></ion-icon>
                           </button>
-                          <button ion-button small icon-only color="primary" (click)="itemActivation(item, 'sucree')">
-                            <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
-                            <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
+                          <button
+                            ion-button
+                            small
+                            icon-only
+                            color="primary"
+                            (click)="itemActivation(item, 'sucree')"
+                          >
+                            <ion-icon
+                              name="eye-off"
+                              *ngIf="item.active"
+                            ></ion-icon>
+                            <ion-icon
+                              name="eye"
+                              *ngIf="!item.active"
+                            ></ion-icon>
                           </button>
                         </span>
                       </h2>
@@ -113,7 +169,6 @@
             </ion-grid>
           </ion-card-content>
         </ion-card>
-
       </ng-container>
     </div>
   </div>

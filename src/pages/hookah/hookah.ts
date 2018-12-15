@@ -4,7 +4,7 @@ import { ItemCL } from "../../domain/chez-lui.model";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { UserData } from "../../providers/user-data";
 import { ItemPage } from "../item/item";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -12,7 +12,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-hookah",
   templateUrl: "hookah.html"
 })
-export class HookahPage extends AbstractPage {
+export class HookahPage extends AbstractPublicPage {
   hookahList: Array<ItemCL> = [];
 
   constructor(
@@ -39,7 +39,7 @@ export class HookahPage extends AbstractPage {
       list.forEach(item => {
         this.hookahList.push({
           uuid: item.uuid,
-          tilte: item.tilte,
+          title: item.title,
           description: item.description,
           price: item.price,
           price_vip: item.price_vip,
@@ -91,7 +91,11 @@ export class HookahPage extends AbstractPage {
     this.navCtrl.push(ItemPage, { modification: false, item: null });
   }
 
-  goToModifyItem(item: any) {
-    this.navCtrl.push(ItemPage, { modification: true, item: item });
+  goToEditItem(item: ItemCL) {
+    this.navCtrl.push(ItemPage, {
+      modification: true,
+      item: item,
+      type: "HOOKAH"
+    });
   }
 }

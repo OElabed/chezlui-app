@@ -82,25 +82,31 @@ page-item {
     height: 75px;
   }
 
-  .add-photo-container {
+  .photo-container {
     position: relative;
     padding-left: 192px;
     padding-right: 192px;
   }
-  .add-photo {
-    border-style: dotted;
-    border-width: 2px;
-    border-color: color($colors, golden);
-    border-radius: 6px;
+  .photo {
+    &.placeholder {
+      border-style: dotted;
+      border-width: 2px;
+      border-color: color($colors, golden);
+      border-radius: 6px;
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 65px;
+      }
+    }
     height: 250px;
     width: 250px;
 
     img {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      width: 40%;
-      margin-top: 65px;
+      height: 100%;
+      width: 100%;
     }
   }
 }

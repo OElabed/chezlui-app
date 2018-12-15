@@ -4,7 +4,7 @@ import { NgForm } from "@angular/forms";
 import { UserOptions } from "../../interfaces/user-options";
 import { UserData } from "../../providers/user-data";
 import { ChezLuiApp } from "../../app/app.component";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -12,7 +12,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-login",
   templateUrl: "login.html"
 })
-export class LoginPage extends AbstractPage {
+export class LoginPage extends AbstractPublicPage {
   login: UserOptions = { username: "", password: "" };
   submitted = false;
   errorLogin = false;

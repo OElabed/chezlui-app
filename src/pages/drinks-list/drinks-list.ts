@@ -3,7 +3,7 @@ import { NavController, NavParams, AlertController } from "ionic-angular";
 import { GroupCL, ItemCL } from "../../domain/chez-lui.model";
 import { UserData } from "../../providers/user-data";
 import { ChezLuiData } from "../../providers/chezlui-data";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 import { ItemPage } from "../item/item";
@@ -12,7 +12,7 @@ import { ItemPage } from "../item/item";
   selector: "page-drinks-list",
   templateUrl: "drinks-list.html"
 })
-export class DrinksListPage extends AbstractPage {
+export class DrinksListPage extends AbstractPublicPage {
   group: GroupCL;
 
   constructor(
@@ -86,5 +86,13 @@ export class DrinksListPage extends AbstractPage {
 
   goToAddItem() {
     this.navCtrl.push(ItemPage, { modification: false, item: null });
+  }
+  goToEditItem(item: ItemCL, group: string) {
+    this.navCtrl.push(ItemPage, {
+      modification: true,
+      item: item,
+      type: "DRINKS",
+      group: group
+    });
   }
 }

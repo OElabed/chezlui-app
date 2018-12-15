@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
 import { NavController, NavParams } from "ionic-angular";
 import { ItemCL } from "../../domain/chez-lui.model";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -16,7 +16,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-formule-item",
   templateUrl: "formule-item.html"
 })
-export class FormuleItemPage extends AbstractPage {
+export class FormuleItemPage extends AbstractPublicPage {
   formule: ItemCL;
 
   constructor(

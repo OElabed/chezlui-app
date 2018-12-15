@@ -8,7 +8,7 @@ export interface GroupCL {
 
 export interface ItemCL {
   uuid: string;
-  tilte: string;
+  title: string;
   description: string;
   price_vip: number;
   price: number;

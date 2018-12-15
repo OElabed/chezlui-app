@@ -120,7 +120,6 @@ export class ChezLuiData {
 
   getPhotosByType(type: string) {
     return this.getAllPhotosList().map((images: PhotoData[]) => {
-      console.log(images.filter(item => item.type === type));
       return images.filter(item => item.type === type);
     });
   }
@@ -465,7 +464,7 @@ export class ChezLuiData {
     data.forEach((item: any) => {
       result.push({
         uuid: item.uuid,
-        tilte: item.tilte,
+        title: item.title,
         description: item.description,
         price: item.price,
         price_vip: item.price_vip,
@@ -480,7 +479,7 @@ export class ChezLuiData {
   mapItemCL(data: any) {
     let result: ItemCL = {
       uuid: data.uuid,
-      tilte: data.tilte,
+      title: data.title,
       description: data.description,
       price: data.price,
       price_vip: data.price_vip,
@@ -494,7 +493,7 @@ export class ChezLuiData {
   mapDBItemCL(data: ItemCL) {
     let result: any = {
       uuid: data.uuid,
-      tilte: data.tilte,
+      title: data.title,
       description: data.description,
       price: data.price,
       price_vip: data.price_vip,

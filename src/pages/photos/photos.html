@@ -9,37 +9,39 @@
     <ion-title>IMAGES</ion-title>
     <ion-buttons end>
       <button ion-button class="camera-button" (click)="goToAddPhoto()">
-        <ion-icon name="camera" class=camera-icon></ion-icon>
+        <ion-icon name="camera" class="camera-icon"></ion-icon>
       </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-
 <ion-content class="card-background-page" padding>
-
   <ion-grid>
     <ion-row>
       <ion-col>
         <ion-card>
           <ion-card-content>
-            <ion-card-title>
-              BOISSONS
-            </ion-card-title>
+            <ion-card-title> BOISSONS </ion-card-title>
             <ion-grid>
               <ion-row>
-
                 <ion-col col-4 *ngFor="let item of drinksPhotos">
-                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
-
+                  <ion-card
+                    tappable
+                    m-ripple-effect
+                    #photoDrinksDiv
+                    [ngClass]="{ selected: item.id === selectedPhoto.id }"
+                    (click)="selectPhoto(item)"
+                  >
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
+                        <img
+                          class="chezlui-food-item-image"
+                          src="{{ baseDataFolder + item.path }}"
+                        />
                       </div>
                     </ion-card-content>
                   </ion-card>
                 </ion-col>
-
               </ion-row>
             </ion-grid>
           </ion-card-content>
@@ -50,18 +52,23 @@
       <ion-col>
         <ion-card>
           <ion-card-content>
-            <ion-card-title>
-              RESTAURANT
-            </ion-card-title>
+            <ion-card-title> RESTAURANT </ion-card-title>
             <ion-grid>
               <ion-row>
-
                 <ion-col col-4 *ngFor="let item of foodsPhotos">
-                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
-
+                  <ion-card
+                    tappable
+                    m-ripple-effect
+                    #photoFoodsDiv
+                    [ngClass]="{ selected: item.id === selectedPhoto.id }"
+                    (click)="selectPhoto(item)"
+                  >
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
+                        <img
+                          class="chezlui-food-item-image"
+                          src="{{ baseDataFolder + item.path }}"
+                        />
                       </div>
                     </ion-card-content>
                   </ion-card>
@@ -76,17 +83,23 @@
       <ion-col>
         <ion-card>
           <ion-card-content>
-            <ion-card-title>
-              CHICHA
-            </ion-card-title>
+            <ion-card-title> CHICHA </ion-card-title>
             <ion-grid>
               <ion-row>
-
                 <ion-col col-4 *ngFor="let item of hookahPhotos">
-                  <ion-card tappable m-ripple-effect [ngClass]="{'selected' : item.id === selectedPhoto.id}" (click)="selectPhoto(item)">
+                  <ion-card
+                    tappable
+                    m-ripple-effect
+                    #photoHookahDiv
+                    [ngClass]="{ selected: item.id === selectedPhoto.id }"
+                    (click)="selectPhoto(item)"
+                  >
                     <ion-card-content>
                       <div class="normal-photo">
-                        <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.path }}" />
+                        <img
+                          class="chezlui-food-item-image"
+                          src="{{ baseDataFolder + item.path }}"
+                        />
                       </div>
                     </ion-card-content>
                   </ion-card>
@@ -98,5 +111,4 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-
 </ion-content>

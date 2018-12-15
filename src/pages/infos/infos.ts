@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { NavController } from "ionic-angular";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -8,7 +8,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-infos",
   templateUrl: "infos.html"
 })
-export class InfosPage extends AbstractPage {
+export class InfosPage extends AbstractPublicPage {
   constructor(
     public navCtrl: NavController,
     public settingsData: SettingsData,

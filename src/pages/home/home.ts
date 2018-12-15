@@ -7,7 +7,7 @@ import { InfosPage } from "../infos/infos";
 import { UserData } from "../../providers/user-data";
 import { SettingsPage } from "../settings/settings";
 import { FormulePage } from "../formule/formule";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -15,7 +15,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-home",
   templateUrl: "home.html"
 })
-export class HomePage extends AbstractPage {
+export class HomePage extends AbstractPublicPage {
   constructor(
     public userDataProvider: UserData,
     public navCtrl: NavController,

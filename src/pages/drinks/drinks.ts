@@ -3,7 +3,7 @@ import { NavController } from "ionic-angular";
 import { DrinksListPage } from "../drinks-list/drinks-list";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { GroupCL } from "../../domain/chez-lui.model";
-import { AbstractPage } from "../common/AbstractPage";
+import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
 
@@ -11,7 +11,7 @@ import { UtilService } from "../../services/utils-service";
   selector: "page-drinks",
   templateUrl: "drinks.html"
 })
-export class DrinksPage extends AbstractPage {
+export class DrinksPage extends AbstractPublicPage {
   drinksGroup: Array<GroupCL> = [];
 
   constructor(

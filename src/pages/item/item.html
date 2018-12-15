@@ -6,10 +6,9 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>{{ title }}</ion-title>
+    <ion-title>{{ titlePage }}</ion-title>
   </ion-navbar>
 </ion-header>
-
 
 <ion-content class="card-background-page" padding>
   <div *ngIf="pageData">
@@ -19,16 +18,26 @@
           <ion-col>
             <ion-card>
               <ion-card-content>
-                <ion-card-title>
-                  IMAGE
-                </ion-card-title>
+                <ion-card-title> IMAGE </ion-card-title>
                 <ion-grid>
                   <ion-row>
-                    <ion-col class="add-photo-container">
+                    <ion-col class="photo-container">
                       <ion-card tappable m-ripple-effect (click)="goToPhotos()">
                         <ion-card-content>
-                          <div class="add-photo">
-                            <img class="chezlui-food-item-image" src="assets/imgs/camera.svg" />
+                          <div
+                            class="photo placeholder"
+                            *ngIf="!pageData.modification"
+                          >
+                            <img
+                              class="chezlui-food-item-image"
+                              src="assets/imgs/camera.svg"
+                            />
+                          </div>
+                          <div class="photo" *ngIf="pageData.modification">
+                            <img
+                              class="chezlui-food-item-image"
+                              src="{{ baseDataFolder + pageData.item.img.path }}"
+                            />
                           </div>
                         </ion-card-content>
                       </ion-card>
@@ -43,85 +52,171 @@
           <ion-col>
             <ion-card>
               <ion-card-content>
-                <ion-card-title>
-                  TITRE
-                </ion-card-title>
+                <ion-card-title> TITRE </ion-card-title>
                 <ion-list no-lines>
                   <ion-item class="item-form">
-                    <ion-input [(ngModel)]="pageData.item.title" type="text" placeholder="Entrer le titre" #itemTitle="ngModel" name="itemTitle"
-                      required spellcheck="false" autocapitalize="on"></ion-input>
+                    <ion-input
+                      [(ngModel)]="pageData.item.title"
+                      type="text"
+                      placeholder="Entrer le titre"
+                      #title="ngModel"
+                      name="title"
+                      required
+                      spellcheck="false"
+                      autocapitalize="on"
+                    ></ion-input>
                   </ion-item>
-                  <!-- <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
-                          Username is required
-                        </p> -->
 
+                  <p
+                    ion-text
+                    [hidden]="title.valid || submitted == false"
+                    color="danger"
+                    padding-left
+                  >
+                    Title is required
+                  </p>
                 </ion-list>
               </ion-card-content>
             </ion-card>
 
             <ion-card>
               <ion-card-content>
-                <ion-card-title>
-                  DESCRIPTION
-                </ion-card-title>
+                <ion-card-title> DESCRIPTION </ion-card-title>
                 <ion-list no-lines>
                   <ion-item class="item-form">
-                    <ion-textarea [(ngModel)]="pageData.item.description" placeholder="Entrer la description" name="description"></ion-textarea>
+                    <ion-textarea
+                      [(ngModel)]="pageData.item.description"
+                      placeholder="Entrer la description"
+                      name="description"
+                    ></ion-textarea>
                   </ion-item>
-                  <!-- <p ion-text [hidden]="username.valid || submitted == false" color="danger" padding-left>
-                            Username is required
-                          </p> -->
-
                 </ion-list>
               </ion-card-content>
             </ion-card>
 
             <ion-card>
               <ion-card-content>
-                <ion-card-title>
-                  PRIX
-                </ion-card-title>
+                <ion-card-title> PRIX </ion-card-title>
                 <ion-list no-lines>
                   <ion-item class="item-form">
                     <ion-label class="light-label">PRIX EN €</ion-label>
-                    <ion-input type="number" placeholder="0" [(ngModel)]="pageData.item.price" name="price" class="light-label-number" required></ion-input>
+                    <ion-input
+                      type="number"
+                      placeholder="0"
+                      [(ngModel)]="pageData.item.price"
+                      name="price"
+                      class="light-label-number"
+                      required
+                    ></ion-input>
                   </ion-item>
-                  <!-- <p ion-text *ngIf="!settings.delta && submitted == true" color="danger" padding-left>
-                        Il faut mettre un montant
-                      </p>
-                      <p ion-text *ngIf="!maximumValue(settings.delta)  && submitted == true" color="danger" padding-left>
-                        Il faut mettre un montant inférieur à 100€
-                      </p> -->
 
+                  <p
+                    ion-text
+                    *ngIf="!pageData.item.price && submitted == true"
+                    color="danger"
+                    padding-left
+                  >
+                    Il faut mettre un montant
+                  </p>
+                  <p
+                    ion-text
+                    *ngIf="
+                      !maximumValue(pageData.item.price) && submitted == true
+                    "
+                    color="danger"
+                    padding-left
+                  >
+                    Il faut mettre un montant inférieur à 100€
+                  </p>
                 </ion-list>
               </ion-card-content>
             </ion-card>
 
             <ion-card>
               <ion-card-content>
-                <ion-card-title>
-                  ACTIVE
-                </ion-card-title>
+                <ion-card-title> PRIX VIP </ion-card-title>
                 <ion-list no-lines>
                   <ion-item class="item-form">
-                    <ion-label class="light-label" color="light">Voulez vous l'activer?</ion-label>
-                    <ion-toggle [(ngModel)]="pageData.item.active" name="active" color="golden"></ion-toggle>
+                    <ion-label class="light-label">PRIX VIP EN €</ion-label>
+                    <ion-input
+                      type="number"
+                      placeholder="0"
+                      [(ngModel)]="pageData.item.price_vip"
+                      name="price_vip"
+                      class="light-label-number"
+                      required
+                    ></ion-input>
                   </ion-item>
+                  <p
+                    ion-text
+                    *ngIf="!pageData.item.price_vip && submitted == true"
+                    color="danger"
+                    padding-left
+                  >
+                    Il faut mettre un montant
+                  </p>
+                  <p
+                    ion-text
+                    *ngIf="
+                      !maximumValue(pageData.item.price_vip) &&
+                      submitted == true
+                    "
+                    color="danger"
+                    padding-left
+                  >
+                    Il faut mettre un montant inférieur à 100€
+                  </p>
+                  <p
+                    ion-text
+                    *ngIf="
+                      pageData.item.price_vip &&
+                      pageData.item.price &&
+                      pageData.item.price_vip < pageData.item.price &&
+                      submitted == true
+                    "
+                    color="danger"
+                    padding-left
+                  >
+                    Il faut mettre un montant superieur ou égale au prix normale
+                  </p>
                 </ion-list>
               </ion-card-content>
             </ion-card>
 
+            <ion-card>
+              <ion-card-content>
+                <ion-card-title> ACTIVE </ion-card-title>
+                <ion-list no-lines>
+                  <ion-item class="item-form">
+                    <ion-label class="light-label" color="light"
+                      >Voulez vous l'activer?</ion-label
+                    >
+                    <ion-toggle
+                      [(ngModel)]="pageData.item.active"
+                      name="active"
+                      color="golden"
+                    ></ion-toggle>
+                  </ion-item>
+                </ion-list>
+              </ion-card-content>
+            </ion-card>
           </ion-col>
         </ion-row>
 
         <ion-row responsive-sm class="login-button">
           <ion-col offset-4 col-4>
-            <button ion-button large (click)="onSubmit(itemForm)" type="submit" block>{{ title }}</button>
+            <button
+              ion-button
+              large
+              (click)="onSubmit(itemForm)"
+              type="submit"
+              block
+            >
+              {{ titlePage }}
+            </button>
           </ion-col>
         </ion-row>
-
       </ion-grid>
     </form>
   </div>
-
 </ion-content>

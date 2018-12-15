@@ -9,35 +9,55 @@
   </ion-navbar>
 </ion-header>
 
-
-
 <ion-content class="card-background-page" padding (click)="globalInteraction()">
-
   <ng-container *ngFor="let item of hookahList">
     <ion-card *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
-      <ion-card-content [ngClass]="{'card-disable' : !item.active}">
+      <ion-card-content [ngClass]="{ 'card-disable': !item.active }">
         <ion-grid>
           <ion-row>
             <ion-col col-3 class="image-container">
-              <img class="chezlui-food-item-image" src="{{ baseDataFolder + item.img.path }}" />
+              <img
+                class="chezlui-food-item-image"
+                src="{{ baseDataFolder + item.img.path }}"
+              />
             </ion-col>
             <ion-col>
               <div class="card-details">
-                <h1 class="title-item">{{ item.tilte | uppercase }}</h1>
-                <p class="description" *ngIf="item.description !== ''">{{ item.description }}</p>
+                <h1 class="title-item">{{ item.title | uppercase }}</h1>
+                <p class="description" *ngIf="item.description !== ''">
+                  {{ item.description }}
+                </p>
                 <div>
                   <h2 class="price">{{ getFinalPrice(item) | number }} €</h2>
                 </div>
               </div>
               <div class="tools-container">
                 <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-                  <button ion-button small icon-only color="danger" (click)="showDeleteConfirm(item)">
+                  <button
+                    ion-button
+                    small
+                    icon-only
+                    color="danger"
+                    (click)="showDeleteConfirm(item)"
+                  >
                     <ion-icon name="trash"></ion-icon>
                   </button>
-                  <button ion-button small icon-only color="dark">
+                  <button
+                    ion-button
+                    small
+                    icon-only
+                    color="dark"
+                    (click)="goToEditItem(item)"
+                  >
                     <ion-icon name="create"></ion-icon>
                   </button>
-                  <button ion-button small icon-only color="primary" (click)="itemActivation(item)">
+                  <button
+                    ion-button
+                    small
+                    icon-only
+                    color="primary"
+                    (click)="itemActivation(item)"
+                  >
                     <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
                     <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
                   </button>
