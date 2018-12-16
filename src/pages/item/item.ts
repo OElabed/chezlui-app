@@ -118,6 +118,12 @@ export class ItemPage extends AbstractPage {
             this.navCtrl.pop();
           });
       }
+
+      if (this.type.toUpperCase() === "FORMULES") {
+        this.dataProvider.updateFormule(this.pageData.item).subscribe(() => {
+          this.navCtrl.pop();
+        });
+      }
     }
   }
 }

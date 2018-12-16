@@ -1,5 +1,10 @@
 import { Component } from "@angular/core";
-import { NavController, NavParams, AlertController, Events } from "ionic-angular";
+import {
+  NavController,
+  NavParams,
+  AlertController,
+  Events
+} from "ionic-angular";
 import { ChezLuiData } from "../../providers/chezlui-data";
 import { ItemCL } from "../../domain/chez-lui.model";
 import { FormuleItemPage } from "../formule-item/formule-item";
@@ -7,6 +12,7 @@ import { UserData } from "../../providers/user-data";
 import { AbstractPublicPage } from "../common/AbstractPublicPage";
 import { SettingsData } from "../../providers/settings-data";
 import { UtilService } from "../../services/utils-service";
+import { ItemPage } from "../item/item";
 
 /**
  * Generated class for the FormulePage page.
@@ -100,6 +106,15 @@ export class FormulePage extends AbstractPublicPage {
       this.displayFormuleList().subscribe(data => {
         return data;
       });
+    });
+  }
+
+  goToEditItem(event: Event, item: ItemCL) {
+    event.stopPropagation();
+    this.navCtrl.push(ItemPage, {
+      modification: true,
+      item: item,
+      type: "FORMULES"
     });
   }
 }

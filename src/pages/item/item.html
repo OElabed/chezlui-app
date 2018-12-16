@@ -14,7 +14,7 @@
   <div *ngIf="pageData">
     <form #itemForm="ngForm" novalidate>
       <ion-grid>
-        <ion-row>
+        <ion-row *ngIf="type.toUpperCase() !== 'FORMULES'">
           <ion-col>
             <ion-card>
               <ion-card-content>

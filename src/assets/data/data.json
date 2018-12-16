@@ -660,7 +660,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b257"
+      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b357"
     },
     {
       "uuid": "745957c8-e229-4952-979d-980e8a98b7d0",
@@ -670,7 +670,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "d965e72b-f055-4248-a763-668075071af4"
+      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b337"
     },
     {
       "uuid": "745957c8-e229-4953-979d-980e8a98b7d0",
@@ -680,7 +680,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "e5da41cd-490a-46e2-888c-3430ab18e424"
+      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b347"
     },
     {
       "uuid": "745957c8-e229-4954-979d-980e8a98b7d0",
@@ -690,7 +690,7 @@
       "price": 15.0,
       "active": true,
       "category": "",
-      "img": "4d8e3830-3b82-48f3-b70a-7abaa001850c"
+      "img": "a65c6111-5368-4da7-b52a-bb0c93e4b357"
     },
     {
       "uuid": "a305ad49-24d7-4848-9ca1-ddcaad3f519b",
@@ -1465,6 +1465,21 @@
       "id": "a65c6111-5368-4da7-b52a-bb0c93e4b257",
       "type": "hookah",
       "path": "data/imgs/hookah/menthe.png"
+    },
+    {
+      "id": "a65c6111-5368-4da7-b52a-bb0c93e4b337",
+      "type": "hookah",
+      "path": "data/imgs/hookah/menthe-miel.png"
+    },
+    {
+      "id": "a65c6111-5368-4da7-b52a-bb0c93e4b347",
+      "type": "hookah",
+      "path": "data/imgs/hookah/menthe-sucree.png"
+    },
+    {
+      "id": "a65c6111-5368-4da7-b52a-bb0c93e4b357",
+      "type": "hookah",
+      "path": "data/imgs/hookah/menthe-airways.png"
     },
     {
       "id": "d965e72b-f055-4248-a763-668075071af4",

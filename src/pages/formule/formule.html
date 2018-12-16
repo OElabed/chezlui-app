@@ -5,24 +5,45 @@
   Ionic pages and navigation.
 -->
 <ion-header (click)="globalInteraction()">
-
-  <ion-navbar>
-    <ion-title>FORMULES</ion-title>
-  </ion-navbar>
-
+  <ion-navbar> <ion-title>FORMULES</ion-title> </ion-navbar>
 </ion-header>
 
 <ion-content class="card-background-page" padding (click)="globalInteraction()">
-
   <ng-container *ngFor="let item of formulesList">
-    <ion-card tappable m-ripple-effect (click)="goToFormuleDetails(item)" *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)">
+    <ion-card
+      tappable
+      m-ripple-effect
+      (click)="goToFormuleDetails(item)"
+      *ngIf="!(!userDataProvider.hasLoggedIn() && !item.active)"
+    >
       <div class="shadow-disable" *ngIf="!item.active"></div>
       <div class="tools-container">
         <span class="tools" *ngIf="userDataProvider.hasLoggedIn()">
-          <button ion-button small icon-only color="danger" (click)="showDeleteConfirm($event,item)">
+          <button
+            ion-button
+            small
+            icon-only
+            color="danger"
+            (click)="showDeleteConfirm($event, item)"
+          >
             <ion-icon name="trash"></ion-icon>
           </button>
-          <button ion-button small icon-only color="primary" (click)="itemActivation($event,item)">
+          <button
+            ion-button
+            small
+            icon-only
+            color="dark"
+            (click)="goToEditItem($event, item)"
+          >
+            <ion-icon name="create"></ion-icon>
+          </button>
+          <button
+            ion-button
+            small
+            icon-only
+            color="primary"
+            (click)="itemActivation($event, item)"
+          >
             <ion-icon name="eye-off" *ngIf="item.active"></ion-icon>
             <ion-icon name="eye" *ngIf="!item.active"></ion-icon>
           </button>
@@ -35,9 +56,7 @@
       </ion-fab>
       <img src="{{ baseDataFolder + item.img.path }}" />
       <div class="card-title">
-        <span>
-          {{ item.title | uppercase }}
-        </span>
+        <span> {{ item.title | uppercase }} </span>
       </div>
     </ion-card>
   </ng-container>
